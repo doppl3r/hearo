@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CreateJS Example: Space Rocks Game</title>
+</head>
+
+<body onload="init();" style="margin:0;">
+    <div id="content"><canvas id="gameCanvas" width="800" height="450" style="background-color: #f1f1f1; width: 100%;"></canvas></div>
+    <script src="preloadjs-NEXT.min.js"></script>
+    <script src="soundjs-NEXT.min.js"></script>
+    <script src="easeljs-NEXT.combined.js"></script>
+
+    <!-- Game script below -->
+    <script type="text/javascript" src="Player.js"></script>
+    <script>
+        var KEYCODE_ENTER = 13; //useful keycode
+        var KEYCODE_SPACE = 32; //useful keycode
+        var KEYCODE_UP = 38; //useful keycode
+        var KEYCODE_LEFT = 37; //useful keycode
+        var KEYCODE_RIGHT = 39; //useful keycode
+        var KEYCODE_DOWN = 40; 
+        var KEYCODE_W = 87; //useful keycode
+        var KEYCODE_A = 65; //useful keycode
+        var KEYCODE_D = 68; //useful keycode
+        var KEYCODE_S = 83; //useful keycode
+
+        var manifest; // used to register sounds for preloading
+        var preload;
+
+        var jump; //is the user holding a shoot command
+        var left; //is the user holding a left command
+        var right; //is the user holding a right command
+        var up; //is the user holding a up command
+        var down; //is the user holding a down command
+
+        var canvas; //Main canvas
+        var stage; //Main display stage
+
+        var player; //play class
+
+        var messageField; //Message display field
+        var scoreField; //score Field
+
+        var loadingInterval = 0;
+
+        //register key functions
+        document.onkeydown = handleKeyDown;
+        document.onkeyup = handleKeyUp;
+
+        function init() {
+            if (!createjs.Sound.initializeDefaultPlugins()) {
+                document.getElementById("error").style.display = "block";
+                document.getElementById("content").style.display = "none";
+                return;
+            }
+
+            if (createjs.BrowserDetect.isIOS || createjs.BrowserDetect.isAndroid || createjs.BrowserDetect.isBlackberry) {
+                document.getElementById("mobile").style.display = "block";
+                document.getElementById("content").style.display = "none";
+                return;
+            }
+
+            canvas = document.getElementById("gameCanvas");
+            canvas.getContext("2d").imageSmoothingEnabled = true;
+            canvas.getContext("2d").mozImageSmoothingEnabled = false;
+            canvas.getContext("2d").oImageSmoothingEnabled = false;
+            canvas.getContext("2d").webkitImageSmoothingEnabled = false;
+            canvas.getContext("2d").msImageSmoothingEnabled = false;
+            stage = new createjs.Stage(canvas);
+            messageField = new createjs.Text("Loading", "bold 24px Arial", "#666");
+            messageField.maxWidth = 1000;
+            messageField.textAlign = "center";
+            messageField.textBaseline = "middle";
+            messageField.x = canvas.width / 2;
+            messageField.y = canvas.height / 2;
+            stage.addChild(messageField);
+            stage.update(); //update the stage to show text
+
+            // begin loading content (only sounds to load)
+            var assetsPath = "sounds/";
+            manifest = [
+                { id: "begin", src: "spawn.ogg" },
+                { id: "break", src: "break.ogg", data: 6 },
+                { id: "death", src: "death.ogg" },
+                { id: "laser", src: "shot.ogg", data: 6 },
+                { id: "music", src: "music.ogg" }
+            ];
+
+            createjs.Sound.alternateExtensions = ["mp3"];
+            preload = new createjs.LoadQueue(true, assetsPath);
+            preload.installPlugin(createjs.Sound);
+            preload.addEventListener("complete", doneLoading); // add an event listener for when load is completed
+            preload.addEventListener("progress", updateLoading);
+            preload.loadManifest(manifest);
+        }
+
+        function stop() {
+            if (preload != null) {
+                preload.close();
+            }
+            createjs.Sound.stop();
+        }
+
+        function updateLoading() {
+            messageField.text = "Loading " + (preload.progress * 100 | 0) + "%";
+            stage.update();
+        }
+
+        function doneLoading(event) {
+            clearInterval(loadingInterval);
+            scoreField = new createjs.Text("0", "bold 18px Arial", "#666");
+            scoreField.textAlign = "right";
+            scoreField.x = canvas.width - 20;
+            scoreField.y = 20;
+            scoreField.maxWidth = 1000;
+
+            messageField.text = "Welcome: Click to play";
+
+            // start the music
+            //createjs.Sound.play("music", { interrupt: createjs.Sound.INTERRUPT_NONE, loop: -1, volume: 0.4, pan: 0 });
+            watchRestart();
+        }
+
+        function watchRestart() {
+            //watch for clicks
+            stage.addChild(messageField);
+            stage.update(); //update the stage to show text
+            canvas.onclick = handleClick;
+        }
+
+        function handleClick() {
+            //prevent extra clicks and hide text
+            canvas.onclick = null;
+            stage.removeChild(messageField);
+
+            // indicate the player is now on screen
+            createjs.Sound.play("begin");
+
+            restart();
+        }
+
+        //reset all game logic
+        function restart() {
+            //hide anything on stage and show the score
+            stage.removeAllChildren();
+            scoreField.text = (0).toString();
+            stage.addChild(scoreField);
+
+            //create the player
+            player = new Player();
+            player.x = canvas.width / 2;
+            player.y = canvas.height / 2;
+
+            //reset key presses
+            jump = left = right = up = down = false;
+
+            //ensure stage is blank and add the player
+            stage.clear();
+            stage.addChild(player);
+
+            //start game timer
+            if (!createjs.Ticker.hasEventListener("tick")) {
+                createjs.Ticker.addEventListener("tick", tick);
+                createjs.Ticker.setFPS(60);
+            }
+        }
+
+        function tick(event) {
+            //handle movement
+            if (left) { player.x -= 10; } 
+            else if (right) { player.x += 10; }
+            if (up) { player.y -= 10; }
+            else if (down) { player.y += 10; }
+
+            //call sub ticks
+            player.tick(event);
+            stage.update(event);
+        }
+
+        //allow for WASD and arrow control scheme
+        function handleKeyDown(e) {
+            if (!e) { var e = window.event; } //cross browser issues exist
+            switch (e.keyCode) {
+                case KEYCODE_SPACE: jump = true; player.jump(); break;
+                case KEYCODE_A: case KEYCODE_LEFT: left = true; break;
+                case KEYCODE_D: case KEYCODE_RIGHT: right = true; break;
+                case KEYCODE_W: case KEYCODE_UP: up = true; break;
+                case KEYCODE_S: case KEYCODE_DOWN: down = true; break;
+                case KEYCODE_ENTER: if (canvas.onclick == handleClick) { handleClick(); } break;
+            }
+        }
+
+        function handleKeyUp(e) {
+            if (!e) { var e = window.event; } //cross browser issues exist
+            switch (e.keyCode) {
+                case KEYCODE_SPACE: jump = false; break;
+                case KEYCODE_A: case KEYCODE_LEFT: left = false; break;
+                case KEYCODE_D: case KEYCODE_RIGHT: right = false; break;
+                case KEYCODE_W: case KEYCODE_UP: up = false; break;
+                case KEYCODE_S: case KEYCODE_DOWN: down = false; break;
+            }
+        }
+
+        function addScore(value) {
+            //trust the field will have a number and add the score
+            scoreField.text = (Number(scoreField.text) + Number(value)).toString();
+        }
+    </script>
+</body>
+</html>
