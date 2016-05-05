@@ -1,12 +1,17 @@
 (function (window) {
     var p = createjs.extend(Player, createjs.Container);
+    var up;
+    var right;
+    var down;
+    var left;
+
 	function Player() {
 		this.Container_constructor();
-        this.addChild(this.grant);
+        this.addChild(this.sprite);
 	}
     
     //Public Properties
-    Player.manifest = [{src: "toon.png", id: "grant"}];
+    Player.manifest = [{src: "player.png", id: "player"}];
     Player.loader = new createjs.LoadQueue(false);
     Player.loader.addEventListener("complete", handleComplete);
     Player.loader.loadManifest(Player.manifest, true, "img/");
@@ -14,25 +19,29 @@
     function handleComplete() {
         p.spriteSheet = new createjs.SpriteSheet({
             framerate: 12,
-            "images": [Player.loader.getResult("grant")],
-            "frames": {"width": 16, "height": 16, "count": 16},
+            images: [Player.loader.getResult("player")],
+            frames: [[0,0,167,255,0,83.4,126.65]], //center bounds
             // define two animations, run (loops, 1.5x speed) and jump (returns to run):
-            "animations": {
-                "run": [0, 4, "run", 1.5],
-                "jump": [4, 8, "run"]
+            animations: {
+                //"run": [0, 1, "run"],
+                idle: [0, 0, "idle"]
             }
         });
-        p.grant = new createjs.Sprite(p.spriteSheet, "run");
-        p.grant.x = -(p.grant.getBounds().width/2);
-        p.grant.y = -(p.grant.getBounds().height/2);
+        p.sprite = new createjs.Sprite(p.spriteSheet, "idle");
+        p.sprite.scaleX = -1;
     }
     //update
 	p.tick = function (event) {
-        //p.grant.x += 1;
+        //p.sprite.x += 1;
+        if (left) this.x -= 10;
+        else if (right) this.x += 10;
+        if (up) this.y -= 10;
+        else if (down) this.y += 10;
 	}
-    p.jump = function() {
-        p.grant.gotoAndPlay("jump");
-    }
+    p.moveUp = function(pressed) { up = pressed ? true : false; }
+    p.moveRight = function(pressed) { p.sprite.scaleX = 1; right = pressed ? true : false; }
+    p.moveDown = function(pressed) { down = pressed ? true : false; }
+    p.moveLeft = function(pressed) { p.sprite.scaleX = -1; left = pressed ? true : false; }
     
 	window.Player = createjs.promote(Player, "Container");
 }(window));

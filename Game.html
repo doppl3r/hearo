@@ -7,12 +7,13 @@
 </head>
 
 <body onload="init();" style="margin:0;">
-    <div id="content"><canvas id="gameCanvas" width="800" height="450" style="background-color: #f1f1f1; width: 100%;"></canvas></div>
+    <div id="content"><canvas id="gameCanvas" width="1280" height="720" style="background-color: #f1f1f1; width: 100%;"></canvas></div>
     <script src="preloadjs-NEXT.min.js"></script>
     <script src="soundjs-NEXT.min.js"></script>
     <script src="easeljs-NEXT.combined.js"></script>
 
     <!-- Game script below -->
+    <script type="text/javascript" src="Background.js"></script>
     <script type="text/javascript" src="Player.js"></script>
     <script>
         var KEYCODE_ENTER = 13; //useful keycode
@@ -29,16 +30,11 @@
         var manifest; // used to register sounds for preloading
         var preload;
 
-        var jump; //is the user holding a shoot command
-        var left; //is the user holding a left command
-        var right; //is the user holding a right command
-        var up; //is the user holding a up command
-        var down; //is the user holding a down command
-
         var canvas; //Main canvas
         var stage; //Main display stage
 
-        var player; //play class
+        var background; //background class
+        var player; //player class
 
         var messageField; //Message display field
         var scoreField; //score Field
@@ -148,16 +144,19 @@
             scoreField.text = (0).toString();
             stage.addChild(scoreField);
 
+            //create the background
+            background = new Background();
+            background.x = canvas.width / 2;
+            background.y = canvas.height / 2;
+
             //create the player
             player = new Player();
             player.x = canvas.width / 2;
             player.y = canvas.height / 2;
 
-            //reset key presses
-            jump = left = right = up = down = false;
-
             //ensure stage is blank and add the player
             stage.clear();
+            stage.addChild(background);
             stage.addChild(player);
 
             //start game timer
@@ -168,13 +167,8 @@
         }
 
         function tick(event) {
-            //handle movement
-            if (left) { player.x -= 10; } 
-            else if (right) { player.x += 10; }
-            if (up) { player.y -= 10; }
-            else if (down) { player.y += 10; }
-
             //call sub ticks
+            background.tick(event);
             player.tick(event);
             stage.update(event);
         }
@@ -183,11 +177,10 @@
         function handleKeyDown(e) {
             if (!e) { var e = window.event; } //cross browser issues exist
             switch (e.keyCode) {
-                case KEYCODE_SPACE: jump = true; player.jump(); break;
-                case KEYCODE_A: case KEYCODE_LEFT: left = true; break;
-                case KEYCODE_D: case KEYCODE_RIGHT: right = true; break;
-                case KEYCODE_W: case KEYCODE_UP: up = true; break;
-                case KEYCODE_S: case KEYCODE_DOWN: down = true; break;
+                case KEYCODE_A: case KEYCODE_LEFT: player.moveLeft(1); break;
+                case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(1); break;
+                case KEYCODE_W: case KEYCODE_UP: player.moveUp(1); break;
+                case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(1); break;
                 case KEYCODE_ENTER: if (canvas.onclick == handleClick) { handleClick(); } break;
             }
         }
@@ -195,11 +188,10 @@
         function handleKeyUp(e) {
             if (!e) { var e = window.event; } //cross browser issues exist
             switch (e.keyCode) {
-                case KEYCODE_SPACE: jump = false; break;
-                case KEYCODE_A: case KEYCODE_LEFT: left = false; break;
-                case KEYCODE_D: case KEYCODE_RIGHT: right = false; break;
-                case KEYCODE_W: case KEYCODE_UP: up = false; break;
-                case KEYCODE_S: case KEYCODE_DOWN: down = false; break;
+                case KEYCODE_A: case KEYCODE_LEFT: player.moveLeft(0); break;
+                case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(0); break;
+                case KEYCODE_W: case KEYCODE_UP: player.moveUp(0); break;
+                case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(0); break;
             }
         }
 
