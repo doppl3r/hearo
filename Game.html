@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>CreateJS Example: Space Rocks Game</title>
+    <title>NeuroCoach: Treasure Checker</title>
 </head>
 
 <body onload="init();" style="margin:0;">
@@ -16,6 +16,8 @@
     <script type="text/javascript" src="Audio.js"></script>
     <script type="text/javascript" src="Background.js"></script>
     <script type="text/javascript" src="Player.js"></script>
+    <script type="text/javascript" src="Chest.js"></script>
+    <script type="text/javascript" src="ChestManager.js"></script>
     <script>
         var KEYCODE_ENTER = 13; //useful keycode
         var KEYCODE_SPACE = 32; //useful keycode
@@ -34,6 +36,8 @@
         var audio; //audio handler
         var background; //background class
         var player; //player class
+        var chestManager;
+        //var chest; //chest class
 
         var messageField; //Message display field
         var scoreField; //score Field
@@ -104,7 +108,7 @@
             messageField.text = "Welcome: Click to play";
 
             // start the music
-            createjs.Sound.play("music", { interrupt: createjs.Sound.INTERRUPT_NONE, loop: -1, volume: 0.4, pan: 0 });
+            //createjs.Sound.play("music", { interrupt: createjs.Sound.INTERRUPT_NONE, loop: -1, volume: 0.4, pan: 0 });
             watchRestart();
         }
 
@@ -143,10 +147,19 @@
             player.x = canvas.width / 2;
             player.y = canvas.height / 2;
 
+            //create the chest
+            //chest = new Chest();
+            //chest.x = canvas.width / 2;
+            //chest.y = canvas.height / 2;
+
+            chestManager = new ChestManager();
+
             //ensure stage is blank and add the player
             stage.clear();
             stage.addChild(background);
             stage.addChild(player);
+            //stage.addChild(chest);
+            stage.addChild(chestManager);
 
             //start game timer
             if (!createjs.Ticker.hasEventListener("tick")) {
@@ -159,6 +172,8 @@
             //call sub ticks
             background.tick(event);
             player.tick(event);
+            //chest.tick(event);
+            chestManager.tick(event);
             stage.update(event);
         }
 

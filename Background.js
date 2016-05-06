@@ -18,8 +18,8 @@
             frames: {"width": 1280, "height": 720, "count": 1},
             // define two animations, run (loops, 1.5x speed) and jump (returns to run):
             animations: {
-                frame1: [0, 0],
-                frame2: [1, 1]
+                frame1: [0],
+                frame2: [1]
             }
         });
         bg.sprite = new createjs.Sprite(bg.spriteSheet,"frame1");
