@@ -9,13 +9,13 @@
 		this.Container_constructor();
         this.addChild(this.sprite);
 	}
-    
+
     //Public Properties
     Player.manifest = [{src: "player.png", id: "player"}];
     Player.loader = new createjs.LoadQueue(false);
     Player.loader.addEventListener("complete", handleComplete);
     Player.loader.loadManifest(Player.manifest, true, "img/");
-    
+
     function handleComplete() {
         p.spriteSheet = new createjs.SpriteSheet({
             framerate: 4,
@@ -41,6 +41,6 @@
     p.moveRight = function(pressed) { p.sprite.scaleX = 1; right = pressed ? true : false; }
     p.moveDown = function(pressed) { down = pressed ? true : false; }
     p.moveLeft = function(pressed) { p.sprite.scaleX = -1; left = pressed ? true : false; }
-    
+
 	window.Player = createjs.promote(Player, "Container");
 }(window));
