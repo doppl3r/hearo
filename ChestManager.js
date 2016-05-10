@@ -46,7 +46,13 @@
 
     }
     c.setXY = function(x,y) {  }
-    c.addChest = function (x,y,scaleX,scaleY,frame){ chests.push(new Chest(x,y,scaleX,scaleY,c.spriteSheet,frame)); }
+    c.addChest = function (x,y,scaleX,scaleY,frame){
+        var tempChest = new Chest(x,y,scaleX,scaleY,c.spriteSheet,frame);
+        tempChest.sprite.on("click", function(evt){
+            tempChest.click();
+        });
+        chests.push(tempChest);
+    }
     c.removeChest = function(i){ if(i != -1) { chests.splice(i, 1); this.removeChildAt(i); }}
     c.removeLastChest = function(){ chests.pop(); this.removeChildAt(chests.length-1); }
 

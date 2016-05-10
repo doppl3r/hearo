@@ -7,11 +7,6 @@
         this.sprite.scaleX = scaleX;
         this.sprite.scaleY = scaleY;
         this.sprite.gotoAndStop(frame);
-        //this.clicked = false;
-        this.sprite.addEventListener("pressup", function(evt){
-            var o = evt.target;
-            Chest.prototype.click();
-        });
 	}
 	//public functions
     Chest.prototype.getSprite = function() { return this.sprite; }
