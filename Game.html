@@ -55,11 +55,11 @@
                 return;
             }
 
-            if (createjs.BrowserDetect.isIOS || createjs.BrowserDetect.isAndroid || createjs.BrowserDetect.isBlackberry) {
+            /*if (createjs.BrowserDetect.isIOS || createjs.BrowserDetect.isAndroid || createjs.BrowserDetect.isBlackberry) {
                 document.getElementById("mobile").style.display = "block";
                 document.getElementById("content").style.display = "none";
                 return;
-            }
+            }*/
 
             canvas = document.getElementById("gameCanvas");
             canvas.getContext("2d").imageSmoothingEnabled = true;
@@ -147,11 +147,7 @@
             player.x = canvas.width / 2;
             player.y = canvas.height / 2;
 
-            //create the chest
-            //chest = new Chest();
-            //chest.x = canvas.width / 2;
-            //chest.y = canvas.height / 2;
-
+            //create the chest manager
             chestManager = new ChestManager();
 
             //ensure stage is blank and add the player
