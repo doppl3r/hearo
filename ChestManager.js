@@ -1,6 +1,5 @@
 (function (window) {
     var container = new createjs.extend(ChestManager, createjs.Container);
-    var chests = []; //list of Chest objects
 
 	function ChestManager() {
 		container.Container_constructor();
@@ -35,27 +34,21 @@
 
     //update
 	container.tick = function (event) {
-        for (i=0; i<chests.length; i++){
-            if (chests[i].isClicked()){
+        for (i=0; i<container.children.length; i++){
+            if (container.getChildAt(i).isClicked()){
                 container.removeChest(i);
             }
         }
-        console.log(container.children);
     }
     container.setXY = function(x,y) {  }
     container.addChest = function (x,y,scaleX,scaleY,frame){
-        var tempChest = new Chest();
-        tempChest.initChest(x,y,scaleX,scaleY,container.spriteSheet,frame);
-        tempChest.sprite.on("click", function(evt){ tempChest.click(); });
+        var tempChest = new Chest(x,y,scaleX,scaleY,container.spriteSheet,frame);
         container.addChild(tempChest); //add to stage
-        chests.push(tempChest); //add to list
+        container.getChildAt(container.children.length-1).sprite.on("click", function(evt){ tempChest.click(); });
     }
     container.removeChest = function(i){
-        if(i != -1) {
-            container.removeChild(i);
-            chests[i].sprite.removeEventListener("click");
-            chests.splice(i, 1); container.removeChildAt(i);
-        }
+        container.getChildAt(i).sprite.removeEventListener("click");
+        container.removeChildAt(i);
     }
 	window.ChestManager = createjs.promote(ChestManager, "Container");
 }(window));

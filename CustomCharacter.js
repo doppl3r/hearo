@@ -4,6 +4,10 @@
 	function CustomCharacter() {
         container.Container_constructor();
 	}
+	function CustomCharacter(x,y,scaleX,scaleY,spriteSheet,frame){
+	    container.Container_constructor();
+	    container.initCustomCharacter(x,y,scaleX,scaleY,spriteSheet,frame);
+	}
 	container.initCustomCharacter = function (x,y,scaleX,scaleY,spriteSheet,frame){
         container.sprite = new createjs.Sprite(spriteSheet, frame);
         container.sprite.x = x;

@@ -1,10 +1,14 @@
 (function (window) {
     var container = new createjs.extend(CustomText, createjs.Container);
-    var textString = []; //list of Char objects
 
 	function CustomText() {
 		container.Container_constructor();
         container.kerning=14;
+	}
+	function CustomText() {
+	    container.Container_constructor();
+	    container.kerning=14;
+	    container.addText(50,50,1,1,"test2");
 	}
     //shared spritesheet properties
     var manifest = [{src: "text.png", id: "text"}];
@@ -36,21 +40,16 @@
     }
 
     //update
-	container.tick = function (event) { for (i=0; i<textString.length; i++){ }}
+	container.tick = function (event) { }
     container.addText = function (x,y,scaleX,scaleY,text){
         text=text.replace(" ","_");
         for (i = 0; i < text.length; i++){
-            var tempChar = new CustomCharacter();
-            tempChar.initCustomCharacter(x+(i*container.kerning*scaleX),y,scaleX,scaleY,container.spriteSheet,text.charAt(i).toLowerCase());
+            var tempChar = new CustomCharacter(x+(i*container.kerning*scaleX),y,scaleX,scaleY,container.spriteSheet,text.charAt(i).toLowerCase());
             container.addChild(tempChar);
-            textString.push(tempChar);
         }
     }
     container.removeChar = function(i){
-        if(i != -1) {
-            this.removeChild(i);
-            textString.splice(i, 1); this.removeChildAt(i);
-        }
+        container.removeChildAt(i);
     }
 	window.CustomText = createjs.promote(CustomText, "Container");
 }(window));
