@@ -16,6 +16,8 @@
     <script type="text/javascript" src="Audio.js"></script>
     <script type="text/javascript" src="Background.js"></script>
     <script type="text/javascript" src="Player.js"></script>
+    <script type="text/javascript" src="Char.js"></script>
+    <script type="text/javascript" src="CharManager.js"></script>-->
     <script type="text/javascript" src="Chest.js"></script>
     <script type="text/javascript" src="ChestManager.js"></script>
     <script>
@@ -36,6 +38,7 @@
         var audio; //audio handler
         var background; //background class
         var player; //player class
+
         var chestManager;
         //var chest; //chest class
 
@@ -143,9 +146,7 @@
             background.y = canvas.height / 2;
 
             //create the player
-            player = new Player();
-            player.x = canvas.width / 2;
-            player.y = canvas.height / 2;
+            player = new Player(canvas.width / 2, canvas.height / 2);
 
             //create the chest manager
             chestManager = new ChestManager();
