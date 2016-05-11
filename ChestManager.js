@@ -1,5 +1,5 @@
 (function (window) {
-    var container = createjs.extend(ChestManager, createjs.Container);
+    var container = new createjs.extend(ChestManager, createjs.Container);
     var chests = []; //list of Chest objects
 
 	function ChestManager() {
@@ -40,10 +40,12 @@
                 container.removeChest(i);
             }
         }
+        console.log(container.children);
     }
     container.setXY = function(x,y) {  }
     container.addChest = function (x,y,scaleX,scaleY,frame){
-        var tempChest = new Chest(x,y,scaleX,scaleY,container.spriteSheet,frame);
+        var tempChest = new Chest();
+        tempChest.initChest(x,y,scaleX,scaleY,container.spriteSheet,frame);
         tempChest.sprite.on("click", function(evt){ tempChest.click(); });
         container.addChild(tempChest); //add to stage
         chests.push(tempChest); //add to list

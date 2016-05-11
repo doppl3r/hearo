@@ -16,8 +16,8 @@
     <script type="text/javascript" src="Audio.js"></script>
     <script type="text/javascript" src="Background.js"></script>
     <script type="text/javascript" src="Player.js"></script>
-    <script type="text/javascript" src="Char.js"></script>
-    <script type="text/javascript" src="CharManager.js"></script>-->
+    <script type="text/javascript" src="CustomCharacter.js"></script>
+    <script type="text/javascript" src="CustomText.js"></script>
     <script type="text/javascript" src="Chest.js"></script>
     <script type="text/javascript" src="ChestManager.js"></script>
     <script>
@@ -42,6 +42,7 @@
         var chestManager;
         //var chest; //chest class
 
+        //var customText;
         var messageField; //Message display field
         var scoreField; //score Field
 
@@ -151,12 +152,14 @@
             //create the chest manager
             chestManager = new ChestManager();
 
+            //customText = new CustomText(200,200,1,1,"test");
+
             //ensure stage is blank and add the player
             stage.clear();
             stage.addChild(background);
             stage.addChild(player);
-            //stage.addChild(chest);
             stage.addChild(chestManager);
+            //stage.addChild(customText);
 
             //start game timer
             if (!createjs.Ticker.hasEventListener("tick")) {
