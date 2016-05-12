@@ -5,10 +5,10 @@
 		container.Container_constructor();
         container.kerning=14;
 	}
-	function CustomText() {
+	function CustomText(x,y,scaleX,scaleY,text) {
 	    container.Container_constructor();
 	    container.kerning=14;
-	    container.addText(50,50,1,1,"test2");
+	    container.addText(x,y,scaleX,scaleY,text);
 	}
     //shared spritesheet properties
     var manifest = [{src: "text.png", id: "text"}];

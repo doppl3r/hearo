@@ -18,7 +18,6 @@
         container.addChild(container.sprite);
 	}
 	//public functions
-    container.getSprite = function() { return container.sprite; }
     container.isClicked = function(){ return container.clicked; }
     container.click = function() { container.clicked=true; }
 
