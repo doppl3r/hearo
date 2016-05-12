@@ -6,8 +6,8 @@
     <title>NeuroCoach: Treasure Checker</title>
 </head>
 
-<body onload="init();" style="margin:0;">
-    <div id="content"><canvas id="gameCanvas" width="1280" height="720" style="background-color: #f1f1f1; width: 100%;"></canvas></div>
+<body onload="init();" style="margin:0 auto; text-align: center; ">
+    <div id="content"><canvas id="gameCanvas" width="1280" height="720" style="background-color: #f1f1f1; max-width: 100%;"></canvas></div>
     <script src="preloadjs-NEXT.min.js"></script>
     <script src="soundjs-NEXT.min.js"></script>
     <script src="easeljs-NEXT.combined.js"></script>
@@ -151,6 +151,14 @@
 
             //create the chest manager
             chestManager = new ChestManager();
+            chestManager.addChest(640,100,1,1,"topClosed");
+            chestManager.getLastChest(0).setText('easy');
+            chestManager.addChest(1100,360,1,1,"sideClosed");
+            chestManager.getLastChest(0).setText('peazy');
+            chestManager.addChest(640,620,1,1,"bottomClosed");
+            chestManager.getLastChest(0).setText('lemon');
+            chestManager.addChest(180,360,-1,1,"sideClosed");
+            chestManager.getLastChest(0).setText('squeezy');
 
             //customText = new CustomText(200,200,1,1,"test");
 

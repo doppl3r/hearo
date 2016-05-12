@@ -2,6 +2,8 @@
 
 	function CustomText(x,y,scaleX,scaleY,text) {
 	    this.Container_constructor();
+	    this.x = x;
+	    this.y = y;
 	    this.scaleX = scaleX;
 	    this.scaleY = scaleY;
 	    this.kerning = 14;
@@ -48,14 +50,13 @@
             var tempChar = new CustomCharacter(x+(i*this.kerning*scaleX),y,scaleX,scaleY,this.spriteSheet,text.charAt(i).toLowerCase());
             this.addChild(tempChar);
         }
-        this.centerText();
+        this.centerAlignText();
     }
     container.removeChar = function(i){
         this.removeChildAt(i);
     }
-    container.centerText = function() {
+    container.centerAlignText = function() {
         this.x = (-(this.getBounds().width/2)+(this.kerning/2))*this.scaleX;
-        this.y = -(this.getBounds().height/2);
         this.scaleX *= this.scaleX;
     }
 

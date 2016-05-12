@@ -2,11 +2,7 @@
 
 	function ChestManager() {
 		this.Container_constructor();
-        this.addChest(640,100,1,1,"topClosed");
-        this.addChest(1100,360,1,1,"sideClosed");
-        this.addChest(640,620,1,1,"bottomClosed");
-        this.addChest(180,360,-1,1,"sideClosed");
-	}
+    }
 
 	//instance of class
 	var container = new createjs.extend(ChestManager, createjs.Container);
@@ -51,6 +47,8 @@
         this.getChildAt(i).sprite.removeEventListener("click");
         this.removeChildAt(i);
     }
-    function length() { return "hi"; }
+    container.getChest = function(i){ return this.getChildAt(i); }
+    container.getLastChest = function(){ return this.getChest(this.children.length-1); }
+
 	window.ChestManager = createjs.promote(ChestManager, "Container");
 }(window));
