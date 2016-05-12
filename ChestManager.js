@@ -1,27 +1,27 @@
 (function (window) {
 
 	function ChestManager() {
-		container.Container_constructor();
-        container.addChest(640,100,1,1,"topClosed");
-        container.addChest(1100,360,1,1,"sideClosed");
-        container.addChest(640,620,1,1,"bottomClosed");
-        container.addChest(180,360,-1,1,"sideClosed");
+		this.Container_constructor();
+        this.addChest(640,100,1,1,"topClosed");
+        this.addChest(1100,360,1,1,"sideClosed");
+        this.addChest(640,620,1,1,"bottomClosed");
+        this.addChest(180,360,-1,1,"sideClosed");
 	}
 
 	//instance of class
 	var container = new createjs.extend(ChestManager, createjs.Container);
 
     //shared spritesheet properties
-    var manifest = [{src: "chests.png", id: "chests"}];
-    container.loader = new createjs.LoadQueue(false);
-    container.loader.addEventListener("complete", handleComplete);
-    container.loader.loadManifest(manifest, true, "img/");
+    this.manifest = [{src: "chests.png", id: "chests"}];
+    this.loader = new createjs.LoadQueue(false);
+    this.loader.addEventListener("complete", handleComplete);
+    this.loader.loadManifest(this.manifest, true, "img/");
 
     //configure after loaded
     function handleComplete() {
         container.spriteSheet = new createjs.SpriteSheet({
             framerate: 4,
-            images: [container.loader.getResult("chests")],
+            images: [this.loader.getResult("chests")],
             frames: [[0,0,159,132,0,79.25,65.65],[159,0,193,107,0,98.25,40.650000000000006],[352,0,193,107,0,98.25,40.650000000000006],
                     [545,0,113,147,0,56.5,73.4],[658,0,180,149,0,56.5,75.4],[838,0,180,149,0,56.5,75.4], //center bounds
                     [0,149,116,97,0,57.25,47.75],[116,149,111,94,0,55.25,44.75],[227,149,111,94,0,55.25,44.75]],
@@ -36,19 +36,20 @@
 
     //update
 	container.tick = function (event) {
-        for (i=0; i<container.children.length; i++){
-            if (container.getChildAt(i).isClicked()){
-                container.removeChest(i);
+        for (i=0; i<this.children.length; i++){
+            if (this.getChildAt(i).isClicked()){
+                this.removeChest(i);
             }
         }
     }
     container.addChest = function (x,y,scaleX,scaleY,frame){
-        container.addChild(new Chest(x,y,scaleX,scaleY,container.spriteSheet,frame)); //add to stage
-        container.getChildAt(container.children.length-1).sprite.on("click", function(evt){ container.getChildAt(container.children.length-1).click(); });
+        this.addChild(new Chest(x,y,scaleX,scaleY,this.spriteSheet,frame)); //add to stage
+        this.getChildAt(this.children.length-1).sprite.on("click", function(){ console.log(this); });
     }
     container.removeChest = function(i){
-        container.getChildAt(i).sprite.removeEventListener("click");
-        container.removeChildAt(i);
+        this.getChildAt(i).sprite.removeEventListener("click");
+        this.removeChildAt(i);
     }
+    function length() { return "hi"; }
 	window.ChestManager = createjs.promote(ChestManager, "Container");
 }(window));
