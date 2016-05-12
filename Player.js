@@ -1,13 +1,15 @@
 (function (window) {
-    var container = createjs.extend(Player, createjs.Container);
-    var up, right, down, left;
 
+    //constructor
 	function Player(x,y) {
-		container.Container_constructor();
-        container.x = x;
-        container.y = y;
-        container.addChild(container.sprite);
+		this.Container_constructor();
+        this.x = x;
+        this.y = y;
+        this.addChild(container.sprite);
 	}
+
+	//instance of class
+	var container = createjs.extend(Player, createjs.Container);
     
     //Public Properties
     var manifest = [{src: "player.png", id: "player"}];
@@ -30,15 +32,15 @@
     }
     //update
 	container.tick = function (event) {
-        if (left) container.x -= 10;
-        else if (right) container.x += 10;
-        if (up) container.y -= 10;
-        else if (down) container.y += 10;
+        if (this.left) this.x -= 10;
+        else if (this.right) this.x += 10;
+        if (this.up) this.y -= 10;
+        else if (this.down) this.y += 10;
 	}
-    container.moveUp = function(pressed) { up = pressed ? true : false; }
-    container.moveRight = function(pressed) { container.sprite.scaleX = 1; right = pressed ? true : false; }
-    container.moveDown = function(pressed) { down = pressed ? true : false; }
-    container.moveLeft = function(pressed) { container.sprite.scaleX = -1; left = pressed ? true : false; }
+    container.moveUp = function(pressed) { this.up = pressed ? true : false; }
+    container.moveRight = function(pressed) { this.sprite.scaleX = 1; this.right = pressed ? true : false; }
+    container.moveDown = function(pressed) { this.down = pressed ? true : false; }
+    container.moveLeft = function(pressed) { this.sprite.scaleX = -1; this.left = pressed ? true : false; }
     
 	window.Player = createjs.promote(Player, "Container");
 }(window));

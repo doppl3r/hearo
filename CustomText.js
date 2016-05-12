@@ -1,26 +1,27 @@
 (function (window) {
-    var container = new createjs.extend(CustomText, createjs.Container);
 
-	function CustomText() {
-		container.Container_constructor();
-        container.kerning=14;
-	}
 	function CustomText(x,y,scaleX,scaleY,text) {
-	    container.Container_constructor();
-	    container.kerning=14;
-	    container.addText(x,y,scaleX,scaleY,text);
+	    this.Container_constructor();
+	    this.scaleX = scaleX;
+	    this.scaleY = scaleY;
+	    this.kerning = 14;
+	    this.addText(x,y,scaleX,scaleY,text);
 	}
+
+	//instance of class
+	var container = new createjs.extend(CustomText, createjs.Container);
+
     //shared spritesheet properties
-    var manifest = [{src: "text.png", id: "text"}];
-    container.loader = new createjs.LoadQueue(false);
-    container.loader.addEventListener("complete", handleComplete);
-    container.loader.loadManifest(manifest, true, "img/");
+    this.manifest = [{src: "text.png", id: "text"}];
+    //this.loader = new createjs.LoadQueue(false);
+    this.loader.addEventListener("complete", handleComplete);
+    this.loader.loadManifest(this.manifest, true, "img/");
 
     //configure after loaded
     function handleComplete() {
         container.spriteSheet = new createjs.SpriteSheet({
-            framerate: 4,
-            images: [container.loader.getResult("text")],
+            framerate: 0,
+            images: [this.loader.getResult("text")],
             frames: [[4,4,16,23,0,8.15,11.15],[24,4,15,26,0,8.15,12.15],[43,4,14,23,0,7.15,11.15],[61,4,15,25,0,8.15,12.15],
                     [80,4,13,23,0,7.15,11.15],[97,4,14,24,0,8.15,11.15],[115,4,14,23,0,6.15,11.15],[133,4,14,23,0,7.15,11.15],
                     [151,4,15,22,0,7.15,10.15],[170,4,16,25,0,8.15,13.15],[190,4,14,23,0,7.15,11.15],[208,4,14,23,0,7.15,11.15],
@@ -44,12 +45,19 @@
     container.addText = function (x,y,scaleX,scaleY,text){
         text=text.replace(" ","_");
         for (i = 0; i < text.length; i++){
-            var tempChar = new CustomCharacter(x+(i*container.kerning*scaleX),y,scaleX,scaleY,container.spriteSheet,text.charAt(i).toLowerCase());
-            container.addChild(tempChar);
+            var tempChar = new CustomCharacter(x+(i*this.kerning*scaleX),y,scaleX,scaleY,this.spriteSheet,text.charAt(i).toLowerCase());
+            this.addChild(tempChar);
         }
+        this.centerText();
     }
     container.removeChar = function(i){
-        container.removeChildAt(i);
+        this.removeChildAt(i);
     }
+    container.centerText = function() {
+        this.x = (-(this.getBounds().width/2)+(this.kerning/2))*this.scaleX;
+        this.y = -(this.getBounds().height/2);
+        this.scaleX *= this.scaleX;
+    }
+
 	window.CustomText = createjs.promote(CustomText, "Container");
 }(window));

@@ -43,8 +43,9 @@
         }
     }
     container.addChest = function (x,y,scaleX,scaleY,frame){
-        this.addChild(new Chest(x,y,scaleX,scaleY,this.spriteSheet,frame)); //add to stage
-        this.getChildAt(this.children.length-1).sprite.on("click", function(){ console.log(this); });
+        var tempChest = new Chest(x,y,scaleX,scaleY,this.spriteSheet,frame);
+        tempChest.sprite.on("click", function(){ tempChest.click(); });
+        this.addChild(tempChest); //add to stage
     }
     container.removeChest = function(i){
         this.getChildAt(i).sprite.removeEventListener("click");

@@ -17,10 +17,10 @@
         this.x = x;
         this.y = y;
         this.sprite = new createjs.Sprite(spriteSheet, frame);
-        this.sprite.scaleX = scaleX;
-        this.sprite.scaleY = scaleY;
+        this.scaleX = scaleX;
+        this.scaleY = scaleY;
         this.sprite.gotoAndStop(frame);
-        this.customText = new CustomText(0,0,scaleX,scaleY,"car");
+        this.customText = new CustomText(0,0,scaleX,scaleY,"success");
         this.addChild(this.sprite);
         this.addChild(this.customText);
 	}
