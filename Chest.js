@@ -19,7 +19,7 @@
         this.sprite = new createjs.Sprite(spriteSheet, frame);
         this.sprite.sourceRect = new createjs.Rectangle(0,0, this.sprite.width, this.sprite.height);
         this.sprite.filters = [new createjs.BlurFilter(16,16,.5)];
-        //this.sprite.cache(x,y,this.sprite.width, this.sprite.height);
+        this.fontSize = 1; //font sprite is 64px tall
         this.scaleX = scaleX;
         this.scaleY = scaleY;
         this.sprite.gotoAndStop(frame);
@@ -32,7 +32,7 @@
     container.mouseOut = function() { this.sprite.alpha=1; }
     container.setText = function(text){
         if (this.children.length > 0) this.removeChild(this.customText);
-        this.customText = new CustomText(0,0,this.scaleX,this.scaleY,text);
+        this.customText = new CustomText(0,0,this.scaleX*this.fontSize,this.scaleY*this.fontSize,text);
         this.addChild(this.customText);
     }
 

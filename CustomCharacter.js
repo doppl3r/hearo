@@ -19,7 +19,7 @@
         this.sprite = new createjs.Sprite(spriteSheet, frame);
         this.sprite.scaleX = scaleX;
         this.sprite.scaleY = scaleY;
-        this.sprite.gotoAndStop(frame.toLowerCase());
+        this.sprite.gotoAndStop(frame);
         this.addChild(this.sprite);
 	}
 

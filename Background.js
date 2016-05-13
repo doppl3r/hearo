@@ -1,20 +1,24 @@
 (function (window) {
-    var bg = createjs.extend(Background, createjs.Container);
+
+	//constructor
 	function Background() {
 		this.Container_constructor();
         this.addChild(this.sprite);
 	}
 
+	//instance of class
+	var container = createjs.extend(Background, createjs.Container);
+
     //Public Properties
-    Background.manifest = [{src: "background-image1.png", id: "bg1"},{src: "background-image2.png", id: "bg2"}];
-    Background.loader = new createjs.LoadQueue(false);
-    Background.loader.addEventListener("complete", handleComplete);
-    Background.loader.loadManifest(Background.manifest, true, "img/");
+    this.manifest = [{src: "background-image1.png", id: "bg1"},{src: "background-image2.png", id: "bg2"}];
+    container.loader = new createjs.LoadQueue(false);
+    container.loader.addEventListener("complete", handleComplete);
+    container.loader.loadManifest(this.manifest, true, "img/");
 
     function handleComplete() {
-        bg.spriteSheet = new createjs.SpriteSheet({
+        container.spriteSheet = new createjs.SpriteSheet({
             framerate: 1,
-            images: [Background.loader.getResult("bg2")],
+            images: [container.loader.getResult("bg2")],
             frames: {"width": 1280, "height": 720, "count": 1},
             // define two animations, run (loops, 1.5x speed) and jump (returns to run):
             animations: {
@@ -22,13 +26,12 @@
                 frame2: [1]
             }
         });
-        bg.sprite = new createjs.Sprite(bg.spriteSheet,"frame1");
-        bg.sprite.x = -(bg.sprite.getBounds().width/2);
-        bg.sprite.y = -(bg.sprite.getBounds().height/2);
+        container.sprite = new createjs.Sprite(container.spriteSheet,"frame1");
+        container.sprite.x = -(container.sprite.getBounds().width/2);
+        container.sprite.y = -(container.sprite.getBounds().height/2);
     }
     //update
-	bg.tick = function (event) { }
-    bg.jump = function() { }
+	container.tick = function (event) { }
 
 	window.Background = createjs.promote(Background, "Container");
 }(window));
