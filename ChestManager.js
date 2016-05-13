@@ -40,11 +40,15 @@
     }
     container.addChest = function (x,y,scaleX,scaleY,frame){
         var tempChest = new Chest(x,y,scaleX,scaleY,this.spriteSheet,frame);
-        tempChest.sprite.on("click", function(){ tempChest.click(); });
+        tempChest.on("click", function(){ tempChest.click(); });
+        tempChest.on("mouseover", function(){ tempChest.mouseOver(); });
+        tempChest.on("mouseout", function(){ tempChest.mouseOut(); });
         this.addChild(tempChest); //add to stage
     }
     container.removeChest = function(i){
-        this.getChildAt(i).sprite.removeEventListener("click");
+        this.getChildAt(i).removeEventListener("click");
+        this.getChildAt(i).removeEventListener("mouseover");
+        this.getChildAt(i).removeEventListener("mouseout");
         this.removeChildAt(i);
     }
     container.getChest = function(i){ return this.getChildAt(i); }

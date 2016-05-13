@@ -72,6 +72,7 @@
             canvas.getContext("2d").webkitImageSmoothingEnabled = false;
             canvas.getContext("2d").msImageSmoothingEnabled = false;
             stage = new createjs.Stage(canvas);
+            stage.enableMouseOver(30);
             messageField = new createjs.Text("Loading", "bold 24px Arial", "#666");
             messageField.maxWidth = 1000;
             messageField.textAlign = "center";
@@ -160,14 +161,11 @@
             chestManager.addChest(180,360,-1,1,"sideClosed");
             chestManager.getLastChest(0).setText('squeezy');
 
-            //customText = new CustomText(200,200,1,1,"test");
-
             //ensure stage is blank and add the player
             stage.clear();
             stage.addChild(background);
             stage.addChild(player);
             stage.addChild(chestManager);
-            //stage.addChild(customText);
 
             //start game timer
             if (!createjs.Ticker.hasEventListener("tick")) {

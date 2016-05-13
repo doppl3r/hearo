@@ -12,10 +12,10 @@
 	var container = createjs.extend(Player, createjs.Container);
     
     //Public Properties
-    var manifest = [{src: "player.png", id: "player"}];
+    this.manifest = [{src: "player.png", id: "player"}];
     container.loader = new createjs.LoadQueue(false);
     container.loader.addEventListener("complete", handleComplete);
-    container.loader.loadManifest(manifest, true, "img/");
+    container.loader.loadManifest(this.manifest, true, "img/");
     
     function handleComplete() {
         container.spriteSheet = new createjs.SpriteSheet({

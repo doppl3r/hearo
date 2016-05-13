@@ -7,7 +7,7 @@
 	    this.scaleX = scaleX;
 	    this.scaleY = scaleY;
 	    this.kerning = 14;
-	    this.addText(x,y,scaleX,scaleY,text);
+	    this.setText(x,y,scaleX,scaleY,text);
 	}
 
 	//instance of class
@@ -44,7 +44,7 @@
 
     //update
 	container.tick = function (event) { }
-    container.addText = function (x,y,scaleX,scaleY,text){
+    container.setText = function (x,y,scaleX,scaleY,text){
         text=text.replace(" ","_");
         for (i = 0; i < text.length; i++){
             var tempChar = new CustomCharacter(x+(i*this.kerning*scaleX),y,scaleX,scaleY,this.spriteSheet,text.charAt(i).toLowerCase());
