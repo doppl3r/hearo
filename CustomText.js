@@ -57,7 +57,7 @@
         for (i = 0; i < text.length; i++){
             var tempChar = text.charAt(i).toLowerCase(); //only lowercase chars
             tempChar = !isNaN(tempChar) ? "_"+tempChar : tempChar; //allow numbers
-            var tempCustomCharacter = new CustomCharacter(x+(i*this.kerning*scaleX),y,scaleX,scaleY,this.spriteSheet,tempChar);
+            var tempCustomCharacter = new CustomCharacter((i*this.kerning*scaleX),0,scaleX,scaleY,this.spriteSheet,tempChar);
             this.addChild(tempCustomCharacter);
         }
         this.centerAlignText();
@@ -66,8 +66,13 @@
         this.removeChildAt(i);
     }
     container.centerAlignText = function() {
-        this.x = (-(this.getBounds().width/2)+(this.kerning/2))*this.scaleX;
-        this.scaleX *= this.scaleX;
+        //the first
+        this.setBounds((-this.getBounds().width/2)-(this.getBounds().x)+2, //spritesheet was rendered with 4 padding
+                        -this.getBounds().height/2,
+                        this.getBounds().width,
+                        this.getBounds().height);
+        this.x=this.getBounds().x; //set to new bounds
+        this.scaleX *= this.scaleX; //mirror if the parent was flipped
     }
 
 	window.CustomText = createjs.promote(CustomText, "Container");
