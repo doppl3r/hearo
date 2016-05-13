@@ -21,7 +21,7 @@
 
     //configure after loaded
     function handleComplete() {
-        container.spriteSheet = new createjs.SpriteSheet({
+        container.spriteSheet = new createjs.SpriteSheet({ //generated with Adobe Animate
             framerate: 0,
             images: [this.loader.getResult("text")],
             frames: [[4,4,37,56,0,19.6,25.3],[45,4,35,60,0,19.6,27.3],[84,4,33,56,0,17.6,26.3],

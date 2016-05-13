@@ -26,7 +26,7 @@
 	}
 	//public functions
     container.isClicked = function(){ return this.clicked; }
-    container.click = function() { this.clicked=true; }
+    container.click = function() { this.clicked=true; createjs.Sound.play("break"); }
     container.mouseOver = function() { this.sprite.alpha=.25; this.cursor="pointer"; }
     container.mouseOut = function() { this.sprite.alpha=1; }
     container.setText = function(text){
