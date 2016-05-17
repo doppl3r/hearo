@@ -40,7 +40,8 @@ function init() {
 //reset all game logic
 function restart() {
     //hide anything on stage and show the score
-    createjs.Sound.play("begin");
+    createjs.Sound.play("rail", {pan:1});
+    createjs.Sound.play("bail", {pan:-1});
     stage.removeAllChildren();
 
     //create the background
@@ -55,13 +56,13 @@ function restart() {
     //create the chest manager
     chestManager = new ChestManager(assetManager.preload);
     chestManager.addChest(640,100,1,1,"topClosed");
-    chestManager.getLastChest(0).setText('easy');
+    chestManager.getLastChest(0).setText('mail');
     chestManager.addChest(1100,360,1,1,"sideClosed");
-    chestManager.getLastChest(0).setText('peazy');
+    chestManager.getLastChest(0).setText('bail');
     chestManager.addChest(640,620,1,1,"bottomClosed");
-    chestManager.getLastChest(0).setText('lemon');
+    chestManager.getLastChest(0).setText('tail');
     chestManager.addChest(180,360,-1,1,"sideClosed");
-    chestManager.getLastChest(0).setText('squeezy');
+    chestManager.getLastChest(0).setText('rail');
 
     //ensure stage is blank and add the player
     stage.clear();
