@@ -15,15 +15,11 @@ var canvas; //Main canvas
 var stage; //Main display stage
 var manifest; //Main asset manifest
 var preload; //asset manager
-
-//var audio; //audio handler
+var loadingScreen; //load progress screen
+var messageField; //load progress status
 var background; //background class
 var player; //player class
 var chestManager; //chestmanager class
-
-//var customText;
-var scoreField; //score Field
-var loadingInterval = 0;
 
 //register key functions
 document.onkeydown = handleKeyDown;
@@ -31,10 +27,10 @@ document.onkeyup = handleKeyUp;
 
 function init() {
     canvas = document.getElementById("gameCanvas");
-
     stage = new createjs.Stage(canvas);
     stage.enableMouseOver(30);
     stage.update(); //update the stage to show text
+
 
     //manage game assets
     manifest = [
@@ -55,6 +51,7 @@ function init() {
     preload.installPlugin(createjs.Sound);
     preload.loadManifest(manifest);
     preload.on("complete", function(){ restart(); });
+    preload.on("progress", updateLoading);
 }
 
 //reset all game logic
@@ -123,5 +120,21 @@ function handleKeyUp(e) {
         case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(0); break;
         case KEYCODE_W: case KEYCODE_UP: player.moveUp(0); break;
         case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(0); break;
+    }
+}
+
+function updateLoading() {
+    if (typeof messageField === 'undefined'){
+        messageField = new createjs.Text("Loading", "bold 24px Arial", "#666666");
+        messageField.maxWidth = 1000;
+        messageField.textAlign = "center";
+        messageField.textBaseline = "middle";
+        messageField.x = canvas.width / 2;
+        messageField.y = canvas.height / 2;
+        stage.addChild(messageField);
+    }
+    else {
+        messageField.text = "Loading " + (preload.progress * 100 | 0) + "%";
+        stage.update();
     }
 }
