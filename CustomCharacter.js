@@ -1,19 +1,15 @@
 (function (window) {
 
-
+    //constructor
 	function CustomCharacter() {
         this.Container_constructor();
 	}
-	function CustomCharacter(x,y,scaleX,scaleY,spriteSheet,frame){
-	    this.Container_constructor();
-	    this.initCustomCharacter(x,y,scaleX,scaleY,spriteSheet,frame);
-	}
 
-
+	//instance of class
 	var container = new createjs.extend(CustomCharacter, createjs.Container);
 
     //initialize Character
-	container.initCustomCharacter = function (x,y,scaleX,scaleY,spriteSheet,frame){
+	container.init = function (x,y,scaleX,scaleY,spriteSheet,frame){
         this.x = x;
         this.y = y;
         this.sprite = new createjs.Sprite(spriteSheet, frame);

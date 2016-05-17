@@ -1,11 +1,11 @@
 (function (window) {
 
 	//constructor
-	function Background(asset) {
+	function Background(preload) {
 		this.Container_constructor();
         this.spriteSheet = new createjs.SpriteSheet({
             framerate: 1,
-            images: [asset],
+            images: [preload.getResult("bg-2")],
             frames: {"width": 1280, "height": 720, "count": 1},
             // define two animations, run (loops, 1.5x speed) and jump (returns to run):
             animations: {

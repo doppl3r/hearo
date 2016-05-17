@@ -1,12 +1,9 @@
 (function (window) {
 
-    //constructors
-    function Chest(){
+    //constructor
+    function Chest(preload){
         this.Container_constructor();
-    }
-    function Chest(x,y,scaleX,scaleY,spriteSheet,frame){
-        this.Container_constructor();
-        this.addChest(x,y,scaleX,scaleY,spriteSheet,frame);
+        this.preload = preload;
     }
 
     //instance of class
@@ -24,6 +21,7 @@
         this.sprite.gotoAndStop(frame);
         this.addChild(this.sprite);
 	}
+
 	//public functions
     container.isClicked = function(){ return this.clicked; }
     container.click = function() { this.clicked=true; createjs.Sound.play("break"); }
@@ -31,7 +29,7 @@
     container.mouseOut = function() { this.sprite.alpha=1; }
     container.setText = function(text){
         if (this.children.length > 0) this.removeChild(this.customText);
-        this.customText = new CustomText(0,0,this.scaleX,this.scaleY,text);
+        this.customText = new CustomText(0,0,this.scaleX,this.scaleY,text,preload);
         this.addChild(this.customText);
     }
 

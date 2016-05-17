@@ -14,7 +14,7 @@ var KEYCODE_S = 83; //useful keycode
 var canvas; //Main canvas
 var stage; //Main display stage
 var manifest; //Main asset manifest
-var preload;
+var preload; //asset manager
 
 //var audio; //audio handler
 var background; //background class
@@ -25,18 +25,18 @@ var chestManager; //chestmanager class
 var scoreField; //score Field
 var loadingInterval = 0;
 
+//register key functions
+document.onkeydown = handleKeyDown;
+document.onkeyup = handleKeyUp;
+
 function init() {
     canvas = document.getElementById("gameCanvas");
-    canvas.getContext("2d").imageSmoothingEnabled = true;
-    canvas.getContext("2d").mozImageSmoothingEnabled = false;
-    canvas.getContext("2d").oImageSmoothingEnabled = false;
-    canvas.getContext("2d").webkitImageSmoothingEnabled = false;
-    canvas.getContext("2d").msImageSmoothingEnabled = false;
 
     stage = new createjs.Stage(canvas);
     stage.enableMouseOver(30);
     stage.update(); //update the stage to show text
 
+    //manage game assets
     manifest = [
         { id: "begin", src: "sounds/spawn.ogg" },
         { id: "break", src: "sounds/break.ogg" },
@@ -44,52 +44,36 @@ function init() {
         { id: "laser", src: "sounds/shot.ogg" },
         { id: "music", src: "sounds/music.ogg" },
         { id: "bg-1", src: "img/background-image1.png" },
-        { id: "bg-2", src: "img/background-image2.png" }
+        { id: "bg-2", src: "img/background-image2.png" },
+        { id: "chests", src: "img/chests.png" },
+        { id: "text", src: "img/text.png" },
+        { id: "player", src: "img/player.png" }
     ];
 
+    //load game assets
     preload = new createjs.LoadQueue(true);
     preload.installPlugin(createjs.Sound);
     preload.loadManifest(manifest);
-    preload.on("complete", function(){  });
-
-    //create audio handler
-    //audio = new Audio();
-
-    //finish loading
-    watchRestart();
-}
-
-function watchRestart() {
-    //watch for clicks
-    //stage.update(); //update the stage to show text
-    canvas.onclick = handleClick;
-}
-
-function handleClick() {
-    //prevent extra clicks and hide text
-    canvas.onclick = null;
-
-    // indicate the player is now on screen
-    createjs.Sound.play("begin");
-
-    restart();
+    preload.on("complete", function(){ restart(); });
 }
 
 //reset all game logic
 function restart() {
     //hide anything on stage and show the score
+    createjs.Sound.play("begin");
     stage.removeAllChildren();
 
     //create the background
-    background = new Background(preload.getResult("bg-2"));
+    background = new Background(preload);
     background.x = canvas.width / 2;
     background.y = canvas.height / 2;
 
     //create the player
-    player = new Player(canvas.width / 2, canvas.height / 2);
+    player = new Player(preload);
+    player.setXY(canvas.width / 2, canvas.height / 2);
 
     //create the chest manager
-    chestManager = new ChestManager();
+    chestManager = new ChestManager(preload);
     chestManager.addChest(640,100,1,1,"topClosed");
     chestManager.getLastChest(0).setText('a');
     chestManager.addChest(1100,360,1,1,"sideClosed");
@@ -116,7 +100,6 @@ function tick(event) {
     //call sub ticks
     background.tick(event);
     player.tick(event);
-    //chest.tick(event);
     chestManager.tick(event);
     stage.update(event);
 }

@@ -1,42 +1,25 @@
 (function (window) {
 
-	function CustomText(x,y,scaleX,scaleY,text) {
+    //constructor
+	function CustomText(x,y,scaleX,scaleY,text,preload) {
 	    this.Container_constructor();
-	    this.x = x;
-	    this.y = y;
-	    this.scaleX = scaleX;
-	    this.scaleY = scaleY;
-	    this.kerning = 32;
-	    this.setText(x,y,scaleX,scaleY,text);
-	}
-
-	//instance of class
-	var container = new createjs.extend(CustomText, createjs.Container);
-
-    //shared spritesheet properties
-    this.manifest = [{src: "text.png", id: "text"}];
-    //this.loader = new createjs.LoadQueue(false);
-    this.loader.addEventListener("complete", handleComplete);
-    this.loader.loadManifest(this.manifest, true, "img/");
-
-    //configure after loaded
-    function handleComplete() {
-        container.spriteSheet = new createjs.SpriteSheet({ //generated with Adobe Animate
+	    this.preload = preload;
+	    this.spriteSheet = new createjs.SpriteSheet({ //generated with Adobe Animate
             framerate: 0,
-            images: [this.loader.getResult("text")],
+            images: [this.preload.getResult("text")],
             frames: [[4,4,37,56,0,19.6,25.3],[45,4,35,60,0,19.6,27.3],[84,4,33,56,0,17.6,26.3],
-            [121,4,35,59,0,19.6,28.3],[160,4,31,55,0,18.6,25.3],[195,4,31,58,0,18.6,26.3],
-            [230,4,34,55,0,15.600000000000001,25.3],[4,68,33,54,0,18.6,25.3],[41,68,34,54,0,17.6,23.3],
-            [79,68,40,59,0,21.6,29.3],[123,68,33,56,0,17.6,26.3],[160,68,33,54,0,17.6,25.3],
-            [197,68,36,50,0,19.6,19.3],[237,68,33,53,0,16.6,24.3],[4,131,34,53,0,18.6,26.3],
-            [42,131,35,59,0,19.6,24.3],[81,131,32,55,0,15.600000000000001,23.3],[117,131,33,59,0,19.6,28.3],
-            [154,131,30,52,0,14.600000000000001,24.3],[188,131,34,55,0,17.6,24.3],[226,131,32,52,0,18.6,23.3],
-            [4,194,37,53,0,20.6,23.3],[45,194,39,55,0,21.6,24.3],[88,194,37,57,0,20.6,26.3],[129,194,38,53,0,21.6,24.3],
-            [171,194,33,52,0,17.6,25.3],[208,194,33,52,0,17.6,25.3],[4,255,33,51,0,18.6,23.3],
-            [41,255,30,49,0,15.600000000000001,22.3],[75,255,33,49,0,19.6,20.3],[112,255,33,48,0,19.6,21.3],
-            [149,255,31,49,0,16.6,22.3],[184,255,31,50,0,16.6,22.3],[219,255,30,51,0,15.600000000000001,23.3],
-            [4,310,28,50,0,15.600000000000001,22.3],[36,310,33,52,0,18.6,23.3],
-            [73,310,27,50,0,14.600000000000001,21.3]],
+                    [121,4,35,59,0,19.6,28.3],[160,4,31,55,0,18.6,25.3],[195,4,31,58,0,18.6,26.3],
+                    [230,4,34,55,0,15.600000000000001,25.3],[4,68,33,54,0,18.6,25.3],[41,68,34,54,0,17.6,23.3],
+                    [79,68,40,59,0,21.6,29.3],[123,68,33,56,0,17.6,26.3],[160,68,33,54,0,17.6,25.3],
+                    [197,68,36,50,0,19.6,19.3],[237,68,33,53,0,16.6,24.3],[4,131,34,53,0,18.6,26.3],
+                    [42,131,35,59,0,19.6,24.3],[81,131,32,55,0,15.600000000000001,23.3],[117,131,33,59,0,19.6,28.3],
+                    [154,131,30,52,0,14.600000000000001,24.3],[188,131,34,55,0,17.6,24.3],[226,131,32,52,0,18.6,23.3],
+                    [4,194,37,53,0,20.6,23.3],[45,194,39,55,0,21.6,24.3],[88,194,37,57,0,20.6,26.3],[129,194,38,53,0,21.6,24.3],
+                    [171,194,33,52,0,17.6,25.3],[208,194,33,52,0,17.6,25.3],[4,255,33,51,0,18.6,23.3],
+                    [41,255,30,49,0,15.600000000000001,22.3],[75,255,33,49,0,19.6,20.3],[112,255,33,48,0,19.6,21.3],
+                    [149,255,31,49,0,16.6,22.3],[184,255,31,50,0,16.6,22.3],[219,255,30,51,0,15.600000000000001,23.3],
+                    [4,310,28,50,0,15.600000000000001,22.3],[36,310,33,52,0,18.6,23.3],
+                    [73,310,27,50,0,14.600000000000001,21.3]],
             // define two animations, run (loops, 1.5x speed) and jump (returns to run):
             animations: {
                 //"run": [0, 1, "run"],
@@ -48,23 +31,33 @@
                 "_8": [36], "_9": [37]
             }
         });
-    }
+	    this.x = x;
+	    this.y = y;
+	    this.scaleX = scaleX;
+	    this.scaleY = scaleY;
+	    this.kerning = 32;
+	    this.setText(x,y,scaleX,scaleY,text);
+	}
+
+	//instance of class
+	var container = new createjs.extend(CustomText, createjs.Container);
 
     //update
 	container.tick = function (event) { }
+
+	//public functions
     container.setText = function (x,y,scaleX,scaleY,text){
         text=text.replace(" ","_");
         for (i = 0; i < text.length; i++){
             var tempChar = text.charAt(i).toLowerCase(); //only lowercase chars
             tempChar = !isNaN(tempChar) ? "_"+tempChar : tempChar; //allow numbers
-            var tempCustomCharacter = new CustomCharacter((i*this.kerning*scaleX),0,scaleX,scaleY,this.spriteSheet,tempChar);
+            var tempCustomCharacter = new CustomCharacter();
+            tempCustomCharacter.init((i*this.kerning*scaleX),0,scaleX,scaleY,this.spriteSheet,tempChar);
             this.addChild(tempCustomCharacter);
         }
         this.centerAlignText();
     }
-    container.removeChar = function(i){
-        this.removeChildAt(i);
-    }
+    container.removeChar = function(i){ this.removeChildAt(i); }
     container.centerAlignText = function() {
         //the first
         this.setBounds((-this.getBounds().width/2)-(this.getBounds().x)+2, //spritesheet was rendered with 4 padding
