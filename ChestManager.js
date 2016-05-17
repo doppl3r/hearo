@@ -32,7 +32,7 @@
 
     //public functions
     container.addChest = function (x,y,scaleX,scaleY,frame){
-        var tempChest = new Chest();
+        var tempChest = new Chest(this.preload);
         tempChest.addChest(x,y,scaleX,scaleY,this.spriteSheet,frame);
         tempChest.on("click", function(){ tempChest.click(); });
         tempChest.on("mouseover", function(){ tempChest.mouseOver(); });

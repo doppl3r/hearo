@@ -29,7 +29,7 @@
     container.mouseOut = function() { this.sprite.alpha=1; }
     container.setText = function(text){
         if (this.children.length > 0) this.removeChild(this.customText);
-        this.customText = new CustomText(0,0,this.scaleX,this.scaleY,text,preload);
+        this.customText = new CustomText(0,0,this.scaleX,this.scaleY,text,this.preload);
         this.addChild(this.customText);
     }
 

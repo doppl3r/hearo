@@ -13,9 +13,9 @@ var KEYCODE_S = 83; //useful keycode
 
 var canvas; //Main canvas
 var stage; //Main display stage
+var assetManager; //load progress screen
 var manifest; //Main asset manifest
-var preload; //asset manager
-var loadingScreen; //load progress screen
+//var preload; //asset manager
 var messageField; //load progress status
 var background; //background class
 var player; //player class
@@ -29,29 +29,12 @@ function init() {
     canvas = document.getElementById("gameCanvas");
     stage = new createjs.Stage(canvas);
     stage.enableMouseOver(30);
-    stage.update(); //update the stage to show text
+    assetManager = new AssetManager();
+    assetManager.init();
+    stage.addChild(assetManager);
 
-
-    //manage game assets
-    manifest = [
-        { id: "begin", src: "sounds/spawn.ogg" },
-        { id: "break", src: "sounds/break.ogg" },
-        { id: "death", src: "sounds/death.ogg" },
-        { id: "laser", src: "sounds/shot.ogg" },
-        { id: "music", src: "sounds/music.ogg" },
-        { id: "bg-1", src: "img/background-image1.png" },
-        { id: "bg-2", src: "img/background-image2.png" },
-        { id: "chests", src: "img/chests.png" },
-        { id: "text", src: "img/text.png" },
-        { id: "player", src: "img/player.png" }
-    ];
-
-    //load game assets
-    preload = new createjs.LoadQueue(true);
-    preload.installPlugin(createjs.Sound);
-    preload.loadManifest(manifest);
-    preload.on("complete", function(){ restart(); });
-    preload.on("progress", updateLoading);
+    assetManager.preload.on("complete", function(){ restart(); });
+    assetManager.preload.on("progress", function(){ assetManager.updateLoading(); stage.update(); });
 }
 
 //reset all game logic
@@ -61,18 +44,18 @@ function restart() {
     stage.removeAllChildren();
 
     //create the background
-    background = new Background(preload);
+    background = new Background(assetManager.preload);
     background.x = canvas.width / 2;
     background.y = canvas.height / 2;
 
     //create the player
-    player = new Player(preload);
+    player = new Player(assetManager.preload);
     player.setXY(canvas.width / 2, canvas.height / 2);
 
     //create the chest manager
-    chestManager = new ChestManager(preload);
+    chestManager = new ChestManager(assetManager.preload);
     chestManager.addChest(640,100,1,1,"topClosed");
-    chestManager.getLastChest(0).setText('a');
+    chestManager.getLastChest(0).setText('easy');
     chestManager.addChest(1100,360,1,1,"sideClosed");
     chestManager.getLastChest(0).setText('peazy');
     chestManager.addChest(640,620,1,1,"bottomClosed");
@@ -120,21 +103,5 @@ function handleKeyUp(e) {
         case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(0); break;
         case KEYCODE_W: case KEYCODE_UP: player.moveUp(0); break;
         case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(0); break;
-    }
-}
-
-function updateLoading() {
-    if (typeof messageField === 'undefined'){
-        messageField = new createjs.Text("Loading", "bold 24px Arial", "#666666");
-        messageField.maxWidth = 1000;
-        messageField.textAlign = "center";
-        messageField.textBaseline = "middle";
-        messageField.x = canvas.width / 2;
-        messageField.y = canvas.height / 2;
-        stage.addChild(messageField);
-    }
-    else {
-        messageField.text = "Loading " + (preload.progress * 100 | 0) + "%";
-        stage.update();
     }
 }
