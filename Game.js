@@ -57,11 +57,11 @@ function restart() {
     chestManager = new ChestManager(assetManager.preload);
     chestManager.addChest(640,100,1,1,"topClosed");
     chestManager.getLastChest(0).setText('mail');
-    chestManager.addChest(1100,360,1,1,"sideClosed");
+    chestManager.addChest(1100,360,-1,1,"sideClosed");
     chestManager.getLastChest(0).setText('bail');
     chestManager.addChest(640,620,1,1,"bottomClosed");
     chestManager.getLastChest(0).setText('tail');
-    chestManager.addChest(180,360,-1,1,"sideClosed");
+    chestManager.addChest(180,360,1,1,"sideClosed");
     chestManager.getLastChest(0).setText('rail');
 
     //ensure stage is blank and add the player
@@ -80,7 +80,7 @@ function restart() {
 function tick(event) {
     //call sub ticks
     background.tick(event);
-    player.tick(event);
+    player.tick(event, chestManager);
     chestManager.tick(event);
     stage.update(event);
 }

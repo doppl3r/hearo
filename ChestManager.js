@@ -7,13 +7,15 @@
 		this.spriteSheet = new createjs.SpriteSheet({
             framerate: 4,
             images: [this.preload.getResult("chests")],
-            frames: [[0,0,159,132,0,79.25,65.65],[159,0,193,107,0,98.25,40.650000000000006],[352,0,193,107,0,98.25,40.650000000000006],
-                    [545,0,113,147,0,56.5,73.4],[658,0,180,149,0,56.5,75.4],[838,0,180,149,0,56.5,75.4], //center bounds
-                    [0,149,116,97,0,57.25,47.75],[116,149,111,94,0,55.25,44.75],[227,149,111,94,0,55.25,44.75]],
+            frames: [
+                [4,4,157,131,0,78.25,65.65],[4,139,193,106,0,98.25,40.650000000000006],[4,249,193,106,0,98.25,40.650000000000006],
+                [4,359,113,147,0,56.5,73.4],[4,510,179,149,0,122.5,75.4],[4,663,179,149,0,122.5,75.4],
+                [4,816,115,95,0,57.25,47.75],[123,816,110,93,0,55.25,45.75],[4,915,110,93,0,55.25,45.75]
+            ],
             animations: {
-                topClosed: [6], topOpenReward: [7], topOpenNothing: [8],
+                bottomClosed: [0], bottomOpenReward: [1], bottomOpenNothing: [2],
                 sideClosed: [3], sideOpenReward: [4], sideOpenNothing: [5],
-                bottomClosed: [0], bottomOpenReward: [1], bottomOpenNothing: [2]
+                topClosed: [6], topOpenReward: [7], topOpenNothing: [8]
             }
         });
     }

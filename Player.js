@@ -24,11 +24,21 @@
 	var container = createjs.extend(Player, createjs.Container);
 
     //update
-	container.tick = function (event) {
+	container.tick = function (event, chestManager) {
         if (this.left) this.x -= 10;
         else if (this.right) this.x += 10;
         if (this.up) this.y -= 10;
         else if (this.down) this.y += 10;
+
+        var tempChest;
+        for (i=0; i<chestManager.children.length; i++){
+            tempChest = chestManager.getChildAt(i);
+            //console.log((this.x - (this.sprite.getBounds().width/2)+", "+(tempChest.x + tempChest.getBounds().x)));
+            if (this.checkCollision(this, tempChest) && !tempChest.isClicked()){
+                tempChest.click();
+                this.sprite.gotoAndPlay("attack");
+            }
+        }
 	}
 
 	//public variables
@@ -38,6 +48,11 @@
     container.moveLeft = function(pressed) { this.sprite.scaleX = -1; this.left = pressed ? true : false; }
     container.attack = function(pressed) { if (pressed) this.sprite.gotoAndPlay("attack"); }
     container.setXY = function(x,y) { this.x = x; this.y = y; }
-
+    container.checkCollision = function(b1,b2){
+        if (Math.abs((b2.x + (b2.getBounds().x)*b2.scaleX) - (b1.x + b1.getBounds().x)) < (b2.getBounds().width) &&
+            Math.abs((b2.y + (b2.getBounds().y)*b2.scaleY) - (b1.y + b1.getBounds().y)) < (b2.getBounds().height)){
+            return true;
+        }
+    }
 	window.Player = createjs.promote(Player, "Container");
 }(window));

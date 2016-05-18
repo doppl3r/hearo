@@ -4,6 +4,7 @@
     function Chest(preload){
         this.Container_constructor();
         this.preload = preload;
+        this.touchable = true;
     }
 
     //instance of class
