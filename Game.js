@@ -93,7 +93,7 @@ function handleKeyDown(e) {
         case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(1); break;
         case KEYCODE_W: case KEYCODE_UP: player.moveUp(1); break;
         case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(1); break;
-        case KEYCODE_ENTER: if (canvas.onclick == handleClick) { handleClick(); } break;
+        case KEYCODE_SPACE: player.attack(1); break;
     }
 }
 
@@ -104,5 +104,6 @@ function handleKeyUp(e) {
         case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(0); break;
         case KEYCODE_W: case KEYCODE_UP: player.moveUp(0); break;
         case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(0); break;
+        case KEYCODE_SPACE: player.attack(0); break;
     }
 }

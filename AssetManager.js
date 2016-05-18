@@ -22,6 +22,7 @@
             { id: "chests", src: "img/chests.png" },
             { id: "text", src: "img/text.png" },
             { id: "player", src: "img/player.png" },
+            { id: "win", src: "sounds/win.wav" },
             { id: "bail", src: "sounds/words/bail.wav" },
             { id: "bar", src: "sounds/words/bar.wav" },
             { id: "beer", src: "sounds/words/beer.wav" },

@@ -27,6 +27,7 @@
     container.click = function() {
         if (!this.clicked){
             this.clicked=true;
+            createjs.Sound.play("win", {pan:0});
             this.sprite.gotoAndStop(this.sprite._currentFrame+1);
             this.resetMouse();
         }
