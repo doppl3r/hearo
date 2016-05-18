@@ -5,14 +5,15 @@
 		this.Container_constructor();
 		this.preload = preload;
 		this.spriteSheet = new createjs.SpriteSheet({
-            framerate: 4,
+            framerate: 8,
             images: [this.preload.getResult("player")],
             frames: [[4,4,167,253,0,83.4,126.65],[175,4,168,252,0,78.4,125.65],[4,261,168,245,0,75.4,117.65],
-                    [176,261,183,315,0,73.4,187.65],[4,580,258,233,0,21.400000000000006,93.65]], //center bounds
+                    [176,261,183,315,0,73.4,187.65],[4,580,155,317,0,64.4,185.65],
+                    [163,580,258,233,0,45.400000000000006,93.65]], //center bounds
             // define two animations, run (loops, 1.5x speed) and jump (returns to run):
             animations: {
                 idle: { frames: [0,1,2,1] },
-                attack: { frames: [3,4,3,4,3,4], next: "idle" }
+                attack: { frames: [3,4,5,5], next: "idle" }
             }
         });
         this.sprite = new createjs.Sprite(this.spriteSheet, "idle");

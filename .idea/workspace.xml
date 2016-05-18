@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2de8d640-2637-4060-9268-605471524733" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/break.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/break.ogg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/death.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/death.ogg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/music.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/music.ogg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/shot.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/shot.ogg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/spawn.mp3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/spawn.ogg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/artwork/treasure-checker.fla" afterPath="$PROJECT_DIR$/artwork/treasure-checker.fla" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/player.png" afterPath="$PROJECT_DIR$/img/player.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AssetManager.js" afterPath="$PROJECT_DIR$/AssetManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chest.js" afterPath="$PROJECT_DIR$/Chest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.js" afterPath="$PROJECT_DIR$/Game.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Player.js" afterPath="$PROJECT_DIR$/Player.js" />
     </list>
     <ignored path="treasure-checker.iws" />
@@ -54,7 +41,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Game.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Game.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Game.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="587">
@@ -74,7 +61,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Chest.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Chest.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Chest.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="493">
@@ -89,16 +76,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="85">
                   <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="player.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/artwork/player.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="247" selection-start-line="4" selection-start-column="83" selection-end-line="4" selection-end-column="247" />
                   <folding />
                 </state>
               </provider>
@@ -121,8 +98,8 @@
           <file leaf-file-name="Player.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Player.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+                <state relative-caret-position="378">
+                  <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -159,6 +136,7 @@
         <option value="$PROJECT_DIR$/AssetManager.js" />
         <option value="$PROJECT_DIR$/Chest.js" />
         <option value="$PROJECT_DIR$/Game.js" />
+        <option value="$PROJECT_DIR$/artwork/player.js" />
         <option value="$PROJECT_DIR$/Player.js" />
       </list>
     </option>
@@ -575,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1463528701611</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update player animation">
+      <created>1463533079475</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1463533079475</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -634,7 +619,8 @@
     <MESSAGE value="introduce loading status" />
     <MESSAGE value="polish upgrade screen" />
     <MESSAGE value="adjust animation interaction" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust animation interaction" />
+    <MESSAGE value="update player animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="update player animation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -803,22 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CustomText.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/artwork/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="247" selection-start-line="4" selection-start-column="83" selection-end-line="4" selection-end-column="247" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AssetManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -835,6 +805,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CustomText.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/artwork/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Chest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -845,16 +839,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+        <state relative-caret-position="378">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
