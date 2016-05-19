@@ -34,7 +34,10 @@
         }
     }
     container.mouseOver = function() {
-        if (!this.clicked) this.cursor="pointer";
+        if (!this.clicked){
+            this.sprite.alpha=.25;
+            this.cursor="pointer";
+        }
     }
     container.mouseOut = function() { this.resetMouse(); }
     container.setText = function(text){

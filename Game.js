@@ -93,10 +93,10 @@ function tick(event) {
 function handleKeyDown(e) {
     if (!e) { var e = window.event; } //cross browser issues exist
     switch (e.keyCode) {
-        case KEYCODE_A: case KEYCODE_LEFT: player.moveLeft(1); break;
-        case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(1); break;
-        case KEYCODE_W: case KEYCODE_UP: player.moveUp(1); break;
-        case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(1); break;
+        case KEYCODE_A: case KEYCODE_LEFT: player.moveLeft(true); break;
+        case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(true); break;
+        case KEYCODE_W: case KEYCODE_UP: player.moveUp(true); break;
+        case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(true); break;
         //case KEYCODE_SPACE: player.attack(1); break;
     }
 }
@@ -104,10 +104,10 @@ function handleKeyDown(e) {
 function handleKeyUp(e) {
     if (!e) { var e = window.event; } //cross browser issues exist
     switch (e.keyCode) {
-        case KEYCODE_A: case KEYCODE_LEFT: player.moveLeft(0); break;
-        case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(0); break;
-        case KEYCODE_W: case KEYCODE_UP: player.moveUp(0); break;
-        case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(0); break;
+        case KEYCODE_A: case KEYCODE_LEFT: player.moveLeft(false); break;
+        case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(false); break;
+        case KEYCODE_W: case KEYCODE_UP: player.moveUp(false); break;
+        case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(false); break;
         //case KEYCODE_SPACE: player.attack(0); break;
     }
 }
