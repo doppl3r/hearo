@@ -20,6 +20,7 @@ var messageField; //load progress status
 var background; //background class
 var player; //player class
 var chestManager; //chestmanager class
+var selector; //selector icon
 
 //register key functions
 document.onkeydown = handleKeyDown;
@@ -32,8 +33,8 @@ function init() {
     assetManager = new AssetManager();
     assetManager.init();
     stage.addChild(assetManager);
-    stage.on("click", function(event){ player.navigate(event); });
-    stage.on("pressmove", function(event){ player.navigate(event); });
+    stage.on("click", function(event){ player.navigate(event); selector.animateAt(event); });
+    stage.on("pressmove", function(event){ player.navigate(event); selector.animateAt(event); });
 
     assetManager.preload.on("complete", function(){ restart(); });
     assetManager.preload.on("progress", function(){ assetManager.updateLoading(); stage.update(); });
@@ -53,6 +54,8 @@ function restart() {
     player = new Player(assetManager.preload);
     player.setXY(canvas.width / 2, canvas.height / 2);
 
+    //create the selector
+    selector = new Selector(assetManager.preload);
 
     createjs.Sound.play("rail", {pan:1});
     createjs.Sound.play("bail", {pan:-1});
@@ -72,6 +75,7 @@ function restart() {
     stage.clear();
     stage.addChild(background);
     stage.addChild(chestManager);
+    stage.addChild(selector);
     stage.addChild(player);
 
     //start game timer

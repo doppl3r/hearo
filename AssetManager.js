@@ -22,6 +22,7 @@
             { id: "chests", src: "img/chests.png" },
             { id: "text", src: "img/text.png" },
             { id: "player", src: "img/player.png" },
+            { id: "selector", src: "img/selector.png" },
             { id: "win", src: "sounds/win.wav" },
             { id: "sword", src: "sounds/sword.wav" },
             { id: "sword-low", src: "sounds/sword-low.wav" },
