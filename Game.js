@@ -67,8 +67,8 @@ function restart() {
     //ensure stage is blank and add the player
     stage.clear();
     stage.addChild(background);
-    stage.addChild(player);
     stage.addChild(chestManager);
+    stage.addChild(player);
 
     //start game timer
     if (!createjs.Ticker.hasEventListener("tick")) {
