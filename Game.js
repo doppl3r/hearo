@@ -28,11 +28,12 @@ document.onkeyup = handleKeyUp;
 function init() {
     canvas = document.getElementById("gameCanvas");
     stage = new createjs.Stage(canvas);
-    stage.enableMouseOver(30);
+    stage.enableMouseOver(60);
     assetManager = new AssetManager();
     assetManager.init();
     stage.addChild(assetManager);
     stage.on("click", function(event){ player.navigate(event); });
+    stage.on("pressmove", function(event){ player.navigate(event); });
 
     assetManager.preload.on("complete", function(){ restart(); });
     assetManager.preload.on("progress", function(){ assetManager.updateLoading(); stage.update(); });
