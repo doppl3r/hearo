@@ -13,9 +13,9 @@
                 [4,816,115,95,0,57.25,47.75],[123,816,110,93,0,55.25,45.75],[4,915,110,93,0,55.25,45.75]
             ],
             animations: {
-                bottomClosed: [0], bottomOpenReward: [1], bottomOpenNothing: [2],
-                sideClosed: [3], sideOpenReward: [4], sideOpenNothing: [5],
-                topClosed: [6], topOpenReward: [7], topOpenNothing: [8]
+                bottomClosed: [0], bottomOpenReward: { frames: [0,1], next: false }, bottomOpenNothing: [2],
+                sideClosed: [3], sideOpenReward: { frames: [3,4], next: false }, sideOpenNothing: [5],
+                topClosed: [6], topOpenReward: { frames: [6,7], next: false }, topOpenNothing: [8]
             }
         });
     }
@@ -36,7 +36,7 @@
     container.addChest = function (x,y,scaleX,scaleY,frame){
         var tempChest = new Chest(this.preload);
         tempChest.addChest(x,y,scaleX,scaleY,this.spriteSheet,frame);
-        tempChest.on("click", function(){ tempChest.click(); });
+        //tempChest.on("click", function(){ tempChest.click(); });
         tempChest.on("mouseover", function(){ tempChest.mouseOver(); });
         tempChest.on("mouseout", function(){ tempChest.mouseOut(); });
         this.addChild(tempChest); //add to stage

@@ -32,6 +32,7 @@ function init() {
     assetManager = new AssetManager();
     assetManager.init();
     stage.addChild(assetManager);
+    stage.on("click", function(event){ player.navigate(event); });
 
     assetManager.preload.on("complete", function(){ restart(); });
     assetManager.preload.on("progress", function(){ assetManager.updateLoading(); stage.update(); });
@@ -40,8 +41,6 @@ function init() {
 //reset all game logic
 function restart() {
     //hide anything on stage and show the score
-    createjs.Sound.play("rail", {pan:1});
-    createjs.Sound.play("bail", {pan:-1});
     stage.removeAllChildren();
 
     //create the background
@@ -52,6 +51,10 @@ function restart() {
     //create the player
     player = new Player(assetManager.preload);
     player.setXY(canvas.width / 2, canvas.height / 2);
+
+
+    createjs.Sound.play("rail", {pan:1});
+    createjs.Sound.play("bail", {pan:-1});
 
     //create the chest manager
     chestManager = new ChestManager(assetManager.preload);
@@ -93,7 +96,7 @@ function handleKeyDown(e) {
         case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(1); break;
         case KEYCODE_W: case KEYCODE_UP: player.moveUp(1); break;
         case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(1); break;
-        case KEYCODE_SPACE: player.attack(1); break;
+        //case KEYCODE_SPACE: player.attack(1); break;
     }
 }
 
@@ -104,6 +107,6 @@ function handleKeyUp(e) {
         case KEYCODE_D: case KEYCODE_RIGHT: player.moveRight(0); break;
         case KEYCODE_W: case KEYCODE_UP: player.moveUp(0); break;
         case KEYCODE_S: case KEYCODE_DOWN: player.moveDown(0); break;
-        case KEYCODE_SPACE: player.attack(0); break;
+        //case KEYCODE_SPACE: player.attack(0); break;
     }
 }

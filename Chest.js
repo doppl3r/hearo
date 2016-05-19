@@ -4,7 +4,6 @@
     function Chest(preload){
         this.Container_constructor();
         this.preload = preload;
-        this.touchable = true;
     }
 
     //instance of class
@@ -28,8 +27,9 @@
     container.click = function() {
         if (!this.clicked){
             this.clicked=true;
-            createjs.Sound.play("win", {pan:0});
-            this.sprite.gotoAndStop(this.sprite._currentFrame+1);
+            createjs.Sound.play("sword-low", {pan:0});
+            createjs.Sound.play("chest-open", {pan:0});
+            this.sprite.gotoAndPlay(this.sprite.spriteSheet.animations[this.sprite._currentFrame+1]);
             this.resetMouse();
         }
     }

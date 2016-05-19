@@ -16,9 +16,9 @@
                 attack: { frames: [3,4,5,5], next: "idle" }
             }
         });
-
         this.sprite = new createjs.Sprite(this.spriteSheet, "idle");
         this.addChild(this.sprite);
+        this.speed = 10;
 	}
 
 	//instance of class
@@ -26,14 +26,30 @@
 
     //update
 	container.tick = function (event, chestManager) {
-        if (this.left) this.x -= 10;
-        else if (this.right) this.x += 10;
-        if (this.up) this.y -= 10;
-        else if (this.down) this.y += 10;
+	    //move player if target is not in reach
+	    if (this.target){
+	        if (Math.abs(this.x - this.targetX) >= this.speed ||
+                Math.abs(this.y - this.targetY) >= this.speed){
+                this.left = this.x >= this.targetX + this.speed * this.directionX;
+                this.right = this.x < this.targetX - this.speed * this.directionX;
+                this.up = this.y >= this.targetY + this.speed * this.directionY;
+                this.down = this.y < this.targetY - this.speed * this.directionY;
 
-        var tempChest;
+                if (this.left) this.scaleX = -1;
+                else this.scaleX = 1;
+            }
+            else { this.left=this.right=this.up=this.down=this.target=false; } //reset when reached target
+	    }
+
+
+        //check key input
+        if (this.left) this.x += this.speed * this.directionX;
+        else if (this.right) this.x += this.speed * this.directionX;
+        if (this.up) this.y += this.speed * this.directionY;
+        else if (this.down) this.y += this.speed * this.directionY;
 
         //check collision using 'ndgmr.Collision.js' provided by Olaf Horstmann
+        var tempChest;
         for (i=0; i<chestManager.children.length; i++){
             tempChest = chestManager.getChildAt(i); //get temporary index
             if (ndgmr.checkRectCollision(this, tempChest)){
@@ -46,12 +62,19 @@
 	}
 
 	//public variables
-    container.moveUp = function(pressed) { this.up = pressed ? true : false; }
-    container.moveRight = function(pressed) { this.sprite.scaleX = 1; this.right = pressed ? true : false; }
-    container.moveDown = function(pressed) { this.down = pressed ? true : false; }
-    container.moveLeft = function(pressed) { this.sprite.scaleX = -1; this.left = pressed ? true : false; }
+    container.moveUp = function(pressed) { this.up = pressed ? true : false; this.directionY = -1; }
+    container.moveRight = function(pressed) { this.sprite.scaleX = 1; this.right = pressed ? true : false; this.directionX = 1; }
+    container.moveDown = function(pressed) { this.down = pressed ? true : false; this.directionY = 1; }
+    container.moveLeft = function(pressed) { this.sprite.scaleX = -1; this.left = pressed ? true : false; this.directionX = -1; }
     container.attack = function(pressed) { if (pressed) this.sprite.gotoAndPlay("attack"); }
     container.setXY = function(x,y) { this.x = x; this.y = y; }
-
+    container.navigate = function(event) {
+        this.target = true;
+        this.targetX = event.stageX;
+        this.targetY = event.stageY;
+        this.distance = Math.sqrt(Math.pow(this.targetX - this.x,2)+Math.pow(this.targetY - this.y,2));
+        this.directionX = (this.targetX - this.x) / this.distance;
+        this.directionY = (this.targetY - this.y) / this.distance;
+    }
 	window.Player = createjs.promote(Player, "Container");
 }(window));
