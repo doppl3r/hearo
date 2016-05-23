@@ -7,7 +7,9 @@
 		this.spriteSheet = new createjs.SpriteSheet({
             framerate: 8,
             images: [this.preload.getResult("player")],
-            frames: [[4,4,167,253,0,83.65,126.65],[175,4,168,252,0,78.65,125.65],[347,4,168,245,0,75.65,117.65],[519,4,183,315,0,73.65,187.65],[706,4,155,317,0,64.65,185.65],[4,325,258,233,0,45.650000000000006,93.65],[266,325,171,251,0,83.65,130.65],[441,325,167,253,0,88.65,120.65]],
+            frames: [[4,4,166,253,0,70.2,224.95],[174,4,168,251,0,66.2,223.95],[346,4,168,245,0,63.2,215.95],
+                    [518,4,183,314,0,61.2,285.95],[705,4,155,317,0,52.2,283.95],[4,325,258,234,0,32.2,192.95],
+                    [266,325,170,250,0,70.2,228.95],[440,325,167,254,0,76.2,219.95]],
             // define two animations, run (loops, 1.5x speed) and jump (returns to run):
             animations: {
                 idle: { frames: [0,1,2,1] },
@@ -16,6 +18,7 @@
             }
         });
         this.sprite = new createjs.Sprite(this.spriteSheet, "idle");
+        this.sprite.y += 32;
         this.addChild(this.sprite);
         this.speed = 10;
         this.forceAllKeysUp();
@@ -42,16 +45,19 @@
                 else this.scaleX = 1;
             }
             else {
-                this.left=this.right=this.up=this.down=this.target=false;
+                this.forceAllKeysUp();
                 this.enableRunAnimation(false);
             } //reset when reached target
 	    }
 
         //check key input
-        if (this.left) this.x += this.speed * this.directionX;
-        else if (this.right) this.x += this.speed * this.directionX;
-        if (this.up) this.y += this.speed * this.directionY;
-        else if (this.down) this.y += this.speed * this.directionY;
+        if (this.sprite.currentAnimation != "attack") { //disable movement while attacking
+            if (this.left) this.x += this.speed * this.directionX;
+            else if (this.right) this.x += this.speed * this.directionX;
+            if (this.up) this.y += this.speed * this.directionY;
+            else if (this.down) this.y += this.speed * this.directionY;
+        }
+        else this.forceAllKeysUp();
 
         //check collision using 'ndgmr.Collision.js' provided by Olaf Horstmann
         var tempChest;
@@ -60,7 +66,6 @@
             if (ndgmr.checkRectCollision(this, tempChest)){
                 if (!tempChest.isClicked()){
                     // TODO Force stop left and right action
-                    this.forceAllKeysUp();
                     tempChest.click();
                     this.sprite.gotoAndPlay("attack");
                 }
@@ -83,8 +88,16 @@
         this.directionY = (this.targetY - this.y) / this.distance;
     }
     container.enableRunAnimation = function(pressed){
-        if (pressed){ if (this.sprite.currentAnimation == "idle") this.sprite.gotoAndPlay("run"); }
-        else { if (this.sprite.currentAnimation == "run" && this.allKeysUp()) { this.sprite.gotoAndPlay("idle"); } }
+        if (pressed){
+            if (this.sprite.currentAnimation == "idle") this.sprite.gotoAndPlay("run");
+        }
+        else {
+            this.targetX = this.x; //interrupt target
+            this.targetY = this.y;
+            if (this.sprite.currentAnimation == "run" && this.allKeysUp()) {
+                this.sprite.gotoAndPlay("idle");
+            }
+        }
     }
     container.allKeysUp = function() { return this.left==this.right==this.up==this.down; }
     container.forceAllKeysUp = function() { this.left=this.right=this.up=this.down=this.target=false; }

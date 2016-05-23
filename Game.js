@@ -34,7 +34,6 @@ function init() {
     assetManager.init();
     stage.addChild(assetManager);
     stage.on("click", function(event){ player.navigate(event); selector.animateAt(event); });
-    stage.on("pressmove", function(event){ player.navigate(event); selector.animateAt(event); });
 
     assetManager.preload.on("complete", function(){ restart(); });
     assetManager.preload.on("progress", function(){ assetManager.updateLoading(); stage.update(); });
@@ -42,6 +41,7 @@ function init() {
 
 //reset all game logic
 function restart() {
+    createjs.Sound.muted = true;
     //hide anything on stage and show the score
     stage.removeAllChildren();
 
