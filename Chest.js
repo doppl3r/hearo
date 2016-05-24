@@ -26,6 +26,7 @@
     container.isClicked = function(){ return this.clicked; }
     container.click = function() {
         if (!this.clicked){
+            window.Game.levelManager.setDelay(60); //1 second delay
             this.clicked=true;
             createjs.Sound.play("sword-low", {pan:0});
             createjs.Sound.play("chest-open", {pan:0});

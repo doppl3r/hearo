@@ -39,7 +39,8 @@
         //call sub ticks
         Game.prototype.background.tick(event);
         Game.prototype.player.tick(event, Game.prototype.chestManager);
-        if (Game.prototype.chestManager.tick(event)) console.log('open');
+        Game.prototype.chestManager.tick(event)
+        Game.prototype.levelManager.tick(event);
         stage.update(event);
     }
     //allow for WASD and arrow control scheme
@@ -68,30 +69,16 @@
         stage.removeAllChildren();
 
         //create the background
-        this.background = new Background(this.assetManager.preload);
+        if (this.background == null) this.background = new Background(this.assetManager.preload);
         this.background.x = canvas.width / 2;
         this.background.y = canvas.height / 2;
-
         //create the player
-        this.player = new Player(this.assetManager.preload);
+        if (this.player == null) this.player = new Player(this.assetManager.preload);
         this.player.setXY(canvas.width / 2, (canvas.height / 2)+32);
-
         //create the selector
-        this.selector = new Selector(this.assetManager.preload);
-
-        createjs.Sound.play("rail", {pan:1});
-        createjs.Sound.play("bail", {pan:-1});
-
+        if (this.selector == null) this.selector = new Selector(this.assetManager.preload);
         //create the chest manager
-        this.chestManager = new ChestManager(this.assetManager.preload);
-        this.chestManager.addChest(640,100,1,1,"topClosed");
-        this.chestManager.getLastChest(0).setText('mail');
-        this.chestManager.addChest(1100,360,-1,1,"sideClosed");
-        this.chestManager.getLastChest(0).setText('bail');
-        this.chestManager.addChest(640,620,1,1,"bottomClosed");
-        this.chestManager.getLastChest(0).setText('tail');
-        this.chestManager.addChest(180,360,1,1,"sideClosed");
-        this.chestManager.getLastChest(0).setText('rail');
+        if (this.chestManager == null) this.chestManager = new ChestManager(this.assetManager.preload);
 
         //ensure stage is blank and add the player
         stage.clear();
@@ -105,6 +92,8 @@
             createjs.Ticker.addEventListener("tick", tick);
             createjs.Ticker.setFPS(60);
         }
+
+        this.levelManager.createLevel();
     }
 
     //create prototype of self

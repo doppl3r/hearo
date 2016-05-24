@@ -27,7 +27,6 @@
 	container.tick = function (event) {
         for (i=0; i<this.children.length; i++){
             if (this.getChildAt(i).isClicked()){
-                //this.removeChest(i);
                 return true;
             }
         }
@@ -47,6 +46,10 @@
         this.getChildAt(i).removeEventListener("mouseover");
         this.getChildAt(i).removeEventListener("mouseout");
         this.removeChildAt(i);
+    }
+    container.removeAllChests = function(){
+        var length = this.children.length;
+        for (i=length-1; i >= 0; i--){ this.removeChest(i); }
     }
     container.getChest = function(i){ return this.getChildAt(i); }
     container.getLastChest = function(){ return this.getChest(this.children.length-1); }
