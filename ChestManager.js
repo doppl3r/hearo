@@ -25,11 +25,12 @@
 
     //update
 	container.tick = function (event) {
-        /*for (i=0; i<this.children.length; i++){
+        for (i=0; i<this.children.length; i++){
             if (this.getChildAt(i).isClicked()){
-                this.removeChest(i);
+                //this.removeChest(i);
+                return true;
             }
-        }*/
+        }
     }
 
     //public functions

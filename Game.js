@@ -15,12 +15,12 @@ var canvas; //Main canvas
 var stage; //Main display stage
 var assetManager; //load progress screen
 var manifest; //Main asset manifest
-//var preload; //asset manager
 var messageField; //load progress status
 var background; //background class
 var player; //player class
 var chestManager; //chestmanager class
 var selector; //selector icon
+var levelManager; //level manager class
 
 //register key functions
 document.onkeydown = handleKeyDown;
@@ -35,13 +35,16 @@ function init() {
     stage.addChild(assetManager);
     stage.on("click", function(event){ player.navigate(event); selector.animateAt(event); });
 
+    //create level manager prototype from window object
+    levelManager = Object.create(LevelManager);
+
     assetManager.preload.on("complete", function(){ restart(); });
     assetManager.preload.on("progress", function(){ assetManager.updateLoading(); stage.update(); });
 }
 
 //reset all game logic
 function restart() {
-    createjs.Sound.muted = true;
+    //createjs.Sound.muted = true;
     //hide anything on stage and show the score
     stage.removeAllChildren();
 
@@ -52,7 +55,7 @@ function restart() {
 
     //create the player
     player = new Player(assetManager.preload);
-    player.setXY(canvas.width / 2, canvas.height / 2);
+    player.setXY(canvas.width / 2, (canvas.height / 2)+32);
 
     //create the selector
     selector = new Selector(assetManager.preload);
@@ -89,7 +92,7 @@ function tick(event) {
     //call sub ticks
     background.tick(event);
     player.tick(event, chestManager);
-    chestManager.tick(event);
+    if (chestManager.tick(event)) console.log('open');
     stage.update(event);
 }
 

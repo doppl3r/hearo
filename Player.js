@@ -18,7 +18,6 @@
             }
         });
         this.sprite = new createjs.Sprite(this.spriteSheet, "idle");
-        this.sprite.y += 32;
         this.addChild(this.sprite);
         this.speed = 10;
         this.forceAllKeysUp();
