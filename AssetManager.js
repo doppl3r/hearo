@@ -19,7 +19,8 @@
         //load game assets
         this.preload = new createjs.LoadQueue(true);
         this.preload.installPlugin(createjs.Sound);
-        this.preload.loadManifest("manifest.json");
+        this.preload.loadManifest({ id: "manifest", src:"manifest.json" });
+        this.preload.loadManifest({ id: "words", src:"words.json" });
 
         //draw background of progress bar
         this.bar1 = new createjs.Shape();
