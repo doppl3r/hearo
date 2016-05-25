@@ -24,6 +24,7 @@
         canvas = document.getElementById("gameCanvas");
         stage = new createjs.Stage(canvas);
         stage.enableMouseOver(60);
+
         this.assetManager = new AssetManager(document.getElementById("gameCanvas"));
         this.assetManager.init();
         stage.addChild(this.assetManager);
@@ -65,19 +66,16 @@
 
     //public functions
     Game.prototype.restart = function() {
-        //createjs.Sound.muted = true;
+        //clean up stage
         stage.removeAllChildren();
 
-        //create the background
+        //initialize game objects
         if (this.background == null) this.background = new Background(this.assetManager.preload);
         this.background.x = canvas.width / 2;
         this.background.y = canvas.height / 2;
-        //create the player
         if (this.player == null) this.player = new Player(this.assetManager.preload);
-        this.player.setXY(canvas.width / 2, (canvas.height / 2)+32);
-        //create the selector
+        this.player.setXY(canvas.width / 2, (canvas.height / 2)+64);
         if (this.selector == null) this.selector = new Selector(this.assetManager.preload);
-        //create the chest manager
         if (this.chestManager == null) this.chestManager = new ChestManager(this.assetManager.preload);
 
         //ensure stage is blank and add the player

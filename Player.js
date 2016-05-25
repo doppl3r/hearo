@@ -64,7 +64,6 @@
             tempChest = chestManager.getChildAt(i); //get temporary index
             if (ndgmr.checkRectCollision(this, tempChest)){
                 if (!tempChest.isClicked()){
-                    // TODO Force stop left and right action
                     tempChest.click();
                     this.sprite.gotoAndPlay("attack");
                 }
