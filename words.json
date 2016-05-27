@@ -138,6 +138,181 @@
     { "id": "lit", "src": "sounds/words/lit.wav", "group": "K-D31-34" },
     { "id": "mix", "src": "sounds/words/mix.wav", "group": "K-D31-34" },
     { "id": "pit", "src": "sounds/words/pit.wav", "group": "K-D31-34" },
-    { "id": "six", "src": "sounds/words/six.wav", "group": "K-D31-34" }
+    { "id": "six", "src": "sounds/words/six.wav", "group": "K-D31-34" },
+
+    { "id": "ask", "src": "sounds/words/ask.wav", "group": "K-E1-4" },
+    { "id": "bask", "src": "sounds/words/bask.wav", "group": "K-E1-4" },
+    { "id": "mask", "src": "sounds/words/mask.wav", "group": "K-E1-4" },
+    { "id": "task", "src": "sounds/words/task.wav", "group": "K-E1-4" },
+
+    { "id": "had", "src": "sounds/words/had.wav", "group": "K-E6-9" },
+    { "id": "hat", "src": "sounds/words/hat.wav", "group": "K-E6-9" },
+    { "id": "have", "src": "sounds/words/have.wav", "group": "K-E6-9" },
+    { "id": "mad", "src": "sounds/words/mad.wav", "group": "K-E6-9" },
+
+    { "id": "bent", "src": "sounds/words/bent.wav", "group": "K-E11-14" },
+    { "id": "dent", "src": "sounds/words/dent.wav", "group": "K-E11-14" },
+    { "id": "lent", "src": "sounds/words/lent.wav", "group": "K-E11-14" },
+    { "id": "tent", "src": "sounds/words/tent.wav", "group": "K-E11-14" },
+
+    { "id": "bee", "src": "sounds/words/bee.wav", "group": "K-E16-19" },
+    { "id": "beef", "src": "sounds/words/beef.wav", "group": "K-E16-19" },
+    { "id": "feet", "src": "sounds/words/feet.wav", "group": "K-E16-19" },
+    { "id": "meet", "src": "sounds/words/meet.wav", "group": "K-E16-19" },
+
+    { "id": "beep", "src": "sounds/words/beep.wav", "group": "K-E21-24" },
+    { "id": "deep", "src": "sounds/words/deep.wav", "group": "K-E21-24" },
+    { "id": "jeep", "src": "sounds/words/jeep.wav", "group": "K-E21-24" },
+    { "id": "peep", "src": "sounds/words/peep.wav", "group": "K-E21-24" },
+
+    { "id": "bad", "src": "sounds/words/bad.wav", "group": "K-E26-29" },
+    { "id": "ball", "src": "sounds/words/ball2.wav", "group": "K-E26-29" },
+    { "id": "bird", "src": "sounds/words/bird.wav", "group": "K-E26-29" },
+    { "id": "hat", "src": "sounds/words/hat2.wav", "group": "K-E26-29" },
+
+    { "id": "bun", "src": "sounds/words/bun.wav", "group": "K-E31-34" },
+    { "id": "fun", "src": "sounds/words/fun.wav", "group": "K-E31-34" },
+    { "id": "one", "src": "sounds/words/one.wav", "group": "K-E31-34" },
+    { "id": "run", "src": "sounds/words/run.wav", "group": "K-E31-34" },
+
+    { "id": "bell", "src": "sounds/words/bell.wav", "group": "K-F1-4" },
+    { "id": "fell", "src": "sounds/words/fell.wav", "group": "K-F1-4" },
+    { "id": "sell", "src": "sounds/words/sell.wav", "group": "K-F1-4" },
+    { "id": "well", "src": "sounds/words/well.wav", "group": "K-F1-4" },
+
+    { "id": "book", "src": "sounds/words/book.wav", "group": "K-F6-9" },
+    { "id": "cook", "src": "sounds/words/cook.wav", "group": "K-F6-9" },
+    { "id": "soot", "src": "sounds/words/soot.wav", "group": "K-F6-9" },
+    { "id": "took", "src": "sounds/words/took.wav", "group": "K-F6-9" },
+
+    { "id": "bold", "src": "sounds/words/bold.wav", "group": "K-F11-14" },
+    { "id": "cold", "src": "sounds/words/cold.wav", "group": "K-F11-14" },
+    { "id": "fold", "src": "sounds/words/fold.wav", "group": "K-F11-14" },
+    { "id": "hold", "src": "sounds/words/hold.wav", "group": "K-F11-14" },
+
+    { "id": "fold", "src": "sounds/words/fold2.wav", "group": "K-F16-19" },
+    { "id": "mold", "src": "sounds/words/mold.wav", "group": "K-F16-19" },
+    { "id": "sold", "src": "sounds/words/sold.wav", "group": "K-F16-19" },
+    { "id": "told", "src": "sounds/words/told.wav", "group": "K-F16-19" },
+
+    { "id": "bone", "src": "sounds/words/bone.wav", "group": "K-F21-24" },
+    { "id": "cone", "src": "sounds/words/cone.wav", "group": "K-F21-24" },
+    { "id": "lone", "src": "sounds/words/lone.wav", "group": "K-F21-24" },
+    { "id": "tone", "src": "sounds/words/tone.wav", "group": "K-F21-24" },
+
+    { "id": "game", "src": "sounds/words/game.wav", "group": "K-F26-29" },
+    { "id": "pain", "src": "sounds/words/pain.wav", "group": "K-F26-29" },
+    { "id": "plane", "src": "sounds/words/plane.wav", "group": "K-F26-29" },
+    { "id": "trane", "src": "sounds/words/trane.wav", "group": "K-F26-29" },
+
+    { "id": "one", "src": "sounds/words/one2.wav", "group": "K-F31-34" },
+    { "id": "pump", "src": "sounds/words/pump.wav", "group": "K-F31-34" },
+    { "id": "pun", "src": "sounds/words/pun.wav", "group": "K-F31-34" },
+    { "id": "pup", "src": "sounds/words/pup.wav", "group": "K-F31-34" },
+
+    { "id": "and", "src": "sounds/words/and.wav", "group": "K-G1-4" },
+    { "id": "band", "src": "sounds/words/band.wav", "group": "K-G1-4" },
+    { "id": "hand", "src": "sounds/words/hand.wav", "group": "K-G1-4" },
+    { "id": "land", "src": "sounds/words/land.wav", "group": "K-G1-4" },
+
+    { "id": "eat", "src": "sounds/words/eat.wav", "group": "K-G6-9" },
+    { "id": "heat", "src": "sounds/words/heat.wav", "group": "K-G6-9" },
+    { "id": "meat", "src": "sounds/words/meat.wav", "group": "K-G6-9" },
+    { "id": "seat", "src": "sounds/words/seat.wav", "group": "K-G6-9" },
+
+    { "id": "dust", "src": "sounds/words/dust.wav", "group": "K-G11-14" },
+    { "id": "gust", "src": "sounds/words/gust.wav", "group": "K-G11-14" },
+    { "id": "must", "src": "sounds/words/must.wav", "group": "K-G11-14" },
+    { "id": "rust", "src": "sounds/words/rust.wav", "group": "K-G11-14" },
+
+    { "id": "law", "src": "sounds/words/law2.wav", "group": "K-G16-19" },
+    { "id": "paw", "src": "sounds/words/paw2.wav", "group": "K-G16-19" },
+    { "id": "raw", "src": "sounds/words/raw2.wav", "group": "K-G16-19" },
+    { "id": "saw", "src": "sounds/words/saw2.wav", "group": "K-G16-19" },
+
+    { "id": "find", "src": "sounds/words/find.wav", "group": "K-G21-24" },
+    { "id": "hind", "src": "sounds/words/hind.wav", "group": "K-G21-24" },
+    { "id": "kind", "src": "sounds/words/kind.wav", "group": "K-G21-24" },
+    { "id": "mind", "src": "sounds/words/mind.wav", "group": "K-G21-24" },
+
+    { "id": "boo", "src": "sounds/words/boo.wav", "group": "K-G26-29" },
+    { "id": "moo", "src": "sounds/words/moo.wav", "group": "K-G26-29" },
+    { "id": "two", "src": "sounds/words/two.wav", "group": "K-G26-29" },
+    { "id": "zoo", "src": "sounds/words/zoo.wav", "group": "K-G26-29" },
+
+    { "id": "mall", "src": "sounds/words/mall2.wav", "group": "K-G31-34" },
+    { "id": "mine", "src": "sounds/words/mine.wav", "group": "K-G31-34" },
+    { "id": "mom", "src": "sounds/words/mom.wav", "group": "K-G31-34" },
+    { "id": "them", "src": "sounds/words/them.wav", "group": "K-G31-34" },
+
+    { "id": "car", "src": "sounds/words/car2.wav", "group": "K-H1-4" },
+    { "id": "cat", "src": "sounds/words/cat.wav", "group": "K-H1-4" },
+    { "id": "cone", "src": "sounds/words/cone2.wav", "group": "K-H1-4" },
+    { "id": "cow", "src": "sounds/words/cow2.wav", "group": "K-H1-4" },
+
+    { "id": "best", "src": "sounds/words/best.wav", "group": "K-H6-9" },
+    { "id": "pest", "src": "sounds/words/pest.wav", "group": "K-H6-9" },
+    { "id": "rest", "src": "sounds/words/rest.wav", "group": "K-H6-9" },
+    { "id": "test", "src": "sounds/words/test.wav", "group": "K-H6-9" },
+
+    { "id": "hide", "src": "sounds/words/hide.wav", "group": "K-H11-14" },
+    { "id": "hive", "src": "sounds/words/hive.wav", "group": "K-H11-14" },
+    { "id": "ride", "src": "sounds/words/ride.wav", "group": "K-H11-14" },
+    { "id": "wide", "src": "sounds/words/wide.wav", "group": "K-H11-14" },
+
+    { "id": "bump", "src": "sounds/words/bump2.wav", "group": "K-H16-19" },
+    { "id": "dump", "src": "sounds/words/dump.wav", "group": "K-H16-19" },
+    { "id": "hump", "src": "sounds/words/hump.wav", "group": "K-H16-19" },
+    { "id": "lump", "src": "sounds/words/lump2.wav", "group": "K-H16-19" },
+
+    { "id": "bowl", "src": "sounds/words/bowl.wav", "group": "K-H21-24" },
+    { "id": "boy", "src": "sounds/words/boy.wav", "group": "K-H21-24" },
+    { "id": "bus", "src": "sounds/words/bus.wav", "group": "K-H21-24" },
+    { "id": "toy", "src": "sounds/words/toy.wav", "group": "K-H21-24" },
+
+    { "id": "duck", "src": "sounds/words/duck.wav", "group": "K-H26-29" },
+    { "id": "fork", "src": "sounds/words/fork.wav", "group": "K-H26-29" },
+    { "id": "luck", "src": "sounds/words/luck.wav", "group": "K-H26-29" },
+    { "id": "truck", "src": "sounds/words/truck.wav", "group": "K-H26-29" },
+
+    { "id": "him", "src": "sounds/words/him2.wav", "group": "K-H31-34" },
+    { "id": "hit", "src": "sounds/words/hit2.wav", "group": "K-H31-34" },
+    { "id": "them", "src": "sounds/words/them2.wav", "group": "K-H31-34" },
+    { "id": "then", "src": "sounds/words/then.wav", "group": "K-H31-34" },
+
+    { "id": "bed", "src": "sounds/words/bed.wav", "group": "K-I1-4" },
+    { "id": "fed", "src": "sounds/words/fed.wav", "group": "K-I1-4" },
+    { "id": "red", "src": "sounds/words/red.wav", "group": "K-I1-4" },
+    { "id": "said", "src": "sounds/words/said.wav", "group": "K-I1-4" },
+
+    { "id": "baby", "src": "sounds/words/baby.wav", "group": "K-I6-9" },
+    { "id": "boat", "src": "sounds/words/boat.wav", "group": "K-I6-9" },
+    { "id": "bold", "src": "sounds/words/bold2.wav", "group": "K-I6-9" },
+    { "id": "bow", "src": "sounds/words/bow3.wav", "group": "K-I6-9" },
+
+    { "id": "had", "src": "sounds/words/had2.wav", "group": "K-I11-14" },
+    { "id": "ham", "src": "sounds/words/ham.wav", "group": "K-I11-14" },
+    { "id": "her", "src": "sounds/words/her.wav", "group": "K-I11-14" },
+    { "id": "home", "src": "sounds/words/home.wav", "group": "K-I11-14" },
+
+    { "id": "free", "src": "sounds/words/free.wav", "group": "K-I16-19" },
+    { "id": "key", "src": "sounds/words/key.wav", "group": "K-I16-19" },
+    { "id": "three", "src": "sounds/words/three.wav", "group": "K-I16-19" },
+    { "id": "tree", "src": "sounds/words/tree.wav", "group": "K-I16-19" },
+
+    { "id": "date", "src": "sounds/words/date2.wav", "group": "K-I21-24" },
+    { "id": "day", "src": "sounds/words/day2.wav", "group": "K-I21-24" },
+    { "id": "late", "src": "sounds/words/late3.wav", "group": "K-I21-24" },
+    { "id": "low", "src": "sounds/words/low2.wav", "group": "K-I21-24" },
+
+    { "id": "ate", "src": "sounds/words/ate2.wav", "group": "K-I26-29" },
+    { "id": "cake", "src": "sounds/words/cake2.wav", "group": "K-I26-29" },
+    { "id": "date", "src": "sounds/words/date3.wav", "group": "K-I26-29" },
+    { "id": "lake", "src": "sounds/words/lake2.wav", "group": "K-I26-29" },
+
+    { "id": "can", "src": "sounds/words/can.wav", "group": "K-I31-34" },
+    { "id": "ham", "src": "sounds/words/ham2.wav", "group": "K-I31-34" },
+    { "id": "man", "src": "sounds/words/man.wav", "group": "K-I31-34" },
+    { "id": "ran", "src": "sounds/words/ran.wav", "group": "K-I31-34" }
   ]
 }

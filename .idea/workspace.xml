@@ -5,168 +5,148 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2de8d640-2637-4060-9268-605471524733" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/age.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/all.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ate.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bake.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ball.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bay.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/beet.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bike.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bog.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/boom.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bow.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bow2.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bump.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/but.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/by.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cake.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/call.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/card.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cart.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cow.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/crow.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cry.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/dad.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/damp.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/date.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/day.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/deer.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/die.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/dog.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/doll.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/dry.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fake.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fall.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/far.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/far2.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fate.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/five.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/four.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fray.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/frog.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fry.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/gate.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/get.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/got.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/gray.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hall.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hate.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hay.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hear.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hike.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/him.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hip.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/his.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hit.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hoe.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/how.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lake.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lamp.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/late.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/late2.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/law.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/let.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lie.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/like.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lit.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/log.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/low.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lump.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/make.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mall.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mate.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/may.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mix.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/moon.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/more.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mow.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/now.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/paw.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pay.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pie.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pike.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/play.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pond.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pray.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/rage.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/rake.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ramp.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/rate.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/raw.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ray.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/room.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/saw.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/say.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/six.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/spoon.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/stamp.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/stow.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/stray.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/take.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/tall.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/there.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/tie.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/toe.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/tow.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/wall.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/way.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/wow.wav" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/bail.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/bar.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/beer.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/beg.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/bill.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/book.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/book2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/boy.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/boy2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/can.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/coat.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/cook.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/cook2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/curl.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/curl2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/dear.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/dig.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/goat.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/hook.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/hurl.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/joy.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/keg.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/keg2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/kit.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/leg.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/look.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/mail.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pail.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pail2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pan.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pearl.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pearl2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/peg.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/peg2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pen.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pier.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pig.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pill.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/rail.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/sail.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/tail.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/tail2.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/tear.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/ten.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/took.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/toy.wav" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/toy2.wav" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/treasure-checker.fla" afterPath="$PROJECT_DIR$/img/treasure-checker.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sounds/words/cage.wav" afterPath="$PROJECT_DIR$/sounds/words/cage.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sounds/words/car.wav" afterPath="$PROJECT_DIR$/sounds/words/car.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sounds/words/girl.wav" afterPath="$PROJECT_DIR$/sounds/words/girl.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sounds/words/page.wav" afterPath="$PROJECT_DIR$/sounds/words/page.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sounds/words/pit.wav" afterPath="$PROJECT_DIR$/sounds/words/pit.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/treasure-checker.iml" afterPath="$PROJECT_DIR$/.idea/treasure-checker.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/and.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ask.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ate2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/baby.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bad.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ball2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/band.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bask.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bed.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bee.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/beef.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/beep.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bell.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bent.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/best.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bird.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/boat.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bold.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bold2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bone.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/boo.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/book.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bow3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bowl.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/boy.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bump2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bun.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bus.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cake2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/can.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/car2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cat.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cold.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cone.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cone2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cook.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cow2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/date2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/date3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/day2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/deep.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/dent.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/duck.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/dump.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/dust.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/eat.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fed.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/feet.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fell.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/find.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fold.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fold2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fork.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/free.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fun.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/game.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/gust.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/had.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/had2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ham.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ham2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hand.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hat.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hat2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/have.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/heat.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/her.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hide.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/him2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hind.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hit2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hive.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hold.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/home.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hump.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/jeep.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/key.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/kind.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lake2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/land.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/late3.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/law2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lent.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lone.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/low2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/luck.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lump2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mad.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mall2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/man.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mask.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/meat.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/meet.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mind.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mine.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mold.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mom.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/moo.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/must.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/one.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/one2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pain.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/paw2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/peep.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pest.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/plane.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pump.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pun.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pup.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ran.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/raw2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/red.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/rest.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ride.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/run.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/rust.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/said.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/saw2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/seat.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/sell.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/sold.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/soot.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/task.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/tent.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/test.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/them.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/them2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/then.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/three.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/told.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/tone.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/took.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/toy.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/trane.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/tree.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/truck.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/two.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/well.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/wide.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/zoo.wav" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/words.json" afterPath="$PROJECT_DIR$/words.json" />
     </list>
     <ignored path="treasure-checker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -200,7 +180,7 @@
       <file leaf-file-name="AssetManager.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AssetManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
+            <state relative-caret-position="1037">
               <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
@@ -230,8 +210,8 @@
       <file leaf-file-name="words.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/words.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="122" column="49" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
+            <state relative-caret-position="72">
+              <caret line="215" column="72" selection-start-line="215" selection-start-column="72" selection-end-line="215" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -288,10 +268,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="x" value="-7" />
+    <option name="width" value="814" />
+    <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -318,6 +297,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Changed Files" />
+        <subPane subId="Project Files" />
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Tests" />
+      </pane>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -337,23 +333,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Changed Files" />
-        <subPane subId="Project Files" />
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Tests" />
-      </pane>
-      <pane id="Scratches">
-        <subPane />
       </pane>
       <pane id="PackagesPane" />
     </panes>
@@ -437,7 +416,8 @@
       <workItem from="1464216722603" duration="1560000" />
       <workItem from="1464282361834" duration="4235000" />
       <workItem from="1464288661988" duration="39000" />
-      <workItem from="1464288715846" duration="5535000" />
+      <workItem from="1464288715846" duration="5622000" />
+      <workItem from="1464307994998" duration="1928000" />
     </task>
     <task id="LOCAL-00001" summary="center align custom text">
       <created>1463086851001</created>
@@ -642,20 +622,27 @@
       <option name="project" value="LOCAL" />
       <updated>1464307702383</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update audio library">
+      <created>1464307731990</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1464307731990</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11805000" />
+    <option name="totallyTimeSpent" value="13820000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-7" y="0" width="814" height="867" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13751584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27963918" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34369886" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3243607" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27482992" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25302827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -950,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -972,7 +958,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AssetManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
+        <state relative-caret-position="1037">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
@@ -982,7 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -996,8 +981,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/words.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="122" column="49" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
+        <state relative-caret-position="72">
+          <caret line="215" column="72" selection-start-line="215" selection-start-column="72" selection-end-line="215" selection-end-column="72" />
           <folding />
         </state>
       </provider>
