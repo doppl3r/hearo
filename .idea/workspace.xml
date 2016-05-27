@@ -5,12 +5,168 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2de8d640-2637-4060-9268-605471524733" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.brackets.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/player.png" afterPath="$PROJECT_DIR$/img/player.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/age.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/all.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ate.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bake.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ball.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bay.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/beet.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bike.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bog.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/boom.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bow.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bow2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/bump.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/but.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/by.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cake.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/call.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/card.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cart.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cow.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/crow.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/cry.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/dad.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/damp.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/date.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/day.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/deer.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/die.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/dog.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/doll.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/dry.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fake.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fall.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/far.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/far2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fate.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/five.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/four.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fray.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/frog.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/fry.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/gate.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/get.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/got.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/gray.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hall.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hate.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hay.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hear.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hike.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/him.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hip.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/his.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hit.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/hoe.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/how.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lake.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lamp.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/late.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/late2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/law.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/let.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lie.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/like.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lit.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/log.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/low.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/lump.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/make.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mall.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mate.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/may.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mix.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/moon.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/more.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/mow.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/now.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/paw.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pay.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pie.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pike.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/play.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pond.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/pray.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/rage.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/rake.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ramp.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/rate.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/raw.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/ray.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/room.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/saw.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/say.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/six.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/spoon.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/stamp.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/stow.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/stray.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/take.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/tall.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/there.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/tie.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/toe.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/tow.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/wall.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/way.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sounds/words/wow.wav" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/bail.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/bar.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/beer.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/beg.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/bill.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/book.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/book2.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/boy.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/boy2.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/can.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/coat.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/cook.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/cook2.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/curl.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/curl2.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/dear.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/dig.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/goat.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/hook.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/hurl.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/joy.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/keg.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/keg2.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/kit.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/leg.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/look.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/mail.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pail.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pail2.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pan.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pearl.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pearl2.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/peg.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/peg2.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pen.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pier.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pig.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/pill.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/rail.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/sail.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/tail.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/tail2.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/tear.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/ten.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/took.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/toy.wav" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sounds/words/toy2.wav" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/treasure-checker.fla" afterPath="$PROJECT_DIR$/img/treasure-checker.fla" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sounds/words/cage.wav" afterPath="$PROJECT_DIR$/sounds/words/cage.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sounds/words/car.wav" afterPath="$PROJECT_DIR$/sounds/words/car.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sounds/words/girl.wav" afterPath="$PROJECT_DIR$/sounds/words/girl.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sounds/words/page.wav" afterPath="$PROJECT_DIR$/sounds/words/page.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sounds/words/pit.wav" afterPath="$PROJECT_DIR$/sounds/words/pit.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/treasure-checker.iml" afterPath="$PROJECT_DIR$/.idea/treasure-checker.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Player.js" afterPath="$PROJECT_DIR$/Player.js" />
     </list>
     <ignored path="treasure-checker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +190,7 @@
       <file leaf-file-name="Game.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="391">
               <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
               <folding />
             </state>
@@ -44,18 +200,38 @@
       <file leaf-file-name="AssetManager.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AssetManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
+            <state relative-caret-position="682">
               <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Player.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+            <state relative-caret-position="153">
+              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelManager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LevelManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="words.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/words.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="122" column="49" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -96,10 +272,12 @@
         <option value="$PROJECT_DIR$/Interface.js" />
         <option value="$PROJECT_DIR$/manifest.json" />
         <option value="$PROJECT_DIR$/AssetManager.js" />
-        <option value="$PROJECT_DIR$/words.json" />
         <option value="$PROJECT_DIR$/LevelManager.js" />
         <option value="$PROJECT_DIR$/Game.js" />
         <option value="$PROJECT_DIR$/Player.js" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/.idea/treasure-checker.iml" />
+        <option value="$PROJECT_DIR$/words.json" />
       </list>
     </option>
   </component>
@@ -110,10 +288,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="91" />
-    <option name="y" value="92" />
-    <option name="width" value="1196" />
-    <option name="height" value="704" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -140,23 +318,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-        <subPane subId="Changed Files" />
-        <subPane subId="Project Files" />
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Tests" />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -175,21 +336,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Changed Files" />
+        <subPane subId="Project Files" />
+        <subPane subId="Default">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="treasure-checker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="treasure-checker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+        <subPane subId="Tests" />
+      </pane>
+      <pane id="Scratches">
+        <subPane />
       </pane>
       <pane id="PackagesPane" />
     </panes>
@@ -219,6 +383,9 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="nodejs_interpreter_path" value="C:\Program Files\nodejs\node" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="full.screen.before.presentation.mode" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -226,28 +393,13 @@
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration default="false" name="AssetManager.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="AssetManager.js" working-dir="$PROJECT_DIR$">
-      <method />
-    </configuration>
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/treasure-checker/index.html">
       <method />
     </configuration>
-    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
+    <configuration default="false" name="AssetManager.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="AssetManager.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
-      <method />
-    </configuration>
-    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
-      <method />
-    </configuration>
-    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -256,54 +408,13 @@
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
-    <configuration default="true" type="PhoneGap" factoryName="PhoneGap/Cordova">
-      <option name="myExecutable" />
-      <option name="myWorkDir" />
-      <option name="myCommand" />
-      <option name="myPassParent" value="true" />
-      <option name="myPlatform" />
-      <option name="myExtraArgs" />
-      <option name="hasTarget" value="false" />
-      <option name="target" />
-      <method />
-    </configuration>
-    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" value="" />
-      <option name="executablePath" />
-      <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui>bdd</ui>
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
-      <method />
-    </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.AssetManager.js" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.AssetManager.js" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.AssetManager.js" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +434,10 @@
       <workItem from="1464205396103" duration="58000" />
       <workItem from="1464205481084" duration="74000" />
       <workItem from="1464216389782" duration="304000" />
-      <workItem from="1464216722603" duration="1443000" />
+      <workItem from="1464216722603" duration="1560000" />
+      <workItem from="1464282361834" duration="4235000" />
+      <workItem from="1464288661988" duration="39000" />
+      <workItem from="1464288715846" duration="5535000" />
     </task>
     <task id="LOCAL-00001" summary="center align custom text">
       <created>1463086851001</created>
@@ -514,20 +628,34 @@
       <option name="project" value="LOCAL" />
       <updated>1464139388662</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="update player animation">
+      <created>1464223926084</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1464223926084</updated>
+    </task>
+    <task id="LOCAL-00029" summary="update audio library">
+      <created>1464307702383</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1464307702383</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1879000" />
+    <option name="totallyTimeSpent" value="11805000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="91" y="92" width="1196" height="704" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18911918" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13751584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34369886" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5236427" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3243607" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25302827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -548,6 +676,31 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34369886" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39973083" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39434725" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25302827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13814956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39919356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.php" />
@@ -587,7 +740,8 @@
     <MESSAGE value="introduce manifest.json for asset manager" />
     <MESSAGE value="randomize levels and split manifest files" />
     <MESSAGE value="update player animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="update player animation" />
+    <MESSAGE value="update audio library" />
+    <option name="LAST_COMMIT_MESSAGE" value="update audio library" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -600,21 +754,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ChestManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -699,13 +838,6 @@
     <entry file="file://$PROJECT_DIR$/../header.php" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/fz3temp-1/functions.php" />
     <entry file="file://$PROJECT_DIR$/Audio.js" />
-    <entry file="file://$PROJECT_DIR$/.idea/treasure-checker.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Background.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -765,13 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -804,52 +929,75 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="28" column="58" selection-start-line="28" selection-start-column="55" selection-end-line="28" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.brackets.json" />
-    <entry file="file://$PROJECT_DIR$/Game.js">
+    <entry file="file://$PROJECT_DIR$/img/player.js" />
+    <entry file="file://$PROJECT_DIR$/img/player.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        <state relative-caret-position="137">
+          <caret line="314" column="88" selection-start-line="314" selection-start-column="88" selection-end-line="314" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/treasure-checker.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LevelManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
+        <state relative-caret-position="561">
           <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AssetManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
+        <state relative-caret-position="682">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/player.js">
+    <entry file="file://$USER_HOME$/Downloads/varitec-job-listing-export.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="83" selection-start-line="4" selection-start-column="83" selection-end-line="4" selection-end-column="326" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/player.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+        <state relative-caret-position="153">
+          <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/words.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="122" column="49" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
           <folding />
         </state>
       </provider>
