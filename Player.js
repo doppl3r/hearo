@@ -1,12 +1,11 @@
 (function (window) {
 
     //constructor
-	function Player(preload) {
+	function Player() {
 		this.Container_constructor();
-		this.preload = preload;
 		this.spriteSheet = new createjs.SpriteSheet({
             framerate: 8,
-            images: [this.preload.getResult("player")],
+            images: [window.Game.assetManager.preload.getResult("player")],
             frames: [[4,4,165,291,0,67.2,262.95],[173,4,175,286,0,69.2,258.95],[352,4,180,286,0,70.2,256.95],
                     [536,4,183,314,0,61.2,285.95],[723,4,155,317,0,52.2,283.95],[4,325,258,234,0,32.2,192.95],
                     [266,325,170,250,0,70.2,228.95],[440,325,167,254,0,76.2,219.95]],
@@ -27,7 +26,7 @@
 	var container = createjs.extend(Player, createjs.Container);
 
     //update
-	container.tick = function (event, chestManager) {
+	container.tick = function (event) {
 	    //move player if target is not in reach
 	    if (this.target){
 	        if (Math.abs(this.x - this.targetX) >= this.speed ||
@@ -60,8 +59,8 @@
 
         //check collision using 'ndgmr.Collision.js' provided by Olaf Horstmann
         var tempChest;
-        for (i=0; i<chestManager.children.length; i++){
-            tempChest = chestManager.getChildAt(i); //get temporary index
+        for (i=0; i<window.Game.chestManager.children.length; i++){
+            tempChest = window.Game.chestManager.getChildAt(i); //get temporary index
             if (ndgmr.checkRectCollision(this, tempChest)){
                 if (!tempChest.isClicked()){
                     tempChest.click();

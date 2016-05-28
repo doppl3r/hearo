@@ -1,12 +1,11 @@
 (function (window) {
 
     //constructor
-	function ChestManager(preload) {
+	function ChestManager() {
 		this.Container_constructor();
-		this.preload = preload;
 		this.spriteSheet = new createjs.SpriteSheet({
             framerate: 4,
-            images: [this.preload.getResult("chests")],
+            images: [window.Game.assetManager.preload.getResult("chests")],
             frames: [
                 [4,4,157,131,0,78.25,65.65],[4,139,193,106,0,98.25,40.650000000000006],[4,249,193,106,0,98.25,40.650000000000006],
                 [4,359,113,147,0,56.5,73.4],[4,510,179,149,0,122.5,75.4],[4,663,179,149,0,122.5,75.4],
@@ -25,16 +24,14 @@
 
     //update
 	container.tick = function (event) {
-        for (i=0; i<this.children.length; i++){
-            if (this.getChildAt(i).isClicked()){
-                return true;
-            }
+        for (var i=0; i<this.children.length; i++){
+            this.getChildAt(i).tick(event);
         }
     }
 
     //public functions
     container.addChest = function (x,y,scaleX,scaleY,frame){
-        var tempChest = new Chest(this.preload);
+        var tempChest = new Chest();
         tempChest.addChest(x,y,scaleX,scaleY,this.spriteSheet,frame);
         //tempChest.on("click", function(){ tempChest.click(); });
         tempChest.on("mouseover", function(){ tempChest.mouseOver(); });

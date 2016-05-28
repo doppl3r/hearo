@@ -1,12 +1,11 @@
 (function (window) {
 
     //constructor
-	function Selector(preload) {
+	function Selector() {
 		this.Container_constructor();
-		this.preload = preload;
 		this.spriteSheet = new createjs.SpriteSheet({
             framerate: 8,
-            images: [this.preload.getResult("selector")],
+            images: [window.Game.assetManager.preload.getResult("selector")],
             frames: [[4,4,53,53,0,26.7,26.15],[61,4,38,37,0,19.7,18.15],
                     [103,4,11,9,0,5.699999999999999,4.149999999999999],
                     [118,4,0,0,0,0.6999999999999993,0.14999999999999858],[4,61,53,53,0,26.7,26.15],

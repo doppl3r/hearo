@@ -23,5 +23,5 @@
     container.isClicked = function(){ return this.clicked; }
     container.click = function() { this.clicked=true; }
 
-	window.CustomCharacter = createjs.promote(CustomCharacter, "Container");
+	window.CustomCharacter = new createjs.promote(CustomCharacter, "Container");
 }(window));

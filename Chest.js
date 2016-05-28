@@ -1,36 +1,40 @@
 (function (window) {
 
     //constructor
-    function Chest(preload){
+    function Chest(){
         this.Container_constructor();
-        this.preload = preload;
     }
 
     //instance of class
     var container = new createjs.extend(Chest, createjs.Container);
 
-    //initialize Chest
-	container.addChest = function (x,y,scaleX,scaleY,spriteSheet,frame) {
+	//public functions
+    container.tick = function(event){
+        if (this.coins != null) this.coins.tick(event);
+    }
+    container.addChest = function (x,y,scaleX,scaleY,spriteSheet,frame) {
+        //initialize Chest
         this.x = x;
         this.y = y;
         this.sprite = new createjs.Sprite(spriteSheet, frame);
-        this.sprite.sourceRect = new createjs.Rectangle(0,0, this.sprite.width, this.sprite.height);
-        this.sprite.filters = [new createjs.BlurFilter(16,16,.5)];
         this.scaleX = scaleX;
         this.scaleY = scaleY;
         this.sprite.gotoAndStop(frame);
         this.addChild(this.sprite);
-	}
-
-	//public functions
+    }
     container.isClicked = function(){ return this.clicked; }
     container.click = function() {
         if (!this.clicked){
-            window.Game.levelManager.setDelay(60); //1 second delay
+            if (this.success) {
+                this.coins = new CoinEffect();
+                this.coins.addCoins(0, 0, 1, 1, 50);
+                this.addChild(this.coins);
+            }
+            window.Game.levelManager.setDelay(120); //1 second delay
             this.clicked=true;
             createjs.Sound.play("sword-low", {pan:0});
             createjs.Sound.play("chest-open", {pan:0});
-            this.sprite.gotoAndPlay(this.sprite.spriteSheet.animations[this.sprite._currentFrame+1]);
+            this.sprite.gotoAndPlay(this.sprite.spriteSheet.animations[this.sprite._currentFrame+(this.success ? 1:2)]);
             this.resetMouse();
         }
     }
@@ -43,10 +47,14 @@
     container.mouseOut = function() { this.resetMouse(); }
     container.setText = function(text){
         if (this.children.length > 0) this.removeChild(this.customText);
-        this.customText = new CustomText(0,-48,this.scaleX,this.scaleY,text,this.preload);
+        this.customText = new CustomText(0,-48,this.scaleX,this.scaleY,text);
         this.addChild(this.customText);
+    }
+    container.updateChest = function(text, success){
+        this.setText(text);
+        this.success=success;
     }
     container.resetMouse = function() { this.sprite.alpha=1; this.cursor="default"; }
 
-	window.Chest = createjs.promote(Chest, "Container");
+	window.Chest = new createjs.promote(Chest, "Container");
 }(window));
