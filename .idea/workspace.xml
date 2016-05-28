@@ -5,30 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2de8d640-2637-4060-9268-605471524733" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/RECOVER_hearo-graphics.fla" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/coin.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/hearo-graphics.fla" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Coin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CoinEffect.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/coin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/trials-remaining.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/treasure-checker.fla" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/text.png" afterPath="$PROJECT_DIR$/img/text.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/trials-remaining.png" afterPath="$PROJECT_DIR$/img/trials-remaining.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/RECOVER_hearo-graphics.fla" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/text.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/img/trials-remaining.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/hearo-graphics.fla" afterPath="$PROJECT_DIR$/img/hearo-graphics.fla" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Background.js" afterPath="$PROJECT_DIR$/Background.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chest.js" afterPath="$PROJECT_DIR$/Chest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ChestManager.js" afterPath="$PROJECT_DIR$/ChestManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CustomCharacter.js" afterPath="$PROJECT_DIR$/CustomCharacter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CustomText.js" afterPath="$PROJECT_DIR$/CustomText.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.js" afterPath="$PROJECT_DIR$/Game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Interface.js" afterPath="$PROJECT_DIR$/Interface.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LevelManager.js" afterPath="$PROJECT_DIR$/LevelManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Player.js" afterPath="$PROJECT_DIR$/Player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Selector.js" afterPath="$PROJECT_DIR$/Selector.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
     </list>
     <ignored path="treasure-checker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -393,7 +374,7 @@
       <workItem from="1464288661988" duration="39000" />
       <workItem from="1464288715846" duration="5622000" />
       <workItem from="1464307994998" duration="1928000" />
-      <workItem from="1464368069593" duration="21689000" />
+      <workItem from="1464368069593" duration="21792000" />
     </task>
     <task id="LOCAL-00001" summary="center align custom text">
       <created>1463086851001</created>
@@ -605,11 +586,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464307731990</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="explode coins out of chest">
+      <created>1464397982165</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1464397982165</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35509000" />
+    <option name="totallyTimeSpent" value="35612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -619,7 +607,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34369886" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2715054" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2718708" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25302827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -679,7 +667,8 @@
     <MESSAGE value="randomize levels and split manifest files" />
     <MESSAGE value="update player animation" />
     <MESSAGE value="update audio library" />
-    <option name="LAST_COMMIT_MESSAGE" value="update audio library" />
+    <MESSAGE value="explode coins out of chest" />
+    <option name="LAST_COMMIT_MESSAGE" value="explode coins out of chest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
