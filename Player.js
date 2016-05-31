@@ -49,7 +49,7 @@
 	    }
 
         //check key input
-        if (this.sprite.currentAnimation != "attack") { //disable movement while attacking
+        if (this.sprite.currentAnimation != "attack" && !this.freeze) { //disable movement while attacking
             if (this.left) this.x += this.speed * this.directionX;
             else if (this.right) this.x += this.speed * this.directionX;
             if (this.up) this.y += this.speed * this.directionY;
@@ -63,6 +63,7 @@
             tempChest = window.Game.chestManager.getChildAt(i); //get temporary index
             if (ndgmr.checkRectCollision(this, tempChest)){
                 if (!tempChest.isClicked()){
+                    this.freeze = true;
                     tempChest.click();
                     this.sprite.gotoAndPlay("attack");
                 }
@@ -71,18 +72,44 @@
 	}
 
 	//public variables
-    container.moveUp = function(pressed) { this.up = pressed; this.directionY = -1; this.enableRunAnimation(pressed); }
-    container.moveRight = function(pressed) { this.right = pressed; this.scaleX = this.directionX = 1; this.enableRunAnimation(pressed); }
-    container.moveDown = function(pressed) { this.down = pressed; this.directionY = 1; this.enableRunAnimation(pressed); }
-    container.moveLeft = function(pressed) { this.left = pressed; this.scaleX = this.directionX = -1; this.enableRunAnimation(pressed); }
-    container.setXY = function(x,y) { this.x = x; this.y = y; }
+    container.moveUp = function(pressed) {
+        if (!this.freeze) {
+            this.up = pressed;
+            this.directionY = -1;
+            this.enableRunAnimation(pressed);
+        }
+    }
+    container.moveRight = function(pressed) {
+        if (!this.freeze) {
+            this.right = pressed;
+            this.scaleX = this.directionX = 1;
+            this.enableRunAnimation(pressed);
+        }
+    }
+    container.moveDown = function(pressed) {
+        if (!this.freeze) {
+            this.down = pressed;
+            this.directionY = 1;
+            this.enableRunAnimation(pressed);
+        }
+    }
+    container.moveLeft = function(pressed) {
+        if (!this.freeze){
+            this.left = pressed;
+            this.scaleX = this.directionX = -1;
+            this.enableRunAnimation(pressed);
+        }
+    }
+    container.setXY = function(x,y) { this.x = x; this.y = y; this.freeze = false; }
     container.navigate = function(event) {
-        this.target = true;
-        this.targetX = event.stageX;
-        this.targetY = event.stageY;
-        this.distance = Math.sqrt(Math.pow(this.targetX - this.x,2)+Math.pow(this.targetY - this.y,2));
-        this.directionX = (this.targetX - this.x) / this.distance;
-        this.directionY = (this.targetY - this.y) / this.distance;
+        if (!this.freeze){
+            this.target = true;
+            this.targetX = event.stageX;
+            this.targetY = event.stageY;
+            this.distance = Math.sqrt(Math.pow(this.targetX - this.x,2)+Math.pow(this.targetY - this.y,2));
+            this.directionX = (this.targetX - this.x) / this.distance;
+            this.directionY = (this.targetY - this.y) / this.distance;
+        }
     }
     container.enableRunAnimation = function(pressed){
         if (pressed){

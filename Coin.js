@@ -20,6 +20,7 @@
         this.sprite = new createjs.Sprite(spriteSheet, getRandomInt(0,3));
         this.sprite.scaleX = scaleX;
         this.sprite.scaleY = scaleY;
+        this.sprite.gotoAndPlay(frame);
         this.addChild(this.sprite);
 	}
 
@@ -35,6 +36,7 @@
                 this.currentBounce -= 1;
                 this.yVel = (this.startV)*(this.currentBounce/this.bounces);
             }
+            else this.sprite.gotoAndStop("halt");
         }
     }
 	//public functions

@@ -4,13 +4,14 @@
 	function CoinEffect() {
 	    this.Container_constructor();
 	    this.spriteSheet = new createjs.SpriteSheet({ //generated with Adobe Animate
-            framerate: 8,
+            framerate: 12,
             images: [window.Game.assetManager.preload.getResult("coin")],
-            frames: [[4,4,18,18,0,13.55,44.9],[26,4,13,20,0,11.55,45.9],
-                    [43,4,7,20,0,7.550000000000001,45.9],[4,28,13,20,0,11.55,45.9]],
+            frames: [[4,4,20,22,0,14,46.25],[28,4,16,23,0,12,47.25],[48,4,10,23,0,9,47.25],
+                    [62,4,17,22,0,13,46.25],[83,4,23,18,0,16,44.25]],
             // define two animations, run (loops, 1.5x speed) and jump (returns to run):
             animations: {
-                spin: { frames: [0,1,2,3] }
+                spin: { frames: [0,1,2,3] },
+                halt: { frames: [4] }
             }
         });
 	}
