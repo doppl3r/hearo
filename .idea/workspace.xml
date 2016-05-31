@@ -4,16 +4,11 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2de8d640-2637-4060-9268-605471524733" name="Default" comment="remove extra assets">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/coin.png" afterPath="$PROJECT_DIR$/img/coin.png" />
+    <list default="true" id="2de8d640-2637-4060-9268-605471524733" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/hearo-graphics.fla" afterPath="$PROJECT_DIR$/img/hearo-graphics.fla" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/player.png" afterPath="$PROJECT_DIR$/img/player.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chest.js" afterPath="$PROJECT_DIR$/Chest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Coin.js" afterPath="$PROJECT_DIR$/Coin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CoinEffect.js" afterPath="$PROJECT_DIR$/CoinEffect.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Player.js" afterPath="$PROJECT_DIR$/Player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/coin.js" afterPath="$PROJECT_DIR$/img/coin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="treasure-checker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,8 +74,18 @@
           <file leaf-file-name="Player.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Player.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1904">
-                  <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+                <state relative-caret-position="170">
+                  <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="character.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/img/character.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="4" column="315" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="315" />
                   <folding />
                 </state>
               </provider>
@@ -93,7 +98,7 @@
           <file leaf-file-name="Game.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Game.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="403">
+                <state relative-caret-position="1003">
                   <caret line="59" column="70" selection-start-line="59" selection-start-column="70" selection-end-line="59" selection-end-column="70" />
                   <folding />
                 </state>
@@ -396,7 +401,7 @@
       <workItem from="1464307994998" duration="1928000" />
       <workItem from="1464368069593" duration="22111000" />
       <workItem from="1464712352101" duration="645000" />
-      <workItem from="1464715766401" duration="1715000" />
+      <workItem from="1464715766401" duration="2490000" />
     </task>
     <task id="LOCAL-00001" summary="center align custom text">
       <created>1463086851001</created>
@@ -622,11 +627,18 @@
       <option name="project" value="LOCAL" />
       <updated>1464398076378</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="update controls after round">
+      <created>1464717501892</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1464717501892</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38291000" />
+    <option name="totallyTimeSpent" value="39066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -635,7 +647,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13751584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34369886" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2715054" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25302827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -672,7 +684,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create test for objects" />
     <MESSAGE value="include hover listeners" />
     <MESSAGE value="update font variables" />
     <MESSAGE value="revise text centering" />
@@ -697,7 +708,8 @@
     <MESSAGE value="update audio library" />
     <MESSAGE value="explode coins out of chest" />
     <MESSAGE value="remove extra assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove extra assets" />
+    <MESSAGE value="update controls after round" />
+    <option name="LAST_COMMIT_MESSAGE" value="update controls after round" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -710,13 +722,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="56" selection-start-line="81" selection-start-column="56" selection-end-line="81" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Player.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
@@ -943,16 +948,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
+        <state relative-caret-position="1003">
           <caret line="59" column="70" selection-start-line="59" selection-start-column="70" selection-end-line="59" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/character.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="315" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="315" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+        <state relative-caret-position="170">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding />
         </state>
       </provider>
