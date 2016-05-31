@@ -12,36 +12,32 @@
 	    if (this.delay >= 0){
 	        this.delay-=1;
 	        if (this.delay == 0) {
-	            //this.nextLevel();
+                this.nextLevel();
                 window.Game.restart();
 	        }
 	    }
 	}
     LevelManager.prototype.setXY = function(x,y) { this.x = x; this.y = y; }
-    LevelManager.prototype.nextLevel = function(){ this.currentLevel+=1; }
+    LevelManager.prototype.nextLevel = function(){ this.currentLevel-=1; }
     LevelManager.prototype.createLevel = function(){
-        //testing purposes
         window.Game.chestManager.removeAllChests(); //remove extra chests
-        if (this.currentLevel == 20){
-            window.Game.interface.setText("trials: "+this.currentLevel);
-            var words = [getRandomWord(), getRandomWord(), getRandomWord(), getRandomWord()];
+        
+        //simple test
+        window.Game.interface.setText("trials: "+this.currentLevel);
+        var words = [getRandomWord(), getRandomWord(), getRandomWord(), getRandomWord()];
 
-            createjs.Sound.play(words[0], {pan:-1});
-            createjs.Sound.play(words[1], {pan:1});
+        createjs.Sound.play(words[0], {pan:-1});
+        createjs.Sound.play(words[1], {pan:1});
 
-            window.Game.chestManager.addChest(640,100,1,1,"topClosed");
-            window.Game.chestManager.getLastChest(0).updateChest(words[0],false);
-            window.Game.chestManager.addChest(1100,360,-1,1,"sideClosed");
-            window.Game.chestManager.getLastChest(0).updateChest(words[1],true);
-            window.Game.chestManager.addChest(640,620,1,1,"bottomClosed");
-            window.Game.chestManager.getLastChest(0).updateChest(words[2],false);
-            window.Game.chestManager.addChest(180,360,1,1,"sideClosed");
-            window.Game.chestManager.getLastChest(0).updateChest(words[3],false);
-        }
-        else if (this.currentLevel == "test"){
-            window.Game.chestManager.addChest(1100,360,-1,1,"sideClosed");
-            window.Game.chestManager.getLastChest(0).updateChest("test",true);
-        }
+        window.Game.chestManager.addChest(640,100,1,1,"topClosed");
+        window.Game.chestManager.getLastChest(0).updateChest(words[0],false);
+        window.Game.chestManager.addChest(1100,360,-1,1,"sideClosed");
+        window.Game.chestManager.getLastChest(0).updateChest(words[1],true);
+        window.Game.chestManager.addChest(640,620,1,1,"bottomClosed");
+        window.Game.chestManager.getLastChest(0).updateChest(words[2],false);
+        window.Game.chestManager.addChest(180,360,1,1,"sideClosed");
+        window.Game.chestManager.getLastChest(0).updateChest(words[3],false);
+
     }
     LevelManager.prototype.setDelay = function(delay){ this.delay = delay; }
     function getRandomWord(){
