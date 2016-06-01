@@ -4,16 +4,10 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2de8d640-2637-4060-9268-605471524733" name="Default" comment="updat">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/hearo-graphics.fla" afterPath="$PROJECT_DIR$/img/hearo-graphics.fla" />
+    <list default="true" id="2de8d640-2637-4060-9268-605471524733" name="Default" comment="update intro screen">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/hearo-title.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/IntroScreen.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CustomText.js" afterPath="$PROJECT_DIR$/CustomText.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.js" afterPath="$PROJECT_DIR$/Game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LevelManager.js" afterPath="$PROJECT_DIR$/LevelManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Player.js" afterPath="$PROJECT_DIR$/Player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/easeljs-NEXT.combined.js" afterPath="$PROJECT_DIR$/easeljs-NEXT.combined.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
     </list>
     <ignored path="treasure-checker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,8 +51,8 @@
       <file leaf-file-name="Game.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="124" column="55" selection-start-line="124" selection-start-column="55" selection-end-line="124" selection-end-column="55" />
+            <state relative-caret-position="94">
+              <caret line="110" column="5" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -67,8 +61,8 @@
       <file leaf-file-name="IntroScreen.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IntroScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="584">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="244">
+              <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -118,6 +112,7 @@
         <option value="$PROJECT_DIR$/AssetManager.js" />
         <option value="$PROJECT_DIR$/Game.js" />
         <option value="$PROJECT_DIR$/IntroScreen.js" />
+        <option value="$PROJECT_DIR$/easeljs-NEXT.combined.js" />
       </list>
     </option>
   </component>
@@ -329,7 +324,7 @@
       <workItem from="1464307994998" duration="1928000" />
       <workItem from="1464368069593" duration="22111000" />
       <workItem from="1464712352101" duration="645000" />
-      <workItem from="1464715766401" duration="12614000" />
+      <workItem from="1464715766401" duration="12773000" />
     </task>
     <task id="LOCAL-00001" summary="center align custom text">
       <created>1463086851001</created>
@@ -576,21 +571,29 @@
       <option name="project" value="LOCAL" />
       <updated>1464734175990</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="update intro screen">
+      <created>1464745903833</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1464745903833</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49190000" />
+    <option name="totallyTimeSpent" value="49349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13751584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34369886" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46567968" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2715054" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2705249" sideWeight="0.4969743" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25302827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -626,7 +629,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="revise text centering" />
     <MESSAGE value="revise game class" />
     <MESSAGE value="adjust manifest for background" />
     <MESSAGE value="improve file loading" />
@@ -651,7 +653,8 @@
     <MESSAGE value="update controls after round" />
     <MESSAGE value="adjust player graphic&#10;" />
     <MESSAGE value="resolve symbol system" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolve symbol system" />
+    <MESSAGE value="update intro screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="update intro screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -708,13 +711,6 @@
     <entry file="file://$PROJECT_DIR$/artwork/player.js" />
     <entry file="file://$PROJECT_DIR$/artwork/selector.js" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_favicon-set.zip/manifest.json" />
-    <entry file="file://$PROJECT_DIR$/easeljs-NEXT.combined.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ndgmr.Collision.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -912,16 +908,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="124" column="55" selection-start-line="124" selection-start-column="55" selection-end-line="124" selection-end-column="55" />
+        <state relative-caret-position="94">
+          <caret line="110" column="5" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/easeljs-NEXT.combined.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9441" column="4" selection-start-line="9441" selection-start-column="4" selection-end-line="9441" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IntroScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="244">
+          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
           <folding />
         </state>
       </provider>
