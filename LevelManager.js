@@ -13,7 +13,7 @@
 	        this.delay-=1;
 	        if (this.delay == 0) {
                 this.nextLevel();
-                window.Game.restart();
+                window.Game.setStage();
 	        }
 	    }
 	}

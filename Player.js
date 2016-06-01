@@ -18,7 +18,7 @@
         });
         this.sprite = new createjs.Sprite(this.spriteSheet, "idle");
         this.addChild(this.sprite);
-        this.speed = 10;
+        this.vel = 10;
         this.forceAllKeysUp();
 	}
 
@@ -29,12 +29,12 @@
 	container.tick = function (event) {
 	    //move player if target is not in reach
 	    if (this.target){
-	        if (Math.abs(this.x - this.targetX) >= this.speed ||
-                Math.abs(this.y - this.targetY) >= this.speed){
-                this.left = this.x >= this.targetX + this.speed * this.directionX;
-                this.right = this.x < this.targetX - this.speed * this.directionX;
-                this.up = this.y >= this.targetY + this.speed * this.directionY;
-                this.down = this.y < this.targetY - this.speed * this.directionY;
+	        if (Math.abs(this.x - this.targetX) >= this.vel ||
+                Math.abs(this.y - this.targetY) >= this.vel){
+                this.left = this.x >= this.targetX + this.vel * this.directionX;
+                this.right = this.x < this.targetX - this.vel * this.directionX;
+                this.up = this.y >= this.targetY + this.vel * this.directionY;
+                this.down = this.y < this.targetY - this.vel * this.directionY;
 
                 this.enableRunAnimation(true);
 
@@ -50,10 +50,10 @@
 
         //check key input
         if (this.sprite.currentAnimation != "attack" && !this.freeze) { //disable movement while attacking
-            if (this.left) this.x += this.speed * this.directionX;
-            else if (this.right) this.x += this.speed * this.directionX;
-            if (this.up) this.y += this.speed * this.directionY;
-            else if (this.down) this.y += this.speed * this.directionY;
+            if (this.left) this.x += this.vel * this.directionX;
+            else if (this.right) this.x += this.vel * this.directionX;
+            if (this.up) this.y += this.vel * this.directionY;
+            else if (this.down) this.y += this.vel * this.directionY;
         }
         else this.forceAllKeysUp();
 

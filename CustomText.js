@@ -50,7 +50,6 @@
         for (var i = 0; i < text.length; i++){
             var tempChar = text.charAt(i).toLowerCase(); //only lowercase chars
             tempChar = !isNaN(tempChar) ? "/"+tempChar : tempChar; //allow numbers
-            console.log(tempChar);
             var tempCustomCharacter = new CustomCharacter();
             tempCustomCharacter.init((i*this.kerning*scaleX),0,scaleX,scaleY,this.spriteSheet,tempChar);
             this.addChild(tempCustomCharacter);

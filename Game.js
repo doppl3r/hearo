@@ -1,7 +1,5 @@
 (function (window) {
     //private variables
-    var KEYCODE_ENTER = 13; //useful keycode
-    var KEYCODE_SPACE = 32; //useful keycode
     var KEYCODE_UP = 38; //useful keycode
     var KEYCODE_LEFT = 37; //useful keycode
     var KEYCODE_RIGHT = 39; //useful keycode
@@ -10,6 +8,7 @@
     var KEYCODE_A = 65; //useful keycode
     var KEYCODE_D = 68; //useful keycode
     var KEYCODE_S = 83; //useful keycode
+    var VIEW = 0; //current stage assets
 
     //var canvas; //Main canvas
     //var stage; //Main display stage
@@ -22,10 +21,17 @@
     function Game(){ Game.prototype.init(); } //constructor
     function tick(event) {
         //call sub ticks
-        window.Game.background.tick(event);
-        window.Game.player.tick(event);
-        window.Game.chestManager.tick(event);
-        window.Game.levelManager.tick(event);
+        switch(VIEW) {
+            case 0: //intro screen
+                window.Game.introscreen.tick(event);
+                break;
+            case 1: //game screen
+                window.Game.background.tick(event);
+                window.Game.player.tick(event);
+                window.Game.chestManager.tick(event);
+                window.Game.levelManager.tick(event);
+            break;
+        }
         window.Game.stage.update(event);
     }
     //allow for WASD and arrow control scheme
@@ -57,15 +63,15 @@
         this.assetManager = new AssetManager(document.getElementById("gameCanvas"));
         this.assetManager.init();
         this.stage.addChild(this.assetManager);
-        this.stage.on("click", function(event){ Game.prototype.player.navigate(event); Game.prototype.selector.animateAt(event); });
+        this.stage.on("click", function(event){ Game.prototype.clickScreen(event); });
 
         //create level manager prototype from window object
         this.levelManager = Object.create(LevelManager);
 
-        this.assetManager.preload.on("complete", function(){ Game.prototype.restart(); });
+        this.assetManager.preload.on("complete", function(){ Game.prototype.setStage(); });
         this.assetManager.preload.on("progress", function(){ Game.prototype.assetManager.updateLoading(); window.Game.stage.update(); });
     }
-    Game.prototype.restart = function() {
+    Game.prototype.setStage = function() {
         //clean up stage
         this.stage.removeAllChildren();
 
@@ -77,26 +83,46 @@
         this.player.setXY(this.canvas.width / 2, (this.canvas.height / 2)+64);
         if (this.selector == null) this.selector = new Selector();
         if (this.chestManager == null) this.chestManager = new ChestManager();
-        if (this.chestManager == null) this.chestManager = new ChestManager();
         if (this.interface == null) this.interface = new Interface();
+        if (this.introscreen == null) this.introscreen = new IntroScreen();
 
         //ensure stage is blank and add the player
         this.stage.clear();
-        this.stage.addChild(this.background);
-        this.stage.addChild(this.chestManager);
-        this.stage.addChild(this.selector);
-        this.stage.addChild(this.player);
-        this.stage.addChild(this.interface);
+
+        switch(VIEW) {
+            case 0:
+                this.stage.addChild(this.introscreen);
+            break;
+            case 1:
+                this.stage.addChild(this.background);
+                this.stage.addChild(this.chestManager);
+                this.stage.addChild(this.selector);
+                this.stage.addChild(this.player);
+                this.stage.addChild(this.interface);
+                this.levelManager.createLevel();
+            break;
+        }
 
         //start game timer
         if (!createjs.Ticker.hasEventListener("tick")) {
             createjs.Ticker.addEventListener("tick", tick);
             createjs.Ticker.setFPS(60);
         }
-
-        this.levelManager.createLevel();
     }
-
+    Game.prototype.clickScreen = function(event){
+        switch(VIEW){
+            case 0:
+                VIEW = 1;
+                this.setStage();
+            break;
+            case 1:
+                this.player.navigate(event);
+                this.selector.animateAt(event);
+            break;
+        }
+    }
+    Game.prototype.getWidth = function(){ return this.canvas.width; }
+    Game.prototype.getHeight = function(){ return this.canvas.height; }
     //create prototype of self
     window.Game = new Game();
 }(window));

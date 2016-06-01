@@ -8,6 +8,7 @@
     { "id": "selector", "src": "img/selector.png" },
     { "id": "trials-remaining", "src": "img/trials-remaining.png" },
     { "id": "coin", "src": "img/coin.png" },
+    { "id": "hearo-title", "src": "img/hearo-title.png" },
     { "id": "win", "src": "sounds/win.wav" },
     { "id": "sword", "src": "sounds/sword.wav" },
     { "id": "sword-low", "src": "sounds/sword-low.wav" },
