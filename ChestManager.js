@@ -13,9 +13,9 @@
                 [4,816,115,95,0,57.25,47.75],[123,816,110,93,0,55.25,45.75],[4,915,110,93,0,55.25,45.75]
             ],
             animations: {
-                bottomClosed: [0], bottomOpenReward: { frames: [0,1], next: false }, bottomOpenNothing: [2],
-                sideClosed: [3], sideOpenReward: { frames: [3,4], next: false }, sideOpenNothing: [5],
-                topClosed: [6], topOpenReward: { frames: [6,7], next: false }, topOpenNothing: [8]
+                bottomClosed: [0], bottomOpenReward: { frames: [0,1], next: false }, bottomOpenNothing: { frames: [0,2], next: false },
+                sideClosed: [3], sideOpenReward: { frames: [3,4], next: false }, sideOpenNothing: { frames: [3,5], next: false },
+                topClosed: [6], topOpenReward: { frames: [6,7], next: false }, topOpenNothing: { frames: [6,8], next: false }
             }
         });
     }
@@ -47,8 +47,13 @@
     }
     container.removeAllChests = function(){
         var length = this.children.length;
-        for (i=length-1; i >= 0; i--){ this.removeChest(i); }
+        for (var i=length-1; i >= 0; i--){ this.removeChest(i); }
     }
+    container.setAllChests = function(frame){
+        var length = this.children.length;
+        for (var i=length-1; i >= 0; i--){ this.getChildAt(i).sprite.gotoAndStop(frame); }
+    }
+    container.setChestFrameAt = function(i, frame){ this.getChildAt(i).sprite.gotoAndStop(frame); }
     container.getChest = function(i){ return this.getChildAt(i); }
     container.getLastChest = function(){ return this.getChest(this.children.length-1); }
 

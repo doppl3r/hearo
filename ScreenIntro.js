@@ -49,7 +49,7 @@
         this.chestManager.tick(event);
         if (this.delay >= 0){
             this.delay-=1;
-            if (this.delay == 0) {
+            if (this.delay == 0) { //change screen after delay runs out
                 window.Game.setScreen(1);
                 window.Game.setStage();
             }
@@ -59,7 +59,8 @@
             for (var i=0; i<this.chestManager.children.length; i++){
                 tempChest = this.chestManager.getChildAt(i); //get temporary index
                 if (tempChest.isClicked()){
-                    this.delay = 120;
+                    this.chestManager.setChestFrameAt(i,7);
+                    this.delay = 120; //delay before screen changes
                 }
             }
         }

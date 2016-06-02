@@ -28,7 +28,7 @@
         if (!this.clicked){
             if (this.success) {
                 this.coins = new CoinEffect();
-                this.coins.addCoins(0, 0, 1, 1, 50, 15); //delay .25 seconds (15)
+                this.coins.addCoins(0, 0, 1, 1, 50, this.instaClick ? 0 : 15); //delay .25 seconds (15)
                 this.addChild(this.coins);
             }
             if (!this.instaClick) window.Game.levelManager.setDelay(120); //60 = 1 second delay
