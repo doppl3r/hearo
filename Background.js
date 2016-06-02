@@ -6,12 +6,11 @@
         this.spriteSheet = new createjs.SpriteSheet({
             framerate: 1,
             images: [window.Game.assetManager.preload.getResult("backgrounds")],
-            frames: [[0,0,1280,720,0,640,360],[0,720,1280,720,0,640,360],[0,1440,1280,720,0,640,360.05]],
+            frames: [[0,0,1280,720,0,640,360.05],[0,720,1280,720,0,640,360.05]],
             // define two animations, run (loops, 1.5x speed) and jump (returns to run):
             animations: {
                 "bg-1": [0],
-                "bg-2": [1],
-                "bg-3": [2]
+                "bg-2": [1]
             }
         });
         this.sprite = new createjs.Sprite(this.spriteSheet,"bg-1");

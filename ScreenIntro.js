@@ -2,24 +2,35 @@
 
     //constructor
 	function ScreenIntro() {
+        //container properties
 		this.Container_constructor();
+        this.x = window.Game.canvas.width / 2;
+        this.y = (window.Game.canvas.height / 2);
+
+        //title sprite
 		this.spriteSheet = new createjs.SpriteSheet({
             framerate: 8,
             images: [window.Game.assetManager.preload.getResult("hearo-title")],
-            frames: [[4,4,795,307,0,397.4,118],[4,315,795,307,0,397.4,118]],
+            frames: [[0,0,858,284,0,433.6,118],[0,284,858,284,0,433.6,118]],
             animations: { start: [0,1] }
         });
         this.sprite = new createjs.Sprite(this.spriteSheet, "start");
-        this.x = window.Game.canvas.width / 2;
-        this.y = (window.Game.canvas.height / 2);
         this.sprite.y = -128;
         this.sprite.scaleX = this.sprite.scaleY = 0;
-        this.rate = 0.0002;
-        this.vel = 0;
+
+        //character sprite
+        this.characterSheet = new createjs.SpriteSheet({
+            framerate: 8,
+            images: [window.Game.assetManager.preload.getResult("player-large")],
+            frames: [[0,0,454,805,0,226.85,402.45],[0,805,454,805,0,226.85,402.45]],
+            animations: { start: [0,1] }
+        });
+        this.characterSprite = new createjs.Sprite(this.characterSheet, "start");
+        this.characterSprite.x = 640 + this.characterSprite.getBounds().width/2; //set off stage
 
         //background color
         this.background = new Background();
-        this.background.setBackground("bg-3");
+        this.background.setBackground("bg-1");
 
         //make chests as clickable buttons
         this.chestManager = new ChestManager(true);
@@ -28,6 +39,7 @@
 
         //add to stage
         this.addChild(this.background);
+        this.addChild(this.characterSprite);
         this.addChild(this.sprite);
         this.addChild(this.chestManager); //add to stage
     }
@@ -37,13 +49,9 @@
 
     //update
 	container.tick = function (event) {
-        //zoom in text
-        if (this.sprite.scaleX < 1){
-            this.vel = this.sprite.scaleX < 0.5 ? this.vel + this.rate : this.vel - this.rate;
-            this.sprite.scaleX += this.vel;
-            this.sprite.scaleY += this.vel;
-        }
-        else this.sprite.scaleX = this.sprite.scaleY = 1;
+        //begin animation
+        createjs.Tween.get(this.sprite).to({scaleX: 1, scaleY: 1}, 1000, createjs.Ease.cubicInOut);
+        createjs.Tween.get(this.characterSprite).wait(1000).to({ x:-460 }, 1000, createjs.Ease.cubicInOut);
 
         //tick chestManager
         this.chestManager.tick(event);
