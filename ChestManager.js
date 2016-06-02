@@ -1,7 +1,8 @@
 (function (window) {
 
     //constructor
-	function ChestManager() {
+	function ChestManager(instaClick) {
+        if (instaClick != null) this.instaClick = instaClick; //instant click
 		this.Container_constructor();
 		this.spriteSheet = new createjs.SpriteSheet({
             framerate: 4,
@@ -31,9 +32,9 @@
 
     //public functions
     container.addChest = function (x,y,scaleX,scaleY,frame){
-        var tempChest = new Chest();
+        var tempChest = new Chest(this.instaClick);
         tempChest.addChest(x,y,scaleX,scaleY,this.spriteSheet,frame);
-        //tempChest.on("click", function(){ tempChest.click(); });
+        if (this.instaClick) tempChest.on("click", function(){ tempChest.click(); });
         tempChest.on("mouseover", function(){ tempChest.mouseOver(); });
         tempChest.on("mouseout", function(){ tempChest.mouseOut(); });
         this.addChild(tempChest); //add to stage

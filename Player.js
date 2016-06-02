@@ -59,7 +59,7 @@
 
         //check collision using 'ndgmr.Collision.js' provided by Olaf Horstmann
         var tempChest;
-        for (i=0; i<window.Game.chestManager.children.length; i++){
+        for (var i=0; i<window.Game.chestManager.children.length; i++){
             tempChest = window.Game.chestManager.getChildAt(i); //get temporary index
             if (ndgmr.checkRectCollision(this, tempChest)){
                 if (!tempChest.isClicked()){

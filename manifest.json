@@ -1,7 +1,6 @@
 {
   "manifest": [
-    { "id": "bg-1", "src": "img/background-image1.png" },
-    { "id": "bg-2", "src": "img/background-image2.png" },
+    { "id": "backgrounds", "src": "img/backgrounds.png" },
     { "id": "chests", "src": "img/chests.png" },
     { "id": "text", "src": "img/text.png" },
     { "id": "player", "src": "img/player.png" },

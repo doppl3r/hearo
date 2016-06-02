@@ -1,8 +1,9 @@
 (function (window) {
 
     //constructor
-    function Chest(){
+    function Chest(instaClick){
         this.Container_constructor();
+        this.instaClick = instaClick;
     }
 
     //instance of class
@@ -27,10 +28,10 @@
         if (!this.clicked){
             if (this.success) {
                 this.coins = new CoinEffect();
-                this.coins.addCoins(0, 0, 1, 1, 50);
+                this.coins.addCoins(0, 0, 1, 1, 50, 15); //delay .25 seconds (15)
                 this.addChild(this.coins);
             }
-            window.Game.levelManager.setDelay(120); //60 = 1 second delay
+            if (!this.instaClick) window.Game.levelManager.setDelay(120); //60 = 1 second delay
             this.clicked=true;
             createjs.Sound.play("sword-low", {pan:0});
             createjs.Sound.play("chest-open", {pan:0});
@@ -40,7 +41,7 @@
     }
     container.mouseOver = function() {
         if (!this.clicked){
-            //this.sprite.alpha=.25;
+            //if (this.instaClick) this.alpha=.25;
             this.cursor="pointer";
         }
     }

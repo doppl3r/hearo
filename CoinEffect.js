@@ -21,14 +21,23 @@
 
     //update
 	container.tick = function (event) {
-         for (var i=0; i < this.children.length; i++){
-             this.getChildAt(i).tick(event);
-         }
+        if (this.delay >= 0) {
+            this.delay -= 1;
+            if (this.delay == 0) this.alpha=1; //make visible
+        }
+        else {
+            for (var i=0; i < this.children.length; i++){
+                this.getChildAt(i).tick(event);
+            }
+        }
     }
 
 	//public functions
-    container.addCoins = function (x,y,scaleX,scaleY,amount){
-        //text=text.replace(" ","_");
+    container.addCoins = function (x,y,scaleX,scaleY,amount, delay){
+        if (delay > 0){
+            this.alpha=0; //make invisible
+            this.delay = delay;
+        } 
         if (this.children.length > 0) this.removeChild(this.coin);
         for (i = 0; i < amount; i++){
             this.coin = new Coin();

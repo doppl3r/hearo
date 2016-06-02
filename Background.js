@@ -5,17 +5,16 @@
 		this.Container_constructor();
         this.spriteSheet = new createjs.SpriteSheet({
             framerate: 1,
-            images: [window.Game.assetManager.preload.getResult("bg-2")],
-            frames: {"width": 1280, "height": 720, "count": 1},
+            images: [window.Game.assetManager.preload.getResult("backgrounds")],
+            frames: [[0,0,1280,720,0,640,360],[0,720,1280,720,0,640,360],[0,1440,1280,720,0,640,360.05]],
             // define two animations, run (loops, 1.5x speed) and jump (returns to run):
             animations: {
-                frame1: [0],
-                frame2: [1]
+                "bg-1": [0],
+                "bg-2": [1],
+                "bg-3": [2]
             }
         });
-        this.sprite = new createjs.Sprite(this.spriteSheet,"frame1");
-        this.sprite.x = -(this.sprite.getBounds().width/2);
-        this.sprite.y = -(this.sprite.getBounds().height/2);
+        this.sprite = new createjs.Sprite(this.spriteSheet,"bg-1");
         this.addChild(this.sprite);
 	}
 
@@ -24,6 +23,9 @@
 
     //update
 	container.tick = function (event) { }
+    container.setBackground = function(bg){
+        this.sprite.gotoAndStop(bg);
+    }
 
 	window.Background = createjs.promote(Background, "Container");
 }(window));

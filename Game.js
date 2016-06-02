@@ -10,9 +10,6 @@
     var KEYCODE_S = 83; //useful keycode
     var VIEW = 0; //current stage assets
 
-    //var canvas; //Main canvas
-    //var stage; //Main display stage
-
     //register key functions
     document.onkeydown = handleKeyDown;
     document.onkeyup = handleKeyUp;
@@ -23,7 +20,7 @@
         //call sub ticks
         switch(VIEW) {
             case 0: //intro screen
-                window.Game.introscreen.tick(event);
+                window.Game.screenIntro.tick(event);
                 break;
             case 1: //game screen
                 window.Game.background.tick(event);
@@ -76,22 +73,25 @@
         this.stage.removeAllChildren();
 
         //initialize game objects
-        if (this.background == null) this.background = new Background();
-        this.background.x = this.canvas.width / 2;
-        this.background.y = this.canvas.height / 2;
+        if (this.background == null) {
+            this.background = new Background();
+            this.background.x = this.canvas.width / 2;
+            this.background.y = this.canvas.height / 2;
+            this.background.setBackground("bg-2");
+        }
         if (this.player == null) this.player = new Player();
-        this.player.setXY(this.canvas.width / 2, (this.canvas.height / 2)+64);
+        else this.player.setXY(this.canvas.width / 2, (this.canvas.height / 2)+64);
         if (this.selector == null) this.selector = new Selector();
         if (this.chestManager == null) this.chestManager = new ChestManager();
         if (this.interface == null) this.interface = new Interface();
-        if (this.introscreen == null) this.introscreen = new IntroScreen();
+        if (this.screenIntro == null) this.screenIntro = new ScreenIntro();
 
         //ensure stage is blank and add the player
         this.stage.clear();
 
         switch(VIEW) {
             case 0:
-                this.stage.addChild(this.introscreen);
+                this.stage.addChild(this.screenIntro);
             break;
             case 1:
                 this.stage.addChild(this.background);
@@ -111,10 +111,7 @@
     }
     Game.prototype.clickScreen = function(event){
         switch(VIEW){
-            case 0:
-                VIEW = 1;
-                this.setStage();
-            break;
+            case 0: break;
             case 1:
                 this.player.navigate(event);
                 this.selector.animateAt(event);
@@ -123,6 +120,7 @@
     }
     Game.prototype.getWidth = function(){ return this.canvas.width; }
     Game.prototype.getHeight = function(){ return this.canvas.height; }
+    Game.prototype.setScreen = function(view){ VIEW = view; }
     //create prototype of self
     window.Game = new Game();
 }(window));
