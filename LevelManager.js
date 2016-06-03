@@ -21,11 +21,8 @@
     LevelManager.prototype.setXY = function(x,y) { this.x = x; this.y = y; }
     LevelManager.prototype.nextLevel = function(){ this.currentLevel-=1; }
     LevelManager.prototype.createLevel = function(){
-        //remove extra chests
-        window.Game.chestManager.removeAllChests();
-        
-        //show remaining trials
-        window.Game.interface.setText("trials: "+this.currentLevel);
+        window.Game.chestManager.removeAllChests(); //remove extra chests
+        window.Game.interface.setText("trials: "+this.currentLevel); //show remaining trials
 
         //construct random words
         var words = [];
@@ -41,14 +38,12 @@
             }
         }
 
-        //remove words that are incorrect
-
-        var incorrectList = groupList.slice(0);
-        incorrectList = incorrectList.slice(this.wordCount-this.correctWords);
-        groupList = groupList.slice(0, this.correctWords);
+        //separate correct words
+        var incorrectList = groupList.slice(this.wordCount-this.correctWords);
+        var correctList = groupList.slice(0,this.wordCount-this.correctWords);
 
         console.log(incorrectList);
-        console.log(groupList);
+        console.log(correctList);
 
         //add wrong words
         var incorrectWordCount = this.incorrectWordCount;
