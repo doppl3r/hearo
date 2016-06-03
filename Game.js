@@ -21,8 +21,11 @@
         switch(VIEW) {
             case 0: //intro screen
                 window.Game.screenIntro.tick(event);
-                break;
-            case 1: //game screen
+            break;
+            case 1: //instructions screen
+                window.Game.screenInstructions.tick(event);
+            break;
+            case 2: //game screen
                 window.Game.background.tick(event);
                 window.Game.player.tick(event);
                 window.Game.chestManager.tick(event);
@@ -85,6 +88,7 @@
         if (this.chestManager == null) this.chestManager = new ChestManager();
         if (this.interface == null) this.interface = new Interface();
         if (this.screenIntro == null) this.screenIntro = new ScreenIntro();
+        if (this.screenInstructions == null) this.screenInstructions = new ScreenInstructions();
 
         //ensure stage is blank and add the player
         this.stage.clear();
@@ -94,6 +98,9 @@
                 this.stage.addChild(this.screenIntro);
             break;
             case 1:
+                this.stage.addChild(this.screenInstructions);
+            break;
+            case 2:
                 this.stage.addChild(this.background);
                 this.stage.addChild(this.chestManager);
                 this.stage.addChild(this.selector);
@@ -112,7 +119,8 @@
     Game.prototype.clickScreen = function(event){
         switch(VIEW){
             case 0: break;
-            case 1:
+            case 1: break;
+            case 2:
                 this.player.navigate(event);
                 this.selector.animateAt(event);
             break;
