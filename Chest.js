@@ -51,8 +51,9 @@
         this.customText = new CustomText(0,-48,this.scaleX,this.scaleY,text);
         this.addChild(this.customText);
     }
-    container.updateChest = function(text, success){
+    container.updateChest = function(text, ear, success){
         this.setText(text);
+        this.ear=ear;
         this.success=success;
     }
     container.resetMouse = function() { this.sprite.alpha=1; this.cursor="default"; }

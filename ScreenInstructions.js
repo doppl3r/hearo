@@ -14,14 +14,14 @@
         //make chests as clickable buttons
         this.chestManager = new ChestManager(true);
         this.chestManager.addChest(0,240,1,1,"topClosed");
-        this.chestManager.getLastChest().updateChest("begin",true);
+        this.chestManager.getLastChest().updateChest("begin",null,true);
 
         //add to stage
         this.addChild(this.background);
         this.addChild(this.chestManager); //add to stage
         this.setText("Instructions:", -216);
         this.setText("Listen and choose a word ", -72);
-        this.setText("that you heard most clearly.", 0);
+        this.setText("that you heard most clearly.", -12);
     }
 
 	//instance of class

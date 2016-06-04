@@ -35,7 +35,7 @@
         //make chests as clickable buttons
         this.chestManager = new ChestManager(true);
         this.chestManager.addChest(0,240,1,1,"topClosed");
-        this.chestManager.getLastChest().updateChest("start",true);
+        this.chestManager.getLastChest().updateChest("start",null,true);
 
         //add to stage
         this.addChild(this.background);

@@ -5,8 +5,10 @@
 		this.currentLevel = this.startLevel = 20;
         this.wordCount = 4;
         this.prizeWords = 2;
-        this.dupeWords = 1; //words that look correct but are never audibly played
+        this.dupeWords = 2; //words that look correct but are never audibly played
 		this.delay = -1; //milliseconds
+        this.leftPoints = 0;
+        this.rightPoints = 0;
 	}
 
 	LevelManager.prototype.tick = function () {
@@ -19,7 +21,13 @@
 	    }
 	}
     LevelManager.prototype.setXY = function(x,y) { this.x = x; this.y = y; }
-    LevelManager.prototype.nextLevel = function(){ this.currentLevel-=1; }
+    LevelManager.prototype.nextLevel = function(){
+        this.currentLevel-=1;
+        if (this.currentLevel <= 0){
+            this.currentLevel = this.startLevel;
+            window.Game.setScreen(3); //score screen
+        }
+    }
     LevelManager.prototype.createLevel = function(){
         window.Game.chestManager.removeAllChests(); //remove extra chests
         window.Game.interface.setText("trials: "+this.currentLevel); //show remaining trials
@@ -78,16 +86,22 @@
 
         if (this.wordCount == 4){ //four-word layout
             window.Game.chestManager.addChest(640,100,1,1,"topClosed");
-            window.Game.chestManager.getLastChest(0).updateChest(words[0][0],words[0][2]);
+            window.Game.chestManager.getLastChest(0).updateChest(words[0][0],words[0][1],words[0][2]);
             window.Game.chestManager.addChest(1100,360,-1,1,"sideClosed");
-            window.Game.chestManager.getLastChest(0).updateChest(words[1][0],words[1][2]);
+            window.Game.chestManager.getLastChest(0).updateChest(words[1][0],words[1][1],words[1][2]);
             window.Game.chestManager.addChest(640,620,1,1,"bottomClosed");
-            window.Game.chestManager.getLastChest(0).updateChest(words[2][0],words[2][2]);
+            window.Game.chestManager.getLastChest(0).updateChest(words[2][0],words[2][1],words[2][2]);
             window.Game.chestManager.addChest(180,360,1,1,"sideClosed");
-            window.Game.chestManager.getLastChest(0).updateChest(words[3][0],words[3][2]);
+            window.Game.chestManager.getLastChest(0).updateChest(words[3][0],words[3][1],words[3][2]);
         }
     }
     LevelManager.prototype.setDelay = function(delay){ this.delay = delay; }
+    LevelManager.prototype.addPoint = function(ear){
+        this.leftPoints += (ear == -1) ? 1 : 0;
+        this.rightPoints += (ear == 1) ? 1 : 0;
+    }
+    LevelManager.prototype.resetScore = function(){ this.leftPoints = this.rightPoints = 0; }
+
     function pullWordAt(tempList, index){
         var tempWord = tempList.splice(index,1);
         return tempWord;

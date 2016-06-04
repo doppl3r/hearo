@@ -65,6 +65,7 @@
                 if (!tempChest.isClicked()){
                     this.freeze = true;
                     tempChest.click();
+                    if (tempChest.success) window.Game.levelManager.addPoint(tempChest.ear);
                     this.sprite.gotoAndPlay("attack");
                 }
             }

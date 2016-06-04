@@ -31,6 +31,9 @@
                 window.Game.chestManager.tick(event);
                 window.Game.levelManager.tick(event);
             break;
+            case 3: //score screen
+                window.Game.screenScore.tick(event);
+            break;
         }
         window.Game.stage.update(event);
     }
@@ -89,6 +92,7 @@
         if (this.interface == null) this.interface = new Interface();
         if (this.screenIntro == null) this.screenIntro = new ScreenIntro();
         if (this.screenInstructions == null) this.screenInstructions = new ScreenInstructions();
+        if (this.screenScore == null) this.screenScore = new ScreenScore();
 
         //ensure stage is blank and add the player
         this.stage.clear();
@@ -108,6 +112,9 @@
                 this.stage.addChild(this.interface);
                 this.levelManager.createLevel();
             break;
+            case 3:
+                this.stage.addChild(this.screenScore);
+            break;
         }
 
         //start game timer
@@ -124,6 +131,7 @@
                 this.player.navigate(event);
                 this.selector.animateAt(event);
             break;
+            case 3: break;
         }
     }
     Game.prototype.getWidth = function(){ return this.canvas.width; }
