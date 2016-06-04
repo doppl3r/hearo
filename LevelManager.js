@@ -3,9 +3,9 @@
     //constructor
 	function LevelManager() {
 		this.currentLevel = this.startLevel = 20;
-        this.correctWords = 2;
-		this.wordCount = 4;
-        this.incorrectWordCount = 1;
+        this.wordCount = 4;
+        this.prizeWords = 2;
+        this.dupeWords = 1; //words that look correct but are never audibly played
 		this.delay = -1; //milliseconds
 	}
 
@@ -25,58 +25,51 @@
         window.Game.interface.setText("trials: "+this.currentLevel); //show remaining trials
 
         //construct random words
+        //words[0][0] = random word string, words[0][1] = ear (-1 or 1), words[0][2] = correct/incorrect
         var words = [];
-        var tempWordList = getWordList();
+        var tempWordList = getWordList().slice(0);
         var ear = getRandomInt(-1,1,true); //pick left or right ear (-1 or 1)
         var cellGroup = tempWordList[getRandomInt()].cell; //pick random cell group
 
         //create new list by group
         var groupList = [];
-        for (var i=0; i<tempWordList.length; i++){
+        var tempWordListLength = tempWordList.length;
+        for (var i=tempWordListLength-1; i>=0; i--){
             if (tempWordList[i].cell == cellGroup){
                 groupList.push(tempWordList[i]);
+                pullWordAt(tempWordList, i); //remove options words
             }
         }
 
-        //separate correct words
-        var incorrectList = groupList.slice(this.wordCount-this.correctWords);
-        var correctList = groupList.slice(0,this.wordCount-this.correctWords);
+        //shuffle group
+        groupList = shuffleArray(groupList.slice(0));
 
-        console.log(incorrectList);
-        console.log(correctList);
-
-        //add wrong words
-        var incorrectWordCount = this.incorrectWordCount;
-        while (groupList.length < this.wordCount){
-            var randWord;
-            randWord = getRandomWord(tempWordList);
-            //scan list for existing words
-            for (var i=0; i<groupList.length; i++){
-                //add wrong word if id does not match current list
-                if (randWord.id != groupList[i].id){
-                    if (randWord.cell != cellGroup){
-                        incorrectWordCount--;
-                        groupList.push(randWord);
-                        break; //break for-loop
-                    }
-                }
-            }
-        }
-
-        //set new list properties
+        //set default list properties
+        var dupeWords = this.dupeWords;
         for (var i=0; i < groupList.length; i++){
-            var correct = i < (this.correctWords);
-            words.push([groupList[i].id, ear, correct]);
+            var correct = i < (this.prizeWords);
+            if (correct || dupeWords > 0){
+                words.push([groupList[i].id, ear, correct]);
+                if (!correct) dupeWords--;
+            }
+            else{
+                var randWord;
+                var randInt;
+                do {
+                    randInt = getRandomInt(0, tempWordList.length-1);
+                    randWord = getWordAt(tempWordList, randInt);
+                }
+                while (randWord.cell == cellGroup);
+                words.push([randWord.id, ear, correct]);
+                pullWordAt(tempWordList, randInt); //remove from optional pics
+            }
             ear *= -1; //switch ear
         }
 
-        //words[0][0] = first random word string
-        //words[0][1] = first current ear (-1 or 1);
-        //words[0][2] = first correct/incorrect
+        //shuffle game list
+        words = shuffleArray(words.slice(0));
 
-        words = shuffleArray(words); //mix up the array
-
-        //play words that are correct
+        //play audio files of correct words
         for (var i=0; i < words.length; i++){
             if (words[i][2]){ //if correct
                 createjs.Sound.play(words[i][0], {pan: words[i][1]});
@@ -95,8 +88,8 @@
         }
     }
     LevelManager.prototype.setDelay = function(delay){ this.delay = delay; }
-    function getRandomWord(tempList){
-        var tempWord = tempList[getRandomInt(0,tempList.length)];
+    function pullWordAt(tempList, index){
+        var tempWord = tempList.splice(index,1);
         return tempWord;
     }
     function getRandomInt(min, max, noZero) {
@@ -109,9 +102,8 @@
         while (noZero && rand == 0); //if noZero = true, get new random number
         return rand;
     }
-    function getWordList(){
-        return window.Game.assetManager.preload._loadedResults.words.manifest;
-    }
+    function getWordList(){ return window.Game.assetManager.preload._loadedResults.words.manifest; }
+    function getWordAt(tempList, index){ return tempList[index]; }
 
     //http://stackoverflow.com/a/12646864/2510368
     function shuffleArray(array) {
