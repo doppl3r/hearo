@@ -20,7 +20,8 @@
         this.preload = new createjs.LoadQueue(true);
         this.preload.installPlugin(createjs.Sound);
         this.preload.loadManifest({ id: "manifest", src:"manifest.json" });
-        this.preload.loadManifest({ id: "words", src:"words.json" });
+        this.preload.loadManifest({ id: "words_k", src:"words-k.json" });
+        this.preload.loadManifest({ id: "words_1", src:"words-1.json" });
 
         //draw background of progress bar
         this.bar1 = new createjs.Shape();
@@ -51,10 +52,15 @@
 
     //update
 	container.updateLoading = function() {
-        this.messageField.text = "Loading " + (this.preload.progress * 100 | 0) + "%";
+        this.messageField.text = "Downloading Audio " + (this.preload.progress * 100 | 0) + "%";
         this.bar2.graphics.beginFill("#ec7b23").drawRect(
             this.centerX-(this.bar2.width/2), 600-(this.bar2.height/2),
             (this.preload.progress * this.bar2.width | 0), this.bar2.height);
+    }
+
+    container.getManifest = function(grade){
+        if (grade == "k") return this.preload._loadedResults.words_k.manifest;
+        else if (grade == "1") return this.preload._loadedResults.words_1.manifest;
     }
 
 	window.AssetManager = createjs.promote(AssetManager, "Container");

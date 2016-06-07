@@ -9,6 +9,8 @@
 		this.delay = -1; //milliseconds
         this.leftPoints = 0;
         this.rightPoints = 0;
+        this.grade = "1";
+        console.log(this.grade);
 	}
 
 	LevelManager.prototype.tick = function () {
@@ -35,9 +37,9 @@
         //construct random words
         //words[0][0] = random word string, words[0][1] = ear (-1 or 1), words[0][2] = correct/incorrect
         var words = [];
-        var tempWordList = getWordList().slice(0);
-        var ear = getRandomInt(-1,1,true); //pick left or right ear (-1 or 1)
-        var cellGroup = tempWordList[getRandomInt()].cell; //pick random cell group
+        var tempWordList = this.getWordList().slice(0);
+        var ear = this.getRandomInt(-1,1,true); //pick left or right ear (-1 or 1)
+        var cellGroup = tempWordList[this.getRandomInt()].cell; //pick random cell group
 
         //create new list by group
         var groupList = [];
@@ -64,7 +66,7 @@
                 var randWord;
                 var randInt;
                 do {
-                    randInt = getRandomInt(0, tempWordList.length-1);
+                    randInt = this.getRandomInt(0, tempWordList.length-1);
                     randWord = getWordAt(tempWordList, randInt);
                 }
                 while (randWord.cell == cellGroup);
@@ -101,22 +103,25 @@
         this.rightPoints += (ear == 1) ? 1 : 0;
     }
     LevelManager.prototype.resetScore = function(){ this.leftPoints = this.rightPoints = 0; }
-
-    function pullWordAt(tempList, index){
-        var tempWord = tempList.splice(index,1);
-        return tempWord;
-    }
-    function getRandomInt(min, max, noZero) {
+    LevelManager.prototype.getRandomInt = function(min, max, noZero) {
         if (typeof min === 'undefined' || typeof max === 'undefined') {
             min = 0;
-            max = getWordList().length-1;
+            max = this.getWordList().length-1;
         }
         var rand;
         do { rand = Math.floor(Math.random() * (max - min + 1)) + min; }
         while (noZero && rand == 0); //if noZero = true, get new random number
         return rand;
     }
-    function getWordList(){ return window.Game.assetManager.preload._loadedResults.words.manifest; }
+    LevelManager.prototype.getWordList = function(){
+        return window.Game.assetManager.getManifest(this.grade);
+    }
+
+    //private functions
+    function pullWordAt(tempList, index){
+        var tempWord = tempList.splice(index,1);
+        return tempWord;
+    }
     function getWordAt(tempList, index){ return tempList[index]; }
 
     //http://stackoverflow.com/a/12646864/2510368

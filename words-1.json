@@ -1,0 +1,243 @@
+{
+  "manifest": [
+    { "id": "add", "src": "sounds/words/add.mp3", "cell": "1-A1-4" },
+    { "id": "after", "src": "sounds/words/after.mp3", "cell": "1-A1-4" },
+    { "id": "mad", "src": "sounds/words/mad.mp3", "cell": "1-A1-4" },
+    { "id": "rad", "src": "sounds/words/rad.mp3", "cell": "1-A1-4" },
+
+    { "id": "any", "src": "sounds/words/any.mp3", "cell": "1-A6-9" },
+    { "id": "apart", "src": "sounds/words/apart.mp3", "cell": "1-A6-9" },
+    { "id": "apple", "src": "sounds/words/apple.mp3", "cell": "1-A6-9" },
+    { "id": "arm", "src": "sounds/words/arm.mp3", "cell": "1-A6-9" },
+
+    { "id": "beat", "src": "sounds/words/beat.mp3", "cell": "1-A11-14" },
+    { "id": "been", "src": "sounds/words/been.mp3", "cell": "1-A11-14" },
+    { "id": "being", "src": "sounds/words/being.mp3", "cell": "1-A11-14" },
+    { "id": "belt", "src": "sounds/words/belt.mp3", "cell": "1-A11-14" },
+
+    { "id": "bent", "src": "sounds/words/bent.mp3", "cell": "1-A16-19" },
+    { "id": "best", "src": "sounds/words/best.mp3", "cell": "1-A16-19" },
+    { "id": "bike", "src": "sounds/words/bike.mp3", "cell": "1-A16-19" },
+    { "id": "bill", "src": "sounds/words/bill.mp3", "cell": "1-A16-19" },
+
+    { "id": "bird", "src": "sounds/words/bird.mp3", "cell": "1-A21-24" },
+    { "id": "birth", "src": "sounds/words/birth.mp3", "cell": "1-A21-24" },
+    { "id": "bone", "src": "sounds/words/bone.mp3", "cell": "1-A21-24" },
+    { "id": "born", "src": "sounds/words/born.mp3", "cell": "1-A21-24" },
+
+    { "id": "black", "src": "sounds/words/black.mp3", "cell": "1-A26-29" },
+    { "id": "blew", "src": "sounds/words/blew.mp3", "cell": "1-A26-29" },
+    { "id": "block", "src": "sounds/words/block.mp3", "cell": "1-A26-29" },
+    { "id": "blue", "src": "sounds/words/blue.mp3", "cell": "1-A26-29" },
+
+    { "id": "book", "src": "sounds/words/book.mp3", "cell": "1-A31-34" },
+    { "id": "brag", "src": "sounds/words/brag.mp3", "cell": "1-A31-34" },
+    { "id": "brook", "src": "sounds/words/brook.mp3", "cell": "1-A31-34" },
+    { "id": "brother", "src": "sounds/words/brother.mp3", "cell": "1-A31-34" },
+
+    { "id": "brown", "src": "sounds/words/brown.mp3", "cell": "1-A36-39" },
+    { "id": "bush", "src": "sounds/words/bush.mp3", "cell": "1-A36-39" },
+    { "id": "clown", "src": "sounds/words/clown.mp3", "cell": "1-A36-39" },
+    { "id": "round", "src": "sounds/words/round.mp3", "cell": "1-A36-39" },
+
+    { "id": "came", "src": "sounds/words/came.mp3", "cell": "1-A41-44" },
+    { "id": "cane", "src": "sounds/words/cane.mp3", "cell": "1-A41-44" },
+    { "id": "case", "src": "sounds/words/case.mp3", "cell": "1-A41-44" },
+    { "id": "chain", "src": "sounds/words/chain.mp3", "cell": "1-A41-44" },
+
+    { "id": "card", "src": "sounds/words/card.mp3", "cell": "1-A46-49" },
+    { "id": "cart", "src": "sounds/words/cart.mp3", "cell": "1-A46-49" },
+    { "id": "chair", "src": "sounds/words/chair.mp3", "cell": "1-A46-49" },
+    { "id": "chalk", "src": "sounds/words/chalk.mp3", "cell": "1-A46-49" },
+
+    { "id": "chat", "src": "sounds/words/chat.mp3", "cell": "1-A51-54" },
+    { "id": "chin", "src": "sounds/words/chin.mp3", "cell": "1-A51-54" },
+    { "id": "chop", "src": "sounds/words/chop.mp3", "cell": "1-A51-54" },
+    { "id": "class", "src": "sounds/words/class.mp3", "cell": "1-A51-54" },
+
+    { "id": "clam", "src": "sounds/words/clam.mp3", "cell": "1-A56-59" },
+    { "id": "clan", "src": "sounds/words/clan.mp3", "cell": "1-A56-59" },
+    { "id": "clap", "src": "sounds/words/clap.mp3", "cell": "1-A56-59" },
+    { "id": "claw", "src": "sounds/words/claw.mp3", "cell": "1-A56-59" },
+
+    { "id": "dine", "src": "sounds/words/dine.mp3", "cell": "1-B1-4" },
+    { "id": "dirt", "src": "sounds/words/dirt.mp3", "cell": "1-B1-4" },
+    { "id": "doll", "src": "sounds/words/doll.mp3", "cell": "1-B1-4" },
+    { "id": "door", "src": "sounds/words/door.mp3", "cell": "1-B1-4" },
+
+    { "id": "jump", "src": "sounds/words/jump.mp3", "cell": "1-B6-9" },
+    { "id": "junk", "src": "sounds/words/junk.mp3", "cell": "1-B6-9" },
+    { "id": "just", "src": "sounds/words/just.mp3", "cell": "1-B6-9" },
+    { "id": "must", "src": "sounds/words/must.mp3", "cell": "1-B6-9" },
+
+    { "id": "draw", "src": "sounds/words/draw.mp3", "cell": "1-B11-14" },
+    { "id": "dress", "src": "sounds/words/dress.mp3", "cell": "1-B11-14" },
+    { "id": "drink", "src": "sounds/words/drink.mp3", "cell": "1-B11-14" },
+    { "id": "drop", "src": "sounds/words/drop.mp3", "cell": "1-B11-14" },
+
+    { "id": "dull", "src": "sounds/words/dull.mp3", "cell": "1-B16-19" },
+    { "id": "dunk", "src": "sounds/words/dunk.mp3", "cell": "1-B16-19" },
+    { "id": "full", "src": "sounds/words/full.mp3", "cell": "1-B16-19" },
+    { "id": "roll", "src": "sounds/words/roll.mp3", "cell": "1-B16-19" },
+
+    { "id": "each", "src": "sounds/words/each.mp3", "cell": "1-B21-24" },
+    { "id": "east", "src": "sounds/words/east.mp3", "cell": "1-B21-24" },
+    { "id": "easy", "src": "sounds/words/easy.mp3", "cell": "1-B21-24" },
+    { "id": "eight", "src": "sounds/words/eight.mp3", "cell": "1-B21-24" },
+
+    { "id": "eleven", "src": "sounds/words/eleven.mp3", "cell": "1-B26-29" },
+    { "id": "end", "src": "sounds/words/end.mp3", "cell": "1-B26-29" },
+    { "id": "every", "src": "sounds/words/every.mp3", "cell": "1-B26-29" },
+    { "id": "fang", "src": "sounds/words/fang.mp3", "cell": "1-B26-29" },
+
+    { "id": "farther", "src": "sounds/words/farther.mp3", "cell": "1-B31-34" },
+    { "id": "fast", "src": "sounds/words/fast.mp3", "cell": "1-B31-34" },
+    { "id": "father", "src": "sounds/words/father.mp3", "cell": "1-B31-34" },
+    { "id": "fell", "src": "sounds/words/fell.mp3", "cell": "1-B31-34" },
+
+    { "id": "few", "src": "sounds/words/few.mp3", "cell": "1-B36-39" },
+    { "id": "field", "src": "sounds/words/field.mp3", "cell": "1-B36-39" },
+    { "id": "fill", "src": "sounds/words/fill.mp3", "cell": "1-B36-39" },
+    { "id": "fine", "src": "sounds/words/fine.mp3", "cell": "1-B36-39" },
+
+    { "id": "first", "src": "sounds/words/first.mp3", "cell": "1-B41-44" },
+    { "id": "flag", "src": "sounds/words/flag.mp3", "cell": "1-B41-44" },
+    { "id": "flat", "src": "sounds/words/flat.mp3", "cell": "1-B41-44" },
+    { "id": "flew", "src": "sounds/words/flew.mp3", "cell": "1-B41-44" },
+
+    { "id": "crow", "src": "sounds/words/crow.mp3", "cell": "1-B46-49" },
+    { "id": "flow", "src": "sounds/words/flow.mp3", "cell": "1-B46-49" },
+    { "id": "flower", "src": "sounds/words/flower.mp3", "cell": "1-B46-49" },
+    { "id": "power", "src": "sounds/words/power.mp3", "cell": "1-B46-49" },
+
+    { "id": "fog", "src": "sounds/words/fog.mp3", "cell": "1-B51-54" },
+    { "id": "fool", "src": "sounds/words/fool.mp3", "cell": "1-B51-54" },
+    { "id": "foot", "src": "sounds/words/foot.mp3", "cell": "1-B51-54" },
+    { "id": "fort", "src": "sounds/words/fort.mp3", "cell": "1-B51-54" },
+
+    { "id": "feel", "src": "sounds/words/feel.mp3", "cell": "1-B56-59" },
+    { "id": "free", "src": "sounds/words/free.mp3", "cell": "1-B56-59" },
+    { "id": "fresh", "src": "sounds/words/fresh.mp3", "cell": "1-B56-59" },
+    { "id": "from", "src": "sounds/words/from.mp3", "cell": "1-B56-59" },
+
+    { "id": "inside", "src": "sounds/words/inside.mp3", "cell": "1-C1-4" },
+    { "id": "into", "src": "sounds/words/into.mp3", "cell": "1-C1-4" },
+    { "id": "ride", "src": "sounds/words/ride.mp3", "cell": "1-C1-4" },
+    { "id": "tidy", "src": "sounds/words/tidy.mp3", "cell": "1-C1-4" },
+
+    { "id": "jaw", "src": "sounds/words/jaw.mp3", "cell": "1-C6-9" },
+    { "id": "joke", "src": "sounds/words/joke.mp3", "cell": "1-C6-9" },
+    { "id": "juice", "src": "sounds/words/juice.mp3", "cell": "1-C6-9" },
+    { "id": "law", "src": "sounds/words/law.mp3", "cell": "1-C6-9" },
+
+    { "id": "keep", "src": "sounds/words/keep.mp3", "cell": "1-C11-14" },
+    { "id": "king", "src": "sounds/words/king.mp3", "cell": "1-C11-14" },
+    { "id": "kite", "src": "sounds/words/kite.mp3", "cell": "1-C11-14" },
+    { "id": "know", "src": "sounds/words/know.mp3", "cell": "1-C11-14" },
+
+    { "id": "lake", "src": "sounds/words/lake.mp3", "cell": "1-C16-19" },
+    { "id": "last", "src": "sounds/words/last.mp3", "cell": "1-C16-19" },
+    { "id": "late", "src": "sounds/words/late.mp3", "cell": "1-C16-19" },
+    { "id": "like", "src": "sounds/words/like.mp3", "cell": "1-C16-19" },
+
+    { "id": "lime", "src": "sounds/words/lime.mp3", "cell": "1-C21-24" },
+    { "id": "line", "src": "sounds/words/line.mp3", "cell": "1-C21-24" },
+    { "id": "live", "src": "sounds/words/live.mp3", "cell": "1-C21-24" },
+    { "id": "look", "src": "sounds/words/look.mp3", "cell": "1-C21-24" },
+
+    { "id": "love", "src": "sounds/words/love.mp3", "cell": "1-C26-29" },
+    { "id": "luck", "src": "sounds/words/luck.mp3", "cell": "1-C26-29" },
+    { "id": "lunch", "src": "sounds/words/lunch.mp3", "cell": "1-C26-29" },
+    { "id": "muck", "src": "sounds/words/muck.mp3", "cell": "1-C26-29" },
+
+    { "id": "fade", "src": "sounds/words/fade.mp3", "cell": "1-C31-34" },
+    { "id": "made", "src": "sounds/words/made.mp3", "cell": "1-C31-34" },
+    { "id": "make", "src": "sounds/words/make.mp3", "cell": "1-C31-34" },
+    { "id": "many", "src": "sounds/words/many.mp3", "cell": "1-C31-34" },
+
+    { "id": "map", "src": "sounds/words/map.mp3", "cell": "1-C36-39" },
+    { "id": "mask", "src": "sounds/words/mask.mp3", "cell": "1-C36-39" },
+    { "id": "rack", "src": "sounds/words/rack.mp3", "cell": "1-C36-39" },
+    { "id": "rap", "src": "sounds/words/rap.mp3", "cell": "1-C36-39" },
+
+    { "id": "may", "src": "sounds/words/may.mp3", "cell": "1-C41-44" },
+    { "id": "meal", "src": "sounds/words/meal.mp3", "cell": "1-C41-44" },
+    { "id": "meat", "src": "sounds/words/meat.mp3", "cell": "1-C41-44" },
+    { "id": "men", "src": "sounds/words/men.mp3", "cell": "1-C41-44" },
+
+    { "id": "ice", "src": "sounds/words/ice.mp3", "cell": "1-C46-49" },
+    { "id": "mice", "src": "sounds/words/mice.mp3", "cell": "1-C46-49" },
+    { "id": "mine", "src": "sounds/words/mine.mp3", "cell": "1-C46-49" },
+    { "id": "rice", "src": "sounds/words/rice.mp3", "cell": "1-C46-49" },
+
+    { "id": "milk", "src": "sounds/words/milk.mp3", "cell": "1-C51-54" },
+    { "id": "mint", "src": "sounds/words/mint.mp3", "cell": "1-C51-54" },
+    { "id": "mix", "src": "sounds/words/mix.mp3", "cell": "1-C51-54" },
+    { "id": "moon", "src": "sounds/words/moon.mp3", "cell": "1-C51-54" },
+
+    { "id": "more", "src": "sounds/words/more.mp3", "cell": "1-C56-59" },
+    { "id": "morning", "src": "sounds/words/morning.mp3", "cell": "1-C56-59" },
+    { "id": "mother", "src": "sounds/words/mother.mp3", "cell": "1-C56-59" },
+    { "id": "much", "src": "sounds/words/much.mp3", "cell": "1-C56-59" },
+
+    { "id": "baby", "src": "sounds/words/baby.mp3", "cell": "1-D1-4" },
+    { "id": "bake", "src": "sounds/words/bake.mp3", "cell": "1-D1-4" },
+    { "id": "bang", "src": "sounds/words/bang.mp3", "cell": "1-D1-4" },
+    { "id": "bank", "src": "sounds/words/bank.mp3", "cell": "1-D1-4" },
+
+    { "id": "plan", "src": "sounds/words/plan.mp3", "cell": "1-D6-9" },
+    { "id": "plant", "src": "sounds/words/plant.mp3", "cell": "1-D6-9" },
+    { "id": "play", "src": "sounds/words/play.mp3", "cell": "1-D6-9" },
+    { "id": "poor", "src": "sounds/words/poor.mp3", "cell": "1-D6-9" },
+
+    { "id": "kitty", "src": "sounds/words/kitty.mp3", "cell": "1-D11-14" },
+    { "id": "pretty", "src": "sounds/words/pretty.mp3", "cell": "1-D11-14" },
+    { "id": "print", "src": "sounds/words/print.mp3", "cell": "1-D11-14" },
+    { "id": "punch", "src": "sounds/words/punch.mp3", "cell": "1-D11-14" },
+
+    { "id": "part", "src": "sounds/words/part.mp3", "cell": "1-D16-19" },
+    { "id": "pink", "src": "sounds/words/pink.mp3", "cell": "1-D16-19" },
+    { "id": "purple", "src": "sounds/words/purple.mp3", "cell": "1-D16-19" },
+    { "id": "put", "src": "sounds/words/put.mp3", "cell": "1-D16-19" },
+
+    { "id": "fang", "src": "sounds/words/fang2.mp3", "cell": "1-D21-24" },
+    { "id": "rain", "src": "sounds/words/rain.mp3", "cell": "1-D21-24" },
+    { "id": "rang", "src": "sounds/words/rang.mp3", "cell": "1-D21-24" },
+    { "id": "rank", "src": "sounds/words/rank.mp3", "cell": "1-D21-24" },
+
+    { "id": "feed", "src": "sounds/words/feed.mp3", "cell": "1-D26-29" },
+    { "id": "lead", "src": "sounds/words/lead.mp3", "cell": "1-D26-29" },
+    { "id": "read", "src": "sounds/words/read.mp3", "cell": "1-D26-29" },
+    { "id": "ride", "src": "sounds/words/ride2.mp3", "cell": "1-D26-29" },
+
+    { "id": "liver", "src": "sounds/words/liver.mp3", "cell": "1-D31-34" },
+    { "id": "river", "src": "sounds/words/river.mp3", "cell": "1-D31-34" },
+    { "id": "road", "src": "sounds/words/road.mp3", "cell": "1-D31-34" },
+    { "id": "rock", "src": "sounds/words/rock.mp3", "cell": "1-D31-34" },
+
+    { "id": "boom", "src": "sounds/words/boom.mp3", "cell": "1-D36-39" },
+    { "id": "room", "src": "sounds/words/room.mp3", "cell": "1-D36-39" },
+    { "id": "soon", "src": "sounds/words/soon.mp3", "cell": "1-D36-39" },
+    { "id": "zoom", "src": "sounds/words/zoom.mp3", "cell": "1-D36-39" },
+
+    { "id": "road", "src": "sounds/words/road2.mp3", "cell": "1-D41-44" },
+    { "id": "rope", "src": "sounds/words/rope.mp3", "cell": "1-D41-44" },
+    { "id": "round", "src": "sounds/words/round2.mp3", "cell": "1-D41-44" },
+    { "id": "rub", "src": "sounds/words/rub.mp3", "cell": "1-D41-44" },
+
+    { "id": "cover", "src": "sounds/words/cover.mp3", "cell": "1-D46-49" },
+    { "id": "hover", "src": "sounds/words/hover.mp3", "cell": "1-D46-49" },
+    { "id": "love", "src": "sounds/words/love2.mp3", "cell": "1-D46-49" },
+    { "id": "rubber", "src": "sounds/words/rubber.mp3", "cell": "1-D46-49" },
+
+    { "id": "fail", "src": "sounds/words/fail.mp3", "cell": "1-D51-54" },
+    { "id": "mail", "src": "sounds/words/mail.mp3", "cell": "1-D51-54" },
+    { "id": "rail", "src": "sounds/words/rail.mp3", "cell": "1-D51-54" },
+    { "id": "sail", "src": "sounds/words/sail.mp3", "cell": "1-D51-54" },
+
+    { "id": "name", "src": "sounds/words/name.mp3", "cell": "1-D56-59" },
+    { "id": "same", "src": "sounds/words/same.mp3", "cell": "1-D56-59" },
+    { "id": "sank", "src": "sounds/words/sank.mp3", "cell": "1-D56-59" },
+    { "id": "save", "src": "sounds/words/save.mp3", "cell": "1-D56-59" }
+  ]
+}
