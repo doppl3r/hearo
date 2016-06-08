@@ -4,8 +4,10 @@
 	function ScreenIntro() {
         //container properties
 		this.Container_constructor();
-        this.x = window.Game.canvas.width / 2;
-        this.y = (window.Game.canvas.height / 2);
+        this.width = window.Game.canvas.width;
+        this.height = window.Game.canvas.height;
+        this.x = this.width / 2;
+        this.y = this.height / 2;
 
         //title sprite
 		this.spriteSheet = new createjs.SpriteSheet({
@@ -36,11 +38,17 @@
         this.chestManager = new ChestManager(true);
         this.chestManager.addChest(0,240,1,1,"topClosed");
         this.chestManager.getLastChest().updateChest("start",null,true);
+        this.chestManager.scaleX = this.chestManager.scaleY = 0;
+
+        //intro fade
+        this.fadeEffect = new createjs.Shape();
+        this.fadeEffect.graphics.beginFill("#ffffff").drawRect(-this.x, -this.y, this.width, this.height);
 
         //add to stage
         this.addChild(this.background);
         this.addChild(this.characterSprite);
         this.addChild(this.sprite);
+        this.addChild(this.fadeEffect); //add to stage
         this.addChild(this.chestManager); //add to stage
     }
 
@@ -50,8 +58,10 @@
     //update
 	container.tick = function (event) {
         //begin animation
-        createjs.Tween.get(this.sprite).to({scaleX: 1, scaleY: 1}, 1000, createjs.Ease.cubicInOut);
-        createjs.Tween.get(this.characterSprite).wait(1000).to({ x:-460 }, 1000, createjs.Ease.cubicInOut);
+        createjs.Tween.get(this.fadeEffect).to({ alpha:0 }, 3000, createjs.Ease.sineOut);
+        createjs.Tween.get(this.characterSprite).wait(500).to({ x:-460 }, 1000, createjs.Ease.cubicInOut);
+        createjs.Tween.get(this.sprite).wait(1500).to({scaleX: 1, scaleY: 1}, 1000, createjs.Ease.cubicInOut);
+        createjs.Tween.get(this.chestManager).wait(1000).to({scaleX: 1, scaleY: 1}, 1000, createjs.Ease.cubicInOut);
 
         //tick chestManager
         this.chestManager.tick(event);

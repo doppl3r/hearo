@@ -15,13 +15,18 @@
         this.chestManager = new ChestManager(true);
         this.chestManager.addChest(0,240,1,1,"topClosed");
         this.chestManager.getLastChest().updateChest("begin",null,true);
+        this.chestManager.scaleX = this.chestManager.scaleY = 0;
+
+        this.text1 = new CustomText(0,-720,1,1,"Instructions:");
+        this.text2 = new CustomText(0,-720,1,1,"Listen and choose a word");
+        this.text3 = new CustomText(0,-720,1,1,"that you heard most clearly.");
 
         //add to stage
         this.addChild(this.background);
         this.addChild(this.chestManager); //add to stage
-        this.setText("Instructions:", -216);
-        this.setText("Listen and choose a word ", -72);
-        this.setText("that you heard most clearly.", -12);
+        this.addChild(this.text1);
+        this.addChild(this.text2);
+        this.addChild(this.text3);
     }
 
 	//instance of class
@@ -29,12 +34,18 @@
 
     //update
 	container.tick = function (event) {
+        createjs.Tween.get(this.text1).to({ y:-216 }, 1000, createjs.Ease.sineOut);
+        createjs.Tween.get(this.text2).to({ y:-72 }, 1000, createjs.Ease.sineOut);
+        createjs.Tween.get(this.text3).to({ y:-12 }, 1000, createjs.Ease.sineOut);
+        createjs.Tween.get(this.chestManager).wait(1000).to({scaleX: 1, scaleY: 1}, 1000, createjs.Ease.cubicInOut)
+
 
         //tick chestManager
         this.chestManager.tick(event);
         if (this.delay >= 0){
             this.delay-=1;
             if (this.delay == 0) { //change screen after delay runs out
+                createjs.Sound.stop();
                 window.Game.setScreen(2);
                 window.Game.setStage();
             }
@@ -49,10 +60,6 @@
                 }
             }
         }
-    }
-    container.setText = function(text, y){
-        this.customText = new CustomText(0,y,this.scaleX,this.scaleY,text);
-        this.addChild(this.customText);
     }
 
 	window.ScreenInstructions = createjs.promote(ScreenInstructions, "Container");

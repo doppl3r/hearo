@@ -70,6 +70,10 @@
                 }
             }
         }
+
+        //loop running sound
+        if (this.sprite.currentFrame == 6 && this.runSound){ createjs.Sound.play("player-run", {volume: 1}); this.runSound = false; }
+        else if (this.sprite.currentFrame != 6) this.runSound = true;
 	}
 
 	//public variables
@@ -114,7 +118,9 @@
     }
     container.enableRunAnimation = function(pressed){
         if (pressed){
-            if (this.sprite.currentAnimation == "idle") this.sprite.gotoAndPlay("run");
+            if (this.sprite.currentAnimation == "idle"){
+                this.sprite.gotoAndPlay("run");
+            }
         }
         else {
             this.targetX = this.x; //interrupt target

@@ -9,8 +9,7 @@
 		this.delay = -1; //milliseconds
         this.leftPoints = 0;
         this.rightPoints = 0;
-        this.grade = "1";
-        console.log(this.grade);
+        this.grade = "k"; //k,1,2,3 etc
 	}
 
 	LevelManager.prototype.tick = function () {

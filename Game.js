@@ -30,6 +30,7 @@
                 window.Game.player.tick(event);
                 window.Game.chestManager.tick(event);
                 window.Game.levelManager.tick(event);
+                window.Game.interface.tick(event);
             break;
             case 3: //score screen
                 window.Game.screenScore.tick(event);
@@ -71,7 +72,10 @@
         //create level manager prototype from window object
         this.levelManager = Object.create(LevelManager);
 
-        this.assetManager.preload.on("complete", function(){ Game.prototype.setStage(); });
+        this.assetManager.preload.on("complete", function(){
+            Game.prototype.setStage();
+            createjs.Sound.play("hearo-theme", {interrupt: createjs.Sound.INTERRUPT_NONE, loop: -1});
+        });
         this.assetManager.preload.on("progress", function(){ Game.prototype.assetManager.updateLoading(); window.Game.stage.update(); });
     }
     Game.prototype.setStage = function() {
@@ -90,6 +94,7 @@
         if (this.selector == null) this.selector = new Selector();
         if (this.chestManager == null) this.chestManager = new ChestManager();
         if (this.interface == null) this.interface = new Interface();
+        else this.interface.resetFade();
         if (this.screenIntro == null) this.screenIntro = new ScreenIntro();
         if (this.screenInstructions == null) this.screenInstructions = new ScreenInstructions();
         if (this.screenScore == null) this.screenScore = new ScreenScore();
