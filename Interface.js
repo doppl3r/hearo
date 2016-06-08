@@ -17,7 +17,8 @@
         this.y = (this.height - this.sprite.getBounds().height/2) + 12;
 
         //progress text
-        this.text1 = new CustomText(0,0,1,1,"trials:");
+        this.trialsText = new CustomText(0,0,1,1,"trials:");
+        this.listenText = new CustomText((this.width/2)-this.x,-this.height/2,1,1,"listen...");
 
         //intro fade
         this.fadeEffect = new createjs.Shape();
@@ -25,7 +26,8 @@
 
         this.addChild(this.fadeEffect);
         this.addChild(this.sprite);
-        this.addChild(this.text1);
+        this.addChild(this.trialsText);
+        this.addChild(this.listenText);
     }
 
 	//instance of class
@@ -38,9 +40,9 @@
         }
     }
     container.setText = function(text){
-        if (this.children.length > 0) this.removeChild(this.text1);
-        this.text1 = new CustomText(0,0,this.scaleX,this.scaleY,text);
-        this.addChild(this.text1);
+        if (this.children.length > 0) this.removeChild(this.trialsText);
+        this.trialsText = new CustomText(0,0,this.scaleX,this.scaleY,text);
+        this.addChild(this.trialsText);
     }
     container.resetFade = function(){ this.fadeEffect.alpha = 1; }
 
