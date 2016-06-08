@@ -27,6 +27,7 @@
     container.click = function() {
         if (!this.clicked){
             if (this.success) {
+                createjs.Sound.play("coins", {pan:0});
                 this.coins = new CoinEffect();
                 this.coins.addCoins(0, 0, 1, 1, 50, this.instaClick ? 0 : 15); //delay .25 seconds (15)
                 this.addChild(this.coins);
@@ -57,6 +58,7 @@
         this.success=success;
     }
     container.resetMouse = function() { this.sprite.alpha=1; this.cursor="default"; }
+    container.reset = function() { this.clicked = this.success = false; this.resetMouse(); this.removeChild(this.coins); }
 
 	window.Chest = new createjs.promote(Chest, "Container");
 }(window));

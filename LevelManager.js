@@ -2,7 +2,7 @@
 
     //constructor
 	function LevelManager() {
-		this.currentLevel = this.startLevel = 20;
+		this.currentLevel = this.startLevel = 10;
         this.wordCount = 4;
         this.prizeWords = 2;
         this.dupeWords = 2; //words that look correct but are never audibly played
@@ -27,6 +27,7 @@
         if (this.currentLevel <= 0){
             this.currentLevel = this.startLevel;
             window.Game.setScreen(3); //score screen
+            window.Game.screenScore.updateScreen();
         }
     }
     LevelManager.prototype.createLevel = function(){

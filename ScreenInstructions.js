@@ -37,7 +37,7 @@
         createjs.Tween.get(this.text1).to({ y:-216 }, 1000, createjs.Ease.sineOut);
         createjs.Tween.get(this.text2).to({ y:-72 }, 1000, createjs.Ease.sineOut);
         createjs.Tween.get(this.text3).to({ y:-12 }, 1000, createjs.Ease.sineOut);
-        createjs.Tween.get(this.chestManager).wait(1000).to({scaleX: 1, scaleY: 1}, 1000, createjs.Ease.cubicInOut)
+        createjs.Tween.get(this.chestManager).wait(1000).to({scaleX: 1, scaleY: 1}, 1000, createjs.Ease.cubicInOut);
 
 
         //tick chestManager
@@ -45,7 +45,6 @@
         if (this.delay >= 0){
             this.delay-=1;
             if (this.delay == 0) { //change screen after delay runs out
-                createjs.Sound.stop();
                 window.Game.setScreen(2);
                 window.Game.setStage();
             }

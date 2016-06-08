@@ -17,6 +17,10 @@
     //private functions
     function Game(){ Game.prototype.init(); } //constructor
     function tick(event) {
+        if (window.Game.hearoThemeFade) {
+            if (window.Game.hearoTheme.volume > 0) window.Game.hearoTheme.volume -= 0.01;
+            else { window.Game.hearoThemeFade = false; window.Game.hearoTheme.stop(); }
+        }
         //call sub ticks
         switch(VIEW) {
             case 0: //intro screen
@@ -74,7 +78,7 @@
 
         this.assetManager.preload.on("complete", function(){
             Game.prototype.setStage();
-            createjs.Sound.play("hearo-theme", {interrupt: createjs.Sound.INTERRUPT_NONE, loop: -1});
+            Game.prototype.hearoTheme = createjs.Sound.play("hearo-theme", {interrupt: createjs.Sound.INTERRUPT_NONE, loop: -1});
         });
         this.assetManager.preload.on("progress", function(){ Game.prototype.assetManager.updateLoading(); window.Game.stage.update(); });
     }
@@ -142,6 +146,7 @@
     Game.prototype.getWidth = function(){ return this.canvas.width; }
     Game.prototype.getHeight = function(){ return this.canvas.height; }
     Game.prototype.setScreen = function(view){ VIEW = view; }
+    Game.prototype.fadeSong = function() { this.hearoThemeFade = true; }
     //create prototype of self
     window.Game = new Game();
 }(window));

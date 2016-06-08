@@ -37,6 +37,7 @@
 	container.tick = function (event) {
         if (this.fadeEffect.alpha == 1){
             createjs.Tween.get(this.fadeEffect).to({ alpha:0 }, 2000, createjs.Ease.quartIn);
+            createjs.Tween.get(this.listenText).to({ alpha:0 }, 2000, createjs.Ease.quartIn);
         }
     }
     container.setText = function(text){
@@ -44,7 +45,7 @@
         this.trialsText = new CustomText(0,0,this.scaleX,this.scaleY,text);
         this.addChild(this.trialsText);
     }
-    container.resetFade = function(){ this.fadeEffect.alpha = 1; }
+    container.resetFade = function(){ this.fadeEffect.alpha = this.listenText.alpha = 1; }
 
 	window.Interface = createjs.promote(Interface, "Container");
 }(window));

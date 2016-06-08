@@ -56,6 +56,9 @@
     container.setChestFrameAt = function(i, frame){ this.getChildAt(i).sprite.gotoAndStop(frame); }
     container.getChest = function(i){ return this.getChildAt(i); }
     container.getLastChest = function(){ return this.getChest(this.children.length-1); }
+    container.reset = function(){
+        for (var i=0; i < this.children.length; i++) this.getChildAt(i).reset();
+    }
 
 	window.ChestManager = createjs.promote(ChestManager, "Container");
 }(window));

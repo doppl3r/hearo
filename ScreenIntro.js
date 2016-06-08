@@ -70,6 +70,7 @@
             if (this.delay == 0) { //change screen after delay runs out
                 window.Game.setScreen(1);
                 window.Game.setStage();
+                window.Game.fadeSong();
             }
         }
         else{

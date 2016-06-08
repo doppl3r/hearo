@@ -15,7 +15,7 @@
         this.xVel = getRandomNum(-2.5,2.5);
         this.yVel = this.startV = getRandomNum(-15,-25);
         this.yDiff = getRandomNum(0,100);
-        this.currentBounce = this.bounces = 4;
+        this.currentBounce = this.bounces = 5;
         this.gravity = 1.2;
         this.sprite = new createjs.Sprite(spriteSheet, getRandomInt(0,3));
         this.sprite.scaleX = scaleX;
