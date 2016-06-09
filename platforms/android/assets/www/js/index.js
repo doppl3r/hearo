@@ -21,7 +21,8 @@ var app = {
     initialize: function() { this.bindEvents(); },
     bindEvents: function() { document.addEventListener('deviceready', this.onDeviceReady, false); },
     onDeviceReady: function() {
-        window.navigationbar.setUp(false); 
+        window.navigationbar.setUp(false);
+        window.navigationbar.hide();
     },
     receivedEvent: function(id) { }
 };
