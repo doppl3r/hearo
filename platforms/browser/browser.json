@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-device-orientation": {
             "PACKAGE_NAME": "com.ntlgroup.hearo"
+        },
+        "cordova-plugin-navigationbar": {
+            "PACKAGE_NAME": "com.ntlgroup.hearo"
         }
     },
     "dependent_plugins": {},
@@ -42,9 +45,18 @@
             "id": "cordova-plugin-device-orientation.CompassProxy",
             "pluginId": "cordova-plugin-device-orientation",
             "runs": true
+        },
+        {
+            "file": "plugins/cordova-plugin-navigationbar/www/navigationbar.js",
+            "id": "cordova-plugin-navigationbar.navigationbar",
+            "pluginId": "cordova-plugin-navigationbar",
+            "clobbers": [
+                "window.navigationbar"
+            ]
         }
     ],
     "plugin_metadata": {
-        "cordova-plugin-device-orientation": "1.0.3"
+        "cordova-plugin-device-orientation": "1.0.3",
+        "cordova-plugin-navigationbar": "1.0.31"
     }
 }

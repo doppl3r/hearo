@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-device-orientation": {
             "PACKAGE_NAME": "com.ntlgroup.hearo"
+        },
+        "cordova-plugin-navigationbar": {
+            "PACKAGE_NAME": "com.ntlgroup.hearo"
         }
     },
     "dependent_plugins": {}
