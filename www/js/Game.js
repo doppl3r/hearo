@@ -129,8 +129,8 @@
         //start game timer
         if (!createjs.Ticker.hasEventListener("tick")) {
             createjs.Ticker.addEventListener("tick", tick);
-            createjs.Ticker.timingMode = createjs.Ticker.RAF;
-            createjs.Ticker.setFPS(30);
+            createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
+            createjs.Ticker.setFPS(60);
         }
     }
     Game.prototype.clickScreen = function(event){
