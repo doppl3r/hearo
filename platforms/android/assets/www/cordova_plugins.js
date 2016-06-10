@@ -22,10 +22,10 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-navigationbar/www/navigationbar.js",
-        "id": "cordova-plugin-navigationbar.navigationbar",
+        "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+        "id": "cordova-plugin-statusbar.statusbar",
         "clobbers": [
-            "window.navigationbar"
+            "window.StatusBar"
         ]
     }
 ];
@@ -33,7 +33,7 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-device-orientation": "1.0.3",
-    "cordova-plugin-navigationbar": "1.0.31"
+    "cordova-plugin-statusbar": "2.1.3"
 };
 // BOTTOM OF METADATA
 });

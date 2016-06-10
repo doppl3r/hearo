@@ -21,6 +21,7 @@
             if (window.Game.hearoTheme.volume > 0) window.Game.hearoTheme.volume -= 0.01;
             else { window.Game.hearoThemeFade = false; window.Game.hearoTheme.stop(); }
         }
+
         //call sub ticks
         switch(VIEW) {
             case 0: //intro screen
@@ -64,6 +65,11 @@
 
     //public functions
     Game.prototype.init = function() {
+        //phonegap presets
+        document.addEventListener('deviceready', function(){ StatusBar.hide(); }, false);
+        document.addEventListener('resume', function(){ StatusBar.hide(); }, false);
+
+
         this.canvas = document.getElementById("gameCanvas");
         this.stage = new createjs.Stage(this.canvas);
         this.stage.enableMouseOver(60);
@@ -129,8 +135,7 @@
         //start game timer
         if (!createjs.Ticker.hasEventListener("tick")) {
             createjs.Ticker.addEventListener("tick", tick);
-            createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED;
-            createjs.Ticker.setFPS(60);
+            createjs.Ticker.timingMode = createjs.Ticker.RAF;
         }
     }
     Game.prototype.clickScreen = function(event){

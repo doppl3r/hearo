@@ -13,7 +13,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"NavigationBar\"><param name=\"android-package\" value=\"com.cranberrygame.cordova.plugin.navigationbar.NavigationBar\" /></feature>",
+                            "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -39,7 +39,7 @@
         "cordova-plugin-device-orientation": {
             "PACKAGE_NAME": "com.ntlgroup.hearo"
         },
-        "cordova-plugin-navigationbar": {
+        "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.ntlgroup.hearo"
         }
     },
@@ -67,15 +67,15 @@
             ]
         },
         {
-            "file": "plugins/cordova-plugin-navigationbar/www/navigationbar.js",
-            "id": "cordova-plugin-navigationbar.navigationbar",
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
             "clobbers": [
-                "window.navigationbar"
+                "window.StatusBar"
             ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-device-orientation": "1.0.3",
-        "cordova-plugin-navigationbar": "1.0.31"
+        "cordova-plugin-statusbar": "2.1.3"
     }
 }

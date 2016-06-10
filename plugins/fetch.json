@@ -7,10 +7,10 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-navigationbar": {
+    "cordova-plugin-statusbar": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-navigationbar"
+            "id": "cordova-plugin-statusbar"
         },
         "is_top_level": true,
         "variables": {}

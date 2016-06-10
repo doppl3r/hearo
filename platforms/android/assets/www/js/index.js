@@ -19,10 +19,14 @@
 var app = {
     // Application Constructor
     initialize: function() { this.bindEvents(); },
-    bindEvents: function() { document.addEventListener('deviceready', this.onDeviceReady, false); },
-    onDeviceReady: function() {
-        window.navigationbar.setUp(false);
-        window.navigationbar.hide();
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('resume', this.onResume, false);
     },
-    receivedEvent: function(id) { }
+    onDeviceReady: function() {
+        StatusBar.hide();
+    },
+    onResume: function(){
+        StatusBar.hide();
+    }
 };
