@@ -68,9 +68,10 @@
         //phonegap presets
         document.addEventListener('deviceready', function(){ StatusBar.hide(); }, false);
         document.addEventListener('resume', function(){ StatusBar.hide(); }, false);
-
+        window.addEventListener('resize', function(){ Game.prototype.resizeCanvas(); });
 
         this.canvas = document.getElementById("gameCanvas");
+        this.resizeCanvas();
         this.stage = new createjs.Stage(this.canvas);
         this.stage.enableMouseOver(60);
 
@@ -153,6 +154,12 @@
     Game.prototype.getHeight = function(){ return this.canvas.height; }
     Game.prototype.setScreen = function(view){ VIEW = view; }
     Game.prototype.fadeSong = function() { this.hearoThemeFade = true; }
+    Game.prototype.resizeCanvas = function(){
+        var content = document.getElementById("content");
+        content.style.height = window.innerHeight+"px";
+        content.style.width = (this.canvas.width/this.canvas.height)*parseInt(content.style.height)+"px";
+        if (parseInt(content.style.width) > window.innerWidth) content.style.width = window.innerWidth + "px";
+    }
     //create prototype of self
     window.Game = new Game();
 }(window));
