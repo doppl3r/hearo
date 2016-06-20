@@ -13,13 +13,14 @@
     container.tick = function(event){
         if (this.coins != null) this.coins.tick(event);
     }
-    container.addChest = function (x,y,scaleX,scaleY,spriteSheet,frame) {
+    container.addChest = function (x,y,scaleX,scaleY,spriteSheet,frame,centerText) {
         //initialize Chest
         this.x = x;
         this.y = y;
         this.sprite = new createjs.Sprite(spriteSheet, frame);
         this.scaleX = scaleX;
         this.scaleY = scaleY;
+        this.centerText = centerText;
         this.sprite.gotoAndStop(frame);
         this.addChild(this.sprite);
     }
@@ -47,13 +48,14 @@
         }
     }
     container.mouseOut = function() { this.resetMouse(); }
-    container.setText = function(text){
+    container.setText = function(text, centerText){
+        this.centerText = centerText;
         if (this.children.length > 0) this.removeChild(this.customText);
-        this.customText = new CustomText(0,-48,this.scaleX,this.scaleY,text);
+        this.customText = new CustomText(0,-48,this.scaleX < 0 ? -1:1,1,text,centerText);
         this.addChild(this.customText);
     }
     container.updateChest = function(text, ear, success){
-        this.setText(text);
+        this.setText(text, this.centerText);
         this.ear=ear;
         this.success=success;
     }

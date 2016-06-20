@@ -36,7 +36,7 @@
         if (this.delay >= 0){
             this.delay-=1;
             if (this.delay == 0) { //change screen after delay runs out
-                window.Game.setScreen(2);
+                window.Game.setScreen(4);
                 window.Game.setStage();
                 window.Game.levelManager.resetScore();
             }
@@ -54,12 +54,12 @@
     }
     container.updateScreen = function(text, y){
         this.removeChild(this.text1,this.text2,this.text3,this.chestManager);
-        this.text1 = new CustomText(0,-720,1,1,"score:");
-        this.text2 = new CustomText(0,-720,1,1,"left ear: "+window.Game.levelManager.leftPoints);
-        this.text3 = new CustomText(0,-720,1,1,"right ear: "+window.Game.levelManager.rightPoints);
+        this.text1 = new CustomText(0,-720,1,1,"score:",true);
+        this.text2 = new CustomText(0,-720,1,1,"left ear: "+window.Game.levelManager.leftPoints,true);
+        this.text3 = new CustomText(0,-720,1,1,"right ear: "+window.Game.levelManager.rightPoints,true);
         //make chests as clickable buttons
         this.chestManager = new ChestManager(true);
-        this.chestManager.addChest(0,480,1,1,"topClosed");
+        this.chestManager.addChest(0,480,1,1,"topClosed",true);
         this.chestManager.getLastChest().updateChest("retry",null,true);
         this.addChild(this.text1, this.text2, this.text3, this.chestManager);
     }

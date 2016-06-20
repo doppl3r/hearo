@@ -31,9 +31,9 @@
     }
 
     //public functions
-    container.addChest = function (x,y,scaleX,scaleY,frame){
+    container.addChest = function (x,y,scaleX,scaleY,frame,centerText){
         var tempChest = new Chest(this.instaClick);
-        tempChest.addChest(x,y,scaleX,scaleY,this.spriteSheet,frame);
+        tempChest.addChest(x,y,scaleX,scaleY,this.spriteSheet,frame,centerText);
         if (this.instaClick) tempChest.on("click", function(){ tempChest.click(); });
         tempChest.on("mouseover", function(){ tempChest.mouseOver(); });
         tempChest.on("mouseout", function(){ tempChest.mouseOut(); });

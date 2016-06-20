@@ -40,6 +40,9 @@
             case 3: //score screen
                 window.Game.screenScore.tick(event);
             break;
+            case 4: //settings screen
+                window.Game.screenSettings.tick(event);
+            break;
         }
         window.Game.stage.update(event);
     }
@@ -80,6 +83,8 @@
         this.stage.addChild(this.assetManager);
         this.stage.on("click", function(event){ Game.prototype.clickScreen(event); });
 
+        this.userID = "65500170";
+
         //create level manager prototype from window object
         this.levelManager = Object.create(LevelManager);
 
@@ -109,6 +114,7 @@
         if (this.screenIntro == null) this.screenIntro = new ScreenIntro();
         if (this.screenInstructions == null) this.screenInstructions = new ScreenInstructions();
         if (this.screenScore == null) this.screenScore = new ScreenScore();
+        if (this.screenSettings == null) this.screenSettings = new ScreenSettings();
 
         //ensure stage is blank and add the player
         this.stage.clear();
@@ -131,6 +137,9 @@
             case 3:
                 this.stage.addChild(this.screenScore);
             break;
+            case 4:
+                this.stage.addChild(this.screenSettings);
+            break;
         }
 
         //start game timer
@@ -152,6 +161,7 @@
     }
     Game.prototype.getWidth = function(){ return this.canvas.width; }
     Game.prototype.getHeight = function(){ return this.canvas.height; }
+    Game.prototype.getCenter = function(){ return [this.canvas.width/2, this.canvas.height/2]; }
     Game.prototype.setScreen = function(view){ VIEW = view; }
     Game.prototype.fadeSong = function() { this.hearoThemeFade = true; }
     Game.prototype.resizeCanvas = function(){
@@ -160,6 +170,7 @@
         content.style.width = (this.canvas.width/this.canvas.height)*parseInt(content.style.height)+"px";
         if (parseInt(content.style.width) > window.innerWidth) content.style.width = window.innerWidth + "px";
     }
+    Game.prototype.setID = function(id){ this.userID = id; }
     //create prototype of self
     window.Game = new Game();
 }(window));

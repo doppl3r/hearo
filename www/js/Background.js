@@ -25,6 +25,11 @@
     container.setBackground = function(bg){
         this.sprite.gotoAndStop(bg);
     }
+    container.setXY = function(x,y){ this.x=x; this.y=y; }
+    container.center = function(){
+        this.x = window.Game.getCenter()[0];
+        this.y=window.Game.getCenter()[1];
+    }
 
 	window.Background = createjs.promote(Background, "Container");
 }(window));
