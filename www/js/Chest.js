@@ -28,15 +28,17 @@
     container.click = function() {
         if (!this.clicked){
             if (this.success) {
-                createjs.Sound.play("coins", {pan:0});
+                if (!this.mute) createjs.Sound.play("coins", {pan:0});
                 this.coins = new CoinEffect();
                 this.coins.addCoins(0, 0, 1, 1, 50, this.instaClick ? 0 : 15); //delay .25 seconds (15)
                 this.addChild(this.coins);
             }
             if (!this.instaClick) window.Game.levelManager.setDelay(120); //60 = 1 second delay
             this.clicked=true;
-            createjs.Sound.play("sword-low", {pan:0});
-            createjs.Sound.play("chest-open", {pan:0});
+            if (!this.mute){
+                createjs.Sound.play("sword-low", {pan:0});
+                createjs.Sound.play("chest-open", {pan:0});
+            }
             this.sprite.gotoAndPlay(this.sprite.spriteSheet.animations[this.sprite._currentFrame+(this.success ? 1:2)]);
             this.resetMouse();
         }
@@ -61,6 +63,7 @@
     }
     container.resetMouse = function() { this.sprite.alpha=1; this.cursor="default"; }
     container.reset = function() { this.clicked = this.success = false; this.resetMouse(); this.removeChild(this.coins); }
+    container.muteChest = function(){ this.mute = true; }
 
 	window.Chest = new createjs.promote(Chest, "Container");
 }(window));

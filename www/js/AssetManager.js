@@ -13,9 +13,7 @@
 	var logo = new createjs.Bitmap("img/neurocoach-logo.png");
 	var container = createjs.extend(AssetManager, createjs.Container);
 
-	container.init = function(){
-	    //preload content
-	    this.addChild(logo)
+	container.init = function(canvas){
         //load game assets
         this.preload = new createjs.LoadQueue(true);
         this.preload.installPlugin(createjs.Sound);
@@ -44,7 +42,13 @@
         this.messageField.x = this.centerX;
         this.messageField.y = 600;
 
+        //bg color stuff
+        this.bgColor = new createjs.Shape();
+        this.bgColor.graphics.beginFill("#FFFFFF").drawRect(0,0, canvas.width, canvas.height);
+
         //add to containger -> stage
+        this.addChild(this.bgColor);
+        this.addChild(logo)
         this.addChild(this.bar1);
         this.addChild(this.bar2);
         this.addChild(this.messageField);

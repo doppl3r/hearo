@@ -5,7 +5,7 @@
 		this.currentLevel = this.startLevel = 10;
         this.wordCount = 4;
         this.prizeWords = 2;
-        this.dupeWords = 0; //words that look correct but are never audibly played
+        this.trickyWords = 0; //words that look correct but are never audibly played
 		this.delay = -1; //milliseconds
         this.leftPoints = 0;
         this.rightPoints = 0;
@@ -55,12 +55,12 @@
         groupList = shuffleArray(groupList.slice(0));
 
         //set default list properties
-        var dupeWords = this.dupeWords;
+        var trickWords = this.trickyWords;
         for (var i=0; i < groupList.length; i++){
             var correct = i < (this.prizeWords);
-            if (correct || dupeWords > 0){
+            if (correct || trickWords > 0){
                 words.push([groupList[i].id, ear, correct]);
-                if (!correct) dupeWords--;
+                if (!correct) trickWords--;
             }
             else{
                 var randWord;
@@ -116,12 +116,23 @@
     LevelManager.prototype.getWordList = function(){
         return window.Game.assetManager.getManifest(this.grade);
     }
-    LevelManager.prototype.increaseDupeCount = function(){
-        this.dupeWords = (this.prizeWords+this.dupeWords < this.wordCount) ? this.dupeWords + 1 : 0;
+    LevelManager.prototype.increaseTrickyCount = function(){
+        this.trickyWords = (this.prizeWords+this.trickyWords < this.wordCount) ?
+        this.trickyWords + 1 : this.wordCount - this.prizeWords;
     }
-    LevelManager.prototype.maxDupeWords = function(){ return this.wordCount - this.prizeWords; }
+    LevelManager.prototype.decreaseTrickyCount = function(){
+        this.trickyWords = (this.trickyWords > 0) ? this.trickyWords - 1 : 0;
+    }
+    LevelManager.prototype.maxTrickyWords = function(){ return this.wordCount - this.prizeWords; }
     LevelManager.prototype.increaseTrials = function(){ this.startLevel = this.currentLevel += 1; }
     LevelManager.prototype.decreaseTrials = function(){ if (this.startLevel > 1) this.startLevel = this.currentLevel -= 1; }
+    LevelManager.prototype.increasePrizeWords = function() {
+        if (this.prizeWords < this.wordCount) {
+            this.prizeWords++;
+            if (this.prizeWords+this.trickyWords > this.wordCount) this.trickyWords--;
+        }
+    }
+    LevelManager.prototype.decreasePrizeWords = function(){ if (this.prizeWords > 1) this.prizeWords--; }
 
     //private functions
     function pullWordAt(tempList, index){

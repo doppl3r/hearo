@@ -18,7 +18,7 @@
 
         //progress text
         this.trialsText = new CustomText(0,0,1,1,"trials:");
-        this.listenText = new CustomText((this.width/2)-this.x,-this.height/2,1,1,"listen...");
+        this.listenText = new CustomText((this.width/2)-this.x,-this.height/2,1,1,"listen...", true);
 
         //intro fade
         this.fadeEffect = new createjs.Shape();
@@ -40,9 +40,9 @@
             createjs.Tween.get(this.listenText).to({ alpha:0 }, 2000, createjs.Ease.quartIn);
         }
     }
-    container.setText = function(text){
+    container.setText = function(text, centerText){
         if (this.children.length > 0) this.removeChild(this.trialsText);
-        this.trialsText = new CustomText(0,0,this.scaleX,this.scaleY,text);
+        this.trialsText = new CustomText(0,0,this.scaleX,this.scaleY,text, centerText);
         this.addChild(this.trialsText);
     }
     container.resetFade = function(){ this.fadeEffect.alpha = this.listenText.alpha = 1; }

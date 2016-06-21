@@ -36,7 +36,7 @@
 
         //make chests as clickable buttons
         this.chestManager = new ChestManager(true);
-        this.chestManager.addChest(0,240,1,1,"topClosed");
+        this.chestManager.addChest(0,240,1,1,"topClosed",true);
         this.chestManager.getLastChest().updateChest("start",null,true);
         this.chestManager.scaleX = this.chestManager.scaleY = 0;
 
@@ -68,7 +68,7 @@
         if (this.delay >= 0){
             this.delay-=1;
             if (this.delay == 0) { //change screen after delay runs out
-                window.Game.setScreen(1);
+                window.Game.setScreen(4);
                 window.Game.setStage();
                 window.Game.fadeSong();
             }

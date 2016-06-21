@@ -79,7 +79,7 @@
         this.stage.enableMouseOver(60);
 
         this.assetManager = new AssetManager(document.getElementById("gameCanvas"));
-        this.assetManager.init();
+        this.assetManager.init(document.getElementById("gameCanvas"));
         this.stage.addChild(this.assetManager);
         this.stage.on("click", function(event){ Game.prototype.clickScreen(event); });
 

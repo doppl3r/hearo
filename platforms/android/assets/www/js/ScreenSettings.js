@@ -76,6 +76,7 @@
         this.chestManager.getLastChest().updateChest("+",null,true);
         this.chestManager.getLastChest().muteChest();
         this.text3 = new CustomText(430,290,1,1,"Tricky Words: "+window.Game.levelManager.trickyWords+"/"+window.Game.levelManager.maxTrickyWords(), false);
+        this.addChild(this.background, this.text1, this.text2, this.chestManager);
         //Trials
         this.chestManager.addChest(280,400,.5,.5,"topClosed",true);
         this.chestManager.getLastChest().updateChest("-",null,true);

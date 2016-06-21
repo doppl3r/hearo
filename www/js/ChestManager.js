@@ -59,6 +59,8 @@
     container.reset = function(){
         for (var i=0; i < this.children.length; i++) this.getChildAt(i).reset();
     }
+    container.muteChest = function(i){ this.getChildAt(i).muteChest(); }
+    container.muteAll = function(){ for (var i=0; i < this.children.length; i++) this.muteChest(i); }
 
 	window.ChestManager = createjs.promote(ChestManager, "Container");
 }(window));
