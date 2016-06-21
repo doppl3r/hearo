@@ -45,7 +45,7 @@
     }
     container.mouseOver = function() {
         if (!this.clicked){
-            //if (this.instaClick) this.alpha=.25;
+            this.sprite.alpha=.5;
             this.cursor="pointer";
         }
     }
