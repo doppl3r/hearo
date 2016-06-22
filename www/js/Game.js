@@ -81,7 +81,7 @@
         this.assetManager = new AssetManager(document.getElementById("gameCanvas"));
         this.assetManager.init(document.getElementById("gameCanvas"));
         this.stage.addChild(this.assetManager);
-        this.stage.on("click", function(event){ Game.prototype.clickScreen(event); });
+        this.stage.on("stagemousedown", function(event){ Game.prototype.clickScreen(event); });
 
         this.userID = "65500170";
 
