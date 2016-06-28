@@ -33,7 +33,8 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-device-orientation": "1.0.3",
-    "cordova-plugin-statusbar": "2.1.3"
+    "cordova-plugin-statusbar": "2.1.3",
+    "cordova-plugin-crosswalk-webview": "1.7.2"
 };
 // BOTTOM OF METADATA
 });

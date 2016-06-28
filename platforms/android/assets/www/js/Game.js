@@ -81,7 +81,7 @@
         this.assetManager = new AssetManager(document.getElementById("gameCanvas"));
         this.assetManager.init(document.getElementById("gameCanvas"));
         this.stage.addChild(this.assetManager);
-        this.stage.on("click", function(event){ Game.prototype.clickScreen(event); });
+        this.stage.on("stagemousedown", function(event){ Game.prototype.clickScreen(event); });
 
         this.userID = "65500170";
 
@@ -145,7 +145,7 @@
         //start game timer
         if (!createjs.Ticker.hasEventListener("tick")) {
             createjs.Ticker.addEventListener("tick", tick);
-            createjs.Ticker.timingMode = createjs.Ticker.RAF;
+            createjs.Ticker.setFPS(60);
         }
     }
     Game.prototype.clickScreen = function(event){
