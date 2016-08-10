@@ -38,6 +38,7 @@
             if (this.delay == 0) { //change screen after delay runs out
                 window.Game.setScreen(4);
                 window.Game.setStage();
+                window.Game.levelManager.sendScore();
                 window.Game.levelManager.resetScore();
             }
         }

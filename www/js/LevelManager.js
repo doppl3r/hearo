@@ -133,6 +133,32 @@
         }
     }
     LevelManager.prototype.decreasePrizeWords = function(){ if (this.prizeWords > 1) this.prizeWords--; }
+    LevelManager.prototype.sendScore = function(){
+        $.ajax({
+            url: "https://dashboard.myhealthybrain.net/rest/hearo-scores",
+            type: "POST",
+            data: {
+                patient_id: "65500170111",
+                left_points: 0,
+                right_points: 0,
+                trials: 10,
+                words_played: 10,
+                difficulty: 0,
+                grade: 0
+            },
+            success: function(response) {
+                if (response.success) {
+                    // do something with response.data
+                }else {
+                    alert(response.message);
+                }
+            }
+        });
+    }
+    LevelManager.prototype.updateTrialSettings = function(){
+
+    }
+
 
     //private functions
     function pullWordAt(tempList, index){
