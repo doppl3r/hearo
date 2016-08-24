@@ -138,7 +138,7 @@
             url: "https://dashboard.myhealthybrain.net/rest/hearo-scores",
             type: "POST",
             data: {
-                patient_id: "65500170111",
+                patient_id: "65500170",
                 left_points: 0,
                 right_points: 0,
                 trials: 10,

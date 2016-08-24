@@ -65,24 +65,18 @@
 
         //tick chestManager
         this.chestManager.tick(event);
-        if (this.delay >= 0){
-            this.delay-=1;
-            if (this.delay == 0) { //change screen after delay runs out
-                window.Game.setScreen(4);
-                window.Game.setStage();
+
+        var tempChest;
+        for (var i=0; i<this.chestManager.children.length; i++){
+            tempChest = this.chestManager.getChildAt(i); //get temporary index
+            if (tempChest.isClicked()){
                 window.Game.fadeSong();
+                tempChest.clicked = false;
+                window.Game.requestUsername();
+                this.chestManager.setChestFrameAt(i,7);
             }
         }
-        else{
-            var tempChest;
-            for (var i=0; i<this.chestManager.children.length; i++){
-                tempChest = this.chestManager.getChildAt(i); //get temporary index
-                if (tempChest.isClicked()){
-                    this.chestManager.setChestFrameAt(i,7);
-                    this.delay = 120; //delay before screen changes
-                }
-            }
-        }
+
     }
 
 	window.ScreenIntro = createjs.promote(ScreenIntro, "Container");

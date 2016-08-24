@@ -8,7 +8,7 @@
     var KEYCODE_A = 65; //useful keycode
     var KEYCODE_D = 68; //useful keycode
     var KEYCODE_S = 83; //useful keycode
-    var VIEW = 0; //current stage assets
+    this.view = 0; //current stage assets
 
     //register key functions
     document.onkeydown = handleKeyDown;
@@ -23,7 +23,7 @@
         }
 
         //call sub ticks
-        switch(VIEW) {
+        switch(window.Game.view) {
             case 0: //intro screen
                 window.Game.screenIntro.tick(event);
             break;
@@ -77,6 +77,7 @@
         this.resizeCanvas();
         this.stage = new createjs.Stage(this.canvas);
         this.stage.enableMouseOver(60);
+        this.view = 0;
 
         this.assetManager = new AssetManager(document.getElementById("gameCanvas"));
         this.assetManager.init(document.getElementById("gameCanvas"));
@@ -118,10 +119,10 @@
 
         //ensure stage is blank and add the player
         this.stage.clear();
-
-        switch(VIEW) {
+        switch(this.view) {
             case 0:
                 this.stage.addChild(this.screenIntro);
+
             break;
             case 1:
                 this.stage.addChild(this.screenInstructions);
@@ -149,7 +150,7 @@
         }
     }
     Game.prototype.clickScreen = function(event){
-        switch(VIEW){
+        switch(window.Game.view){
             case 0: break;
             case 1: break;
             case 2:
@@ -162,7 +163,7 @@
     Game.prototype.getWidth = function(){ return this.canvas.width; }
     Game.prototype.getHeight = function(){ return this.canvas.height; }
     Game.prototype.getCenter = function(){ return [this.canvas.width/2, this.canvas.height/2]; }
-    Game.prototype.setScreen = function(view){ VIEW = view; }
+    Game.prototype.setScreen = function(view){ this.view = view; }
     Game.prototype.fadeSong = function() { this.hearoThemeFade = true; }
     Game.prototype.resizeCanvas = function(){
         var content = document.getElementById("content");
@@ -173,4 +174,59 @@
     Game.prototype.setID = function(id){ this.userID = id; }
     //create prototype of self
     window.Game = new Game();
+
+    Game.prototype.requestUsername = function(){
+        $("body").removeClass('pw'); //ensure no password styling
+        alertify
+        .okBtn("Submit").cancelBtn("Offline Mode")
+        .defaultValue("jdoe")
+        .prompt("Please enter your user ID",
+            function (val, ev) {
+                window.Game.setID(val);
+                window.Game.requestPassword();
+                alertify.success("User ID: #" + val);
+                ev.preventDefault();
+            }, function(ev) {
+                window.Game.setScreen(4);
+                window.Game.setStage();
+                ev.preventDefault();
+                alertify.error("Login Unsuccessful");
+            }
+        );
+    }
+    Game.prototype.requestPassword = function(){
+        $("body").addClass('pw');
+        alertify.logPosition("bottom right");
+        alertify
+        .okBtn("Login").cancelBtn("Cancel")
+        .defaultValue('pass')
+        .prompt("Please enter your password",
+            function (val, ev) {
+                window.Game.login(val);
+                ev.preventDefault();
+                alertify.success("Checking credentials...");
+            }, function(ev) {
+                window.Game.requestUsername(); //go back to username dialog window
+                alertify.error("Cancelled");
+            }
+        );
+    }
+    Game.prototype.login = function(val){
+        $.ajax({
+            url: 'https://dashboard.myhealthybrain.net/rest/auth-check?username='+this.userID+'&password='+val,
+            // url: 'https://local.ntldashboard.com/rest/auth-check?username='+username+'&pin='+pin+'&password='+password+'&computer_code='+Globals.macAddress,
+            success: function(response) {
+                if (response.success) {
+                    alertify.success("Login Successful!");
+                    window.Game.setScreen(2);
+                    window.Game.setStage();
+                }else {
+                    alertify.success("Login Failed!");
+                    window.Game.requestPassword();
+                }
+            }
+        })
+    }
+
 }(window));
+
